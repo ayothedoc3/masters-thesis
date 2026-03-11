@@ -1,0 +1,22 @@
+# Dependencies
+scripts/node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+
+# Large binary screenshots (stored locally, not in repo)
+# Remove this line if you want screenshots tracked
+data/screenshots/
+
+# Temp files
+*.tmp
+~$*
