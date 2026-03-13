@@ -106,24 +106,46 @@ def detect_heading_level(text, style_name):
 
 
 def append_docx(doc, source_path, label=""):
-    """Append all paragraphs and tables from a source docx into doc."""
+    """Append all paragraphs and tables from a source docx into doc.
+
+    Handles images by copying the binary image parts from the source
+    document and creating new relationships in the target document.
+    """
     print(f"  Appending: {label or source_path}")
     src = Document(source_path)
+    from copy import deepcopy
+    from docx.oxml.ns import qn
 
+    # Build a mapping from source relationship IDs to target relationship IDs
+    # for any image parts that need to be copied
+    rel_map = {}
+
+    # First pass: find all image relationships in the source
+    for rel in src.part.rels.values():
+        if "image" in rel.reltype:
+            # Copy the image part to the target document
+            image_part = rel.target_part
+            # Add the image to the target document's package
+            new_rel = doc.part.relate_to(image_part, rel.reltype)
+            rel_map[rel.rId] = new_rel
+
+    # Now copy elements, updating relationship IDs for images
     for element in src.element.body:
         tag = element.tag.split("}")[-1] if "}" in element.tag else element.tag
 
-        if tag == "p":
-            # It's a paragraph
-            from docx.oxml.ns import qn
-            from copy import deepcopy
+        if tag in ("p", "tbl"):
             new_elem = deepcopy(element)
-            doc.element.body.append(new_elem)
 
-        elif tag == "tbl":
-            # It's a table
-            from copy import deepcopy
-            new_elem = deepcopy(element)
+            # Update any image relationship IDs in the copied element
+            if rel_map:
+                # Find all blip elements (embedded images)
+                nsmap = {"a": "http://schemas.openxmlformats.org/drawingml/2006/main",
+                         "r": "http://schemas.openxmlformats.org/officeDocument/2006/relationships"}
+                for blip in new_elem.iter(qn("a:blip")):
+                    embed = blip.get(qn("r:embed"))
+                    if embed and embed in rel_map:
+                        blip.set(qn("r:embed"), rel_map[embed])
+
             doc.element.body.append(new_elem)
 
 

@@ -26,30 +26,30 @@ TikTok                 0                   0                  18
 Instagram             50                   0                   0
 
 1d. DISCERN Total — Descriptive Statistics by Platform:
-            N   Mean    SD  Median     Q1     Q3  Min  Max    IQR
-Platform                                                         
-Website    50  48.70  8.17    48.0  42.25  55.00   33   65  12.75
-YouTube    50  40.36  6.21    39.0  36.00  42.75   31   57   6.75
-TikTok     50  32.38  6.39    31.0  29.00  37.00   17   45   8.00
-Instagram  50  23.78  5.83    21.0  18.25  29.75   16   36  11.50
+            N   Mean    SD  Median     Q1     Q3  Min  Max   IQR
+Platform                                                        
+Website    50  47.02  7.90    48.5  43.00  52.75   28   64  9.75
+YouTube    50  42.88  7.10    42.0  38.00  47.00   30   57  9.00
+TikTok     50  35.96  7.86    35.0  31.25  39.75   20   57  8.50
+Instagram  50  28.98  6.82    27.5  25.00  34.00   17   52  9.00
 
-  Overall: Mean=36.3, SD=11.42, Median=35.5, Min=16.0, Max=65.0
+  Overall: Mean=38.71, SD=10.09, Median=38.0, Min=17.0, Max=64.0
 
 1e. DISCERN Category Distribution by Platform:
 DISCERN_Category  Very Poor  Poor  Fair  Good  Excellent
 Platform                                                
-Website                   0     4    23    22          1
-YouTube                   0    23    24     3          0
-TikTok                    7    35     8     0          0
-Instagram                30    20     0     0          0
+Website                   0     9    22    18          1
+YouTube                   0    16    24    10          0
+TikTok                    6    27    15     2          0
+Instagram                21    25     3     1          0
 
   Percentages:
 DISCERN_Category  Very Poor  Poor  Fair  Good  Excellent
 Platform                                                
-Website                 0.0   8.0  46.0  44.0        2.0
-YouTube                 0.0  46.0  48.0   6.0        0.0
-TikTok                 14.0  70.0  16.0   0.0        0.0
-Instagram              60.0  40.0   0.0   0.0        0.0
+Website                 0.0  18.0  44.0  36.0        2.0
+YouTube                 0.0  32.0  48.0  20.0        0.0
+TikTok                 12.0  54.0  30.0   4.0        0.0
+Instagram              42.0  50.0   6.0   2.0        0.0
 
 1f. JAMA Total — Descriptive Statistics by Platform:
             N  Mean    SD  Median
@@ -72,45 +72,45 @@ SECTION 2: INTER-RATER RELIABILITY
 ======================================================================
 
   ICC for DISCERN Total (ICC3, consistency):
-    ICC = 0.994
-    95% CI = [0.990, 1.000]
+    ICC = 0.932
+    95% CI = [0.870, 0.960]
     Interpretation: EXCELLENT agreement (>= 0.75)
 
   Cohen's Kappa for JAMA criteria:
-    Authorship: kappa = 1.000
-    Attribution: kappa = 1.000
-    Disclosure: kappa = 1.000
-    Currency: kappa = 1.000
+    Authorship: kappa = 0.671
+    Attribution: kappa = 0.615
+    Disclosure: kappa = 0.273
+    Currency: kappa = 0.216
 
 ======================================================================
 SECTION 3: RQ1 — DISCERN SCORES ACROSS PLATFORMS
 ======================================================================
 
 3a. Kruskal-Wallis H Test:
-  H(3) = 136.581, p = 0.000000
-  Eta-squared = 0.6815
+  H(3) = 93.837, p = 0.000000
+  Eta-squared = 0.4635
   Result: HIGHLY SIGNIFICANT (p < 0.001)
 
 3b. Dunn's Post-Hoc Tests (Bonferroni corrected):
             Website   YouTube    TikTok  Instagram
-Website    1.000000  0.010823  0.000000   0.000000
-YouTube    0.010823  1.000000  0.000305   0.000000
-TikTok     0.000000  0.000305  1.000000   0.000943
-Instagram  0.000000  0.000000  0.000943   1.000000
+Website    1.000000  0.384577  0.000000   0.000000
+YouTube    0.384577  1.000000  0.001809   0.000000
+TikTok     0.000000  0.001809  1.000000   0.003356
+Instagram  0.000000  0.000000  0.003356   1.000000
 
   Pairwise comparisons (Mann-Whitney U with effect size):
-  Website vs YouTube: U=1980, p_adj=0.0000 ***, r=-0.584
-  Website vs TikTok: U=2348, p_adj=0.0000 ***, r=-0.878
-  Website vs Instagram: U=2494, p_adj=0.0000 ***, r=-0.995
-  YouTube vs TikTok: U=2030, p_adj=0.0000 ***, r=-0.624
-  YouTube vs Instagram: U=2468, p_adj=0.0000 ***, r=-0.974
-  TikTok vs Instagram: U=2051, p_adj=0.0000 ***, r=-0.641
+  Website vs YouTube: U=1646, p_adj=0.0384 *, r=-0.316
+  Website vs TikTok: U=2088, p_adj=0.0000 ***, r=-0.670
+  Website vs Instagram: U=2364, p_adj=0.0000 ***, r=-0.891
+  YouTube vs TikTok: U=1859, p_adj=0.0002 ***, r=-0.487
+  YouTube vs Instagram: U=2313, p_adj=0.0000 ***, r=-0.850
+  TikTok vs Instagram: U=1883, p_adj=0.0001 ***, r=-0.506
 
 3c. DISCERN Section Scores by Platform:
-  Website: Section1 Mdn=26 (IQR 23-31), Section2 Mdn=19 (IQR 17-21)
-  YouTube: Section1 Mdn=22 (IQR 21-25), Section2 Mdn=14 (IQR 13-17)
-  TikTok: Section1 Mdn=18 (IQR 17-21), Section2 Mdn=12 (IQR 10-14)
-  Instagram: Section1 Mdn=13 (IQR 10-16), Section2 Mdn=7 (IQR 7-11)
+  Website: Section1 Mdn=25 (IQR 23-29), Section2 Mdn=18 (IQR 16-21)
+  YouTube: Section1 Mdn=24 (IQR 21-27), Section2 Mdn=16 (IQR 14-18)
+  TikTok: Section1 Mdn=19 (IQR 17-22), Section2 Mdn=14 (IQR 11-16)
+  Instagram: Section1 Mdn=15 (IQR 13-18), Section2 Mdn=10 (IQR 9-13)
 
 ======================================================================
 SECTION 4: RQ1 — JAMA COMPLIANCE ACROSS PLATFORMS
@@ -137,18 +137,18 @@ SECTION 5: RQ2 — CREATOR TYPE AND QUALITY SCORES
 ======================================================================
 
 5a. DISCERN by Creator Professional Status:
-  Professional: n=48, Mdn=39.5, IQR=31.8-43.5
-  Non-professional: n=152, Mdn=35.0, IQR=28.0-42.0
-  Mann-Whitney U = 4392, p = 0.033430, r = -0.204
+  Professional: n=48, Mdn=41.0, IQR=34.8-47.0
+  Non-professional: n=152, Mdn=37.5, IQR=31.0-46.0
+  Mann-Whitney U = 4233, p = 0.094329, r = -0.160
 
 5b. DISCERN by Individual Creator Type:
-  Certified fitness professional: n=34, Mdn=41.0, Mean=38.8, SD=10.4
-  Fitness influencer: n=43, Mdn=35.0, Mean=33.8, SD=5.5
-  General user: n=24, Mdn=28.5, Mean=28.4, SD=9.7
-  Healthcare professional: n=14, Mdn=37.5, Mean=38.6, SD=8.5
-  Organization: n=85, Mdn=40.0, Mean=38.4, SD=13.6
+  Certified fitness professional: n=34, Mdn=41.0, Mean=40.4, SD=9.0
+  Fitness influencer: n=43, Mdn=37.0, Mean=37.4, SD=7.9
+  General user: n=24, Mdn=33.0, Mean=32.7, SD=9.7
+  Healthcare professional: n=14, Mdn=41.0, Mean=40.9, SD=9.7
+  Organization: n=85, Mdn=39.0, Mean=40.0, SD=11.1
 
-  Kruskal-Wallis by Creator Type: H = 19.253, p = 0.000701
+  Kruskal-Wallis by Creator Type: H = 11.256, p = 0.023833
 
 5c. JAMA Total by Creator Professional Status:
   Professional: Mdn=2.0, Mean=1.96
@@ -162,26 +162,26 @@ SECTION 6: RQ3 — ENGAGEMENT METRICS VS QUALITY
   Social media items with engagement data: 150
 
   Views vs DISCERN Total:
-    n = 63, Spearman's rho = 0.017, p = 0.8940
+    n = 63, Spearman's rho = -0.073, p = 0.5713
     Interpretation: Negligible correlation
 
   Likes vs DISCERN Total:
-    n = 121, Spearman's rho = 0.549, p = 0.0000
-    Interpretation: Strong correlation
+    n = 121, Spearman's rho = 0.413, p = 0.0000
+    Interpretation: Moderate correlation
 
   Comments vs DISCERN Total:
-    n = 111, Spearman's rho = 0.520, p = 0.0000
-    Interpretation: Strong correlation
+    n = 111, Spearman's rho = 0.415, p = 0.0000
+    Interpretation: Moderate correlation
 
   Engagement-Quality correlations by platform:
-    YouTube — Views: rho=-0.352, p=0.0178 *
-    YouTube — Likes: rho=-0.338, p=0.0230 *
-    YouTube — Comments: rho=-0.239, p=0.1270 
-    TikTok — Views: rho=0.522, p=0.0262 *
-    TikTok — Likes: rho=0.475, p=0.0034 *
-    TikTok — Comments: rho=0.262, p=0.0940 
-    Instagram — Likes: rho=-0.038, p=0.8170 
-    Instagram — Comments: rho=0.065, p=0.7465 
+    YouTube — Views: rho=-0.316, p=0.0345 *
+    YouTube — Likes: rho=-0.279, p=0.0632 
+    YouTube — Comments: rho=-0.169, p=0.2846 
+    TikTok — Views: rho=0.249, p=0.3181 
+    TikTok — Likes: rho=0.280, p=0.0976 
+    TikTok — Comments: rho=0.133, p=0.4014 
+    Instagram — Likes: rho=-0.013, p=0.9360 
+    Instagram — Comments: rho=0.058, p=0.7722 
 
   Engagement vs JAMA Total:
     Views: rho=-0.370, p=0.0028
@@ -203,14 +203,14 @@ SECTION 8: ADDITIONAL ANALYSES
 ======================================================================
 
 8a. DISCERN by Search Term:
-  'how to start exercising': n=40, Mdn=38.0, Mean=37.5
-  'best exercises to lose weight': n=40, Mdn=32.0, Mean=33.6
-  'strength training for beginners': n=40, Mdn=35.0, Mean=37.5
-  'physical activity guidelines': n=40, Mdn=37.0, Mean=39.0
-  'home workout routine': n=40, Mdn=35.0, Mean=33.9
-  Kruskal-Wallis: H = 5.321, p = 0.2559
+  'how to start exercising': n=40, Mdn=46.0, Mean=43.8
+  'best exercises to lose weight': n=40, Mdn=37.0, Mean=36.7
+  'strength training for beginners': n=40, Mdn=39.0, Mean=39.7
+  'physical activity guidelines': n=40, Mdn=39.5, Mean=40.7
+  'home workout routine': n=40, Mdn=34.0, Mean=32.6
+  Kruskal-Wallis: H = 27.716, p = 0.0000
 
 8b. DISCERN by Content Format:
-  'Long video (>5min)': n=45, Mdn=39.0, Mean=40.5
-  'Short video (<60s)': n=18, Mdn=29.0, Mean=28.7
-  'Carousel': n=50, Mdn=21.0, Mean=23.8
+  'Long video (>5min)': n=45, Mdn=43.0, Mean=43.1
+  'Short video (<60s)': n=18, Mdn=31.5, Mean=32.8
+  'Carousel': n=50, Mdn=27.5, Mean=29.0
