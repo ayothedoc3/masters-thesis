@@ -287,7 +287,7 @@ def create_chapter2():
 
     add_formatted_paragraph(
         doc,
-        "The research follows a deductive approach, applying established quality assessment frameworks\u2014the DISCERN instrument and JAMA benchmarks\u2014to evaluate content across a novel four-platform comparison. While these instruments were originally developed for traditional health information materials, their application to social media content represents a theoretically grounded extension that has been validated in prior research examining YouTube (Azer, 2020), TikTok (Kong et al., 2024), and Instagram health content (Chea & Lim, 2023).",
+        "The research follows a deductive approach, applying established quality assessment frameworks\u2014the DISCERN instrument and JAMA benchmarks\u2014to evaluate content across a novel four-platform comparison. While these instruments were originally developed for traditional health information materials, their application to social media content represents a theoretically grounded extension that has been validated in prior research examining YouTube (Azer, 2020), TikTok (Kong et al., 2021), and Instagram health content (Chea & Lim, 2023).",
         first_line_indent=1.27
     )
 
@@ -485,7 +485,7 @@ def create_chapter2():
 
     add_formatted_paragraph(
         doc,
-        "For the purposes of the present study, DISCERN quality scores were categorised using the following established thresholds: Very Poor (16\u201326), Poor (27\u201338), Fair (39\u201350), Good (51\u201362), and Excellent (63\u201380). These categories facilitate meaningful interpretation and cross-study comparison of quality ratings. In adapting the instrument for social media content, questions pertaining to treatment information were interpreted in the context of exercise and physical activity recommendations, consistent with the approach adopted in prior studies examining fitness-related content (Kocyigit et al., 2024; Kong et al., 2024).",
+        "For the purposes of the present study, DISCERN quality scores were categorised using the following established thresholds: Very Poor (16\u201326), Poor (27\u201338), Fair (39\u201350), Good (51\u201362), and Excellent (63\u201380). These categories facilitate meaningful interpretation and cross-study comparison of quality ratings. In adapting the instrument for social media content, questions pertaining to treatment information were interpreted in the context of exercise and physical activity recommendations, consistent with the approach adopted in prior studies examining fitness-related content (Kocyigit et al., 2019; Kong et al., 2021).",
         first_line_indent=1.27
     )
 
@@ -558,7 +558,7 @@ def create_chapter2():
 
     add_formatted_paragraph(
         doc,
-        "To apply the JAMA benchmarks to social media content, which differs substantially in format from traditional web-based health information, the criteria were operationalised as described in Table 2.3. This operationalisation draws on adaptations employed in prior research assessing social media health content (Delli et al., 2016; Kocyigit et al., 2024).",
+        "To apply the JAMA benchmarks to social media content, which differs substantially in format from traditional web-based health information, the criteria were operationalised as described in Table 2.3. This operationalisation draws on adaptations employed in prior research assessing social media health content (Delli et al., 2016; Kocyigit et al., 2019).",
         first_line_indent=1.27
     )
 
@@ -614,7 +614,7 @@ def create_chapter2():
     add_mixed_paragraph(
         doc,
         [("Creator type classification. ", True, False),
-         ("Each content creator was classified into one of five categories based on the information available in their profile, bio, and content: (a) Healthcare professional (e.g., physicians, physiotherapists, registered nurses), (b) Certified fitness professional (e.g., certified personal trainers, strength and conditioning specialists), (c) Fitness influencer (individuals with substantial followings who create fitness content without verified professional credentials), (d) General user (individuals without identifiable fitness or health credentials), and (e) Organisation (institutional accounts such as hospitals, health agencies, or fitness organisations). This classification scheme was developed based on typologies employed in prior research on health information creators (Kocyigit et al., 2024; Yurdaisik, 2022).", False, False)],
+         ("Each content creator was classified into one of five categories based on the information available in their profile, bio, and content: (a) Healthcare professional (e.g., physicians, physiotherapists, registered nurses), (b) Certified fitness professional (e.g., certified personal trainers, strength and conditioning specialists), (c) Fitness influencer (individuals with substantial followings who create fitness content without verified professional credentials), (d) General user (individuals without identifiable fitness or health credentials), and (e) Organisation (institutional accounts such as hospitals, health agencies, or fitness organisations). This classification scheme was developed based on typologies employed in prior research on health information creators (Kocyigit et al., 2019; Yurdaisik, 2022).", False, False)],
         first_line_indent=1.27
     )
 
