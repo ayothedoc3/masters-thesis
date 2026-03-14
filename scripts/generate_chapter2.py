@@ -830,7 +830,7 @@ def create_chapter2():
     add_mixed_paragraph(
         doc,
         [("Creator type and quality scores. ", True, False),
-         ("To investigate whether creator type moderates information quality, DISCERN scores were compared between professional creators (healthcare professionals and certified fitness professionals combined) and non-professional creators (fitness influencers and general users combined) using the Mann-Whitney U test. The effect size was reported as rank-biserial correlation (r", False, False),
+         ("To investigate whether creator type moderates information quality, DISCERN scores were compared between professional creators (healthcare professionals and certified fitness professionals combined) and non-professional creators (fitness influencers, general users, and organisations combined) using the Mann-Whitney U test. Organisations were classified as non-professional because they encompass a heterogeneous mix of entities\u2014from government health departments to commercial fitness brands\u2014making uniform professional classification inappropriate. The effect size was reported as rank-biserial correlation (r", False, False),
          ("rb", False, True),
          ("), where values of 0.10, 0.30, and 0.50 correspond to small, medium, and large effects (Fritz et al., 2012).", False, False)],
         first_line_indent=1.27

@@ -371,8 +371,11 @@ def generate_appendix_d():
          "ICC(3,1) computed via pingouin.intraclass_corr() for DISCERN total scores. "
          "Cohen\u2019s kappa calculated manually for binary JAMA criteria using observed vs. expected agreement."),
         ("Platform comparisons (DISCERN)",
-         "Kruskal-Wallis H test (scipy.stats.kruskal) followed by Dunn\u2019s post-hoc test "
-         "(scikit_posthocs.posthoc_dunn) with Bonferroni correction. Effect size: eta-squared = H / (N-1)."),
+         "Kruskal-Wallis H test (scipy.stats.kruskal) followed by Mann\u2013Whitney U pairwise "
+         "comparisons with Bonferroni correction. Effect size: \u03b7\u00b2 = (H \u2212 k + 1) / (N \u2212 k), "
+         "where H is the Kruskal-Wallis statistic, k the number of groups, and N the total "
+         "sample size (Tomczak & Tomczak, 2014). Pairwise effect sizes reported as rank-biserial "
+         "correlation r."),
         ("Platform comparisons (JAMA)",
          "Chi-square test of independence (scipy.stats.chi2_contingency) for each JAMA criterion. "
          "Fisher\u2019s exact test used when expected cell counts < 5."),

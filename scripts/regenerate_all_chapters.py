@@ -375,7 +375,7 @@ def build_chapter3():
     add_heading2(doc, "3.4 JAMA Benchmark Compliance by Platform")
 
     add_body(doc,
-        "JAMA benchmark compliance varied by criterion and platform (Table 5). A "
+        "JAMA benchmark compliance varied by criterion and platform (Table 4). A "
         "Kruskal-Wallis test on JAMA total scores (range 0\u20134) revealed no statistically "
         "significant difference across platforms, H(3) = 5.43, p = .143. However, this "
         "aggregate result is partly an artefact of the Currency criterion, which gives "
@@ -548,12 +548,14 @@ def build_chapter3():
 
     add_body(doc,
         "Exploratory analysis of content format revealed notable differences in DISCERN "
-        "scores. Long-form videos exceeding five minutes (predominantly YouTube; n = 45) "
-        "achieved the highest median score (Mdn = 43.0, M = 43.1), followed by text "
-        "articles (n = 50, Mdn = 48.5, M = 47.0, which were exclusive to websites). "
-        "Short videos under 60 seconds (n = 18, Mdn = 31.5, M = 32.8) and carousel posts "
-        "(n = 50, Mdn = 27.5, M = 29.0) scored substantially lower. These format differences "
-        "are largely confounded with platform, as content formats were strongly associated "
+        "scores. Text articles (n = 50, exclusive to websites) achieved the highest median "
+        "score (Mdn = 48.5, M = 47.0), followed by long-form videos exceeding five minutes "
+        "(predominantly YouTube; n = 45, Mdn = 43.0, M = 43.1). Short videos under 60 "
+        "seconds (n = 47, comprising 5 from YouTube and 42 from TikTok; Mdn = 34.0, "
+        "M = 33.8) scored lower. Image-with-caption posts (n = 21, from TikTok and "
+        "Instagram; Mdn = 30.0, M = 30.5) and carousel posts (n = 37, exclusive to "
+        "Instagram; Mdn = 27.5, M = 28.4) scored lowest. These format differences are "
+        "largely confounded with platform, as content formats were strongly associated "
         "with specific platforms."
     )
 
@@ -1083,7 +1085,7 @@ def build_appendix_c():
     add_body(doc, "")
 
     # -- Table C3: Pairwise comparisons --
-    add_heading2(doc, "Table C3. Pairwise Platform Comparisons (Dunn's Test, Bonferroni-Adjusted)")
+    add_heading2(doc, "Table C3. Pairwise Platform Comparisons (Mann-Whitney U, Bonferroni-Adjusted)")
     t3 = doc.add_table(rows=7, cols=4)
     t3.style = "Table Grid"
     h3 = ["Comparison", "U", "p (adjusted)", "r"]
@@ -1219,15 +1221,17 @@ def build_appendix_c():
 
     # -- Table C9: Content format --
     add_heading2(doc, "Table C9. DISCERN Scores by Content Format")
-    t9 = doc.add_table(rows=4, cols=4)
+    t9 = doc.add_table(rows=6, cols=4)
     t9.style = "Table Grid"
     h9 = ["Format", "n", "Mdn", "M"]
     for i, v in enumerate(h9):
         t9.rows[0].cells[i].text = v
     rows9 = [
+        ["Text Article", "50", "48.5", "47.0"],
         ["Long Video (>5 min)", "45", "43.0", "43.1"],
-        ["Short Video (<60 s)", "18", "31.5", "32.8"],
-        ["Carousel", "50", "27.5", "29.0"],
+        ["Short Video (<60 s)", "47", "34.0", "33.8"],
+        ["Image + Caption", "21", "30.0", "30.5"],
+        ["Carousel", "37", "27.5", "28.4"],
     ]
     for ri, rd in enumerate(rows9):
         for ci, v in enumerate(rd):

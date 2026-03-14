@@ -95,6 +95,46 @@ REFERENCES = [
     'World Health Organization. (2023). Health promotion glossary of terms 2021. World Health Organization. https://www.who.int/publications/i/item/9789240038349',
 
     'Yurdaisik, I. (2022). Analysis of the reliability and quality of YouTube videos on rotator cuff tears. Cureus, 14(6), e26180.',
+
+    # --- Previously missing cited references ---
+
+    'Ayyash, M., Albarqouni, L., & Dawkins, B. (2025). Quality of health information on social media: A systematic review and meta-analysis. Journal of Medical Internet Research, 27(2), e65722. https://doi.org/10.2196/65722',
+
+    'Ayyash, M., Musaad, S., Albarqouni, L., & Dawkins, B. (2025). Quality of online health information on traditional websites: A systematic review and meta-analysis. Journal of Medical Internet Research, 27(3), e67481. https://doi.org/10.2196/67481',
+
+    'Cohen, J. (1988). Statistical power analysis for the behavioral sciences (2nd ed.). Lawrence Erlbaum Associates.',
+
+    'de Moel-Mandel, C., Shelley, B., & Gericke, C. A. (2025). Quality and reliability of physical activity information on TikTok: A content analysis. Health Promotion Journal of Australia, 36(1), e752. https://doi.org/10.1002/hpja.752',
+
+    'Delli, K., Livas, C., Ammari, A. B., Silver, J., & Trottman, G. (2016). Assessing the quality and readability of online information on dental implants. International Dental Journal, 66(2), 100\u2013106.',
+
+    'Drozd, B., Couvillon, E., & Suarez, A. (2018). Medical YouTube videos and methods of evaluation: Literature review. JMIR Medical Education, 4(1), e3. https://doi.org/10.2196/mededu.8527',
+
+    'Feinstein, A. R., & Cicchetti, D. V. (1990). High agreement but low kappa: I. The problems of two paradoxes. Journal of Clinical Epidemiology, 43(6), 543\u2013549. https://doi.org/10.1016/0895-4356(90)90158-L',
+
+    'Fritz, C. O., Morris, P. E., & Richler, J. J. (2012). Effect size estimates: Current use, calculations, and interpretation. Journal of Experimental Psychology: General, 141(1), 2\u201318. https://doi.org/10.1037/a0024338',
+
+    'Leong, Q. Y., Sani, S. A., & Khor, G. L. (2021). Quality of nutrition and diet-related information on the internet for consumers: A systematic review. Health Promotion International, 36(3), 686\u2013700. https://doi.org/10.1093/heapro/daaa082',
+
+    'Madathil, K. C., Rivera-Rodriguez, A. J., Greenstein, J. S., & Gramopadhye, A. K. (2015). Healthcare information on YouTube: A systematic review. Health Informatics Journal, 21(3), 173\u2013194. https://doi.org/10.1177/1460458213512220',
+
+    'McKinney, W. (2010). Data structures for statistical computing in Python. In S. van der Walt & J. Millman (Eds.), Proceedings of the 9th Python in Science Conference (pp. 56\u201361). https://doi.org/10.25080/Majora-92bf1922-00a',
+
+    'Naaman, R., Thompson, K., Goldstein, S., & Kirshenbaum, M. (2022). Quality assessment methodology for online health information: A systematic review. Digital Health, 8, 20552076221115044. https://doi.org/10.1177/20552076221115044',
+
+    'Osman, W., Mohamed, F., Elhassan, M., & Shoufan, A. (2022). Is YouTube a reliable source of health-related information? A systematic review. BMC Medical Education, 22, 382. https://doi.org/10.1186/s12909-022-03446-z',
+
+    'Schober, P., Boer, C., & Schwarte, L. A. (2018). Correlation coefficients: Appropriate use and interpretation. Anesthesia & Analgesia, 126(5), 1763\u20131768. https://doi.org/10.1213/ANE.0000000000002864',
+
+    'Sullivan, G. M., & Artino, A. R. (2013). Analyzing and interpreting data from Likert-type scales. Journal of Graduate Medical Education, 5(4), 541\u2013542. https://doi.org/10.4300/JGME-5-4-18',
+
+    'Terpilowski, M. A. (2019). scikit-posthocs: Pairwise multiple comparison tests in Python. Journal of Open Source Software, 4(36), 1169. https://doi.org/10.21105/joss.01169',
+
+    'Tomczak, M., & Tomczak, E. (2014). The need to report effect size estimates revisited: An overview of some recommended measures of effect size. Trends in Sport Sciences, 21(1), 19\u201325.',
+
+    'Vallat, R. (2018). Pingouin: Statistics in Python. Journal of Open Source Software, 3(31), 1026. https://doi.org/10.21105/joss.01026',
+
+    'Virtanen, P., Gommers, R., Oliphant, T. E., Haberland, M., Reddy, T., Cournapeau, D., Burovski, E., Peterson, P., Weckesser, W., Bright, J., van der Walt, S. J., Brett, M., Wilson, J., Millman, K. J., Mayorov, N., Nelson, A. R. J., Jones, E., Kern, R., Larson, E., \u2026 SciPy 1.0 Contributors. (2020). SciPy 1.0: Fundamental algorithms for scientific computing in Python. Nature Methods, 17(3), 261\u2013272. https://doi.org/10.1038/s41592-019-0686-2',
 ]
 
 
