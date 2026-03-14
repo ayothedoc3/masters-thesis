@@ -200,23 +200,7 @@ def add_toc_placeholder(doc):
 
     doc.add_paragraph("")
 
-    p = doc.add_paragraph()
-    p.alignment = WD_ALIGN_PARAGRAPH.LEFT
-    r = p.add_run(
-        "[To generate the Table of Contents in Microsoft Word:\n"
-        "1. Place cursor here\n"
-        "2. Go to References > Table of Contents\n"
-        "3. Select a style\n"
-        "4. The TOC will auto-populate from Heading styles]"
-    )
-    r.font.name = "Times New Roman"
-    r.font.size = Pt(12)
-    r.font.color.rgb = RGBColor(128, 128, 128)
-    r.italic = True
-
-    doc.add_paragraph("")
-
-    # Manual TOC as fallback
+    # Manual TOC entries
     toc_entries = [
         ("ABSTRACT", ""),
         ("ACKNOWLEDGMENTS", ""),
@@ -233,7 +217,7 @@ def add_toc_placeholder(doc):
         ("    2.1 Research Object", ""),
         ("    2.2 Research Strategy and Logic", ""),
         ("    2.3 Nature of Research", ""),
-        ("    2.4 Contingent of Research Subjects", ""),
+        ("    2.4 Study Sample and Sampling Frame", ""),
         ("    2.5 Research Methods", ""),
         ("    2.6 Research Organisation", ""),
         ("    2.7 Methods of Statistical Analysis", ""),

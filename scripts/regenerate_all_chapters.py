@@ -377,9 +377,12 @@ def build_chapter3():
     add_body(doc,
         "JAMA benchmark compliance varied by criterion and platform (Table 5). A "
         "Kruskal-Wallis test on JAMA total scores (range 0\u20134) revealed no statistically "
-        "significant difference across platforms, H(3) = 5.43, p = .143. This finding "
-        "indicates that, when aggregated across all four criteria, platforms did not differ "
-        "meaningfully in overall JAMA compliance."
+        "significant difference across platforms, H(3) = 5.43, p = .143. However, this "
+        "aggregate result is partly an artefact of the Currency criterion, which gives "
+        "social media platforms an automatic advantage: posting dates are inherently "
+        "visible (100% compliance) on social media but must be explicitly stated on "
+        "websites (68% compliance). Criterion-level comparisons are therefore more "
+        "informative than total JAMA scores in this study."
     )
 
     add_body(doc,
@@ -451,14 +454,16 @@ def build_chapter3():
     )
 
     add_body(doc,
-        "A more nuanced picture emerged from the Kruskal-Wallis test comparing all five "
-        "creator types individually, H(4) = 11.26, p = .024. General users scored lowest "
-        "(Mdn = 33.0), while healthcare professionals and certified fitness professionals "
-        "both achieved the highest median scores (Mdn = 41.0 each). Fitness influencers "
-        "(Mdn = 36.0) and organisations (Mdn = 39.0) fell between these extremes. This "
-        "pattern suggests that while the binary professional/non-professional distinction "
-        "may lack sufficient sensitivity, meaningful quality differences exist among the "
-        "five creator categories."
+        "A more informative picture emerged from the Kruskal-Wallis test comparing all "
+        "five creator types individually, H(4) = 11.26, p = .024. General users scored "
+        "lowest (Mdn = 33.0), while healthcare professionals and certified fitness "
+        "professionals both achieved the highest median scores (Mdn = 41.0 each). "
+        "Fitness influencers (Mdn = 36.0) and organisations (Mdn = 39.0) fell between "
+        "these extremes. This five-category result is the more meaningful analysis: the "
+        "binary classification was analytically crude, collapsing a heterogeneous group "
+        "of organisations\u2014ranging from NHS and WHO to commercial fitness brands\u2014into "
+        "the non-professional category, which diluted any real quality difference between "
+        "credentialed and non-credentialed creators."
     )
 
     add_figure(doc, 4,
@@ -506,9 +511,9 @@ def build_chapter3():
     )
 
     add_figure(doc, 5,
-        "Figure 5. Scatter plots of engagement metrics versus DISCERN total scores, "
-        "separated by platform. Trend lines are fitted using locally weighted smoothing "
-        "(LOESS)."
+        "Figure 5. Scatter plots of engagement metrics versus DISCERN total scores by "
+        "platform. Top row: views (Instagram lacks public view counts for non-Reel posts). "
+        "Bottom row: likes. Trend lines are fitted using linear regression."
     )
 
     # ---- 3.7 DISCERN Question-Level Patterns ----
@@ -521,10 +526,14 @@ def build_chapter3():
         "(Q1\u2013Q8) across all platforms, indicating that even higher-quality sources "
         "tended to provide less comprehensive information about exercise alternatives and "
         "their relative benefits and risks. Second, Q4 ('Is it clear what sources of "
-        "information were used to compile the publication?') and Q5 ('Is it clear when the "
-        "information used or reported was produced?') showed the steepest platform gradients, "
-        "with traditional websites scoring substantially higher than social media on these "
-        "transparency-related items. Third, Q16 (overall quality rating) closely tracked "
+        "information were used to compile the publication?') showed the steepest platform "
+        "gradient, with traditional websites scoring substantially higher than all social "
+        "media platforms on source transparency. Q5 ('Is it clear when the information used "
+        "or reported was produced?') showed a different pattern: YouTube scored highest on "
+        "this currency item because upload dates are automatically and prominently displayed, "
+        "whereas Instagram and TikTok scored lowest despite also auto-displaying post dates, "
+        "likely because their content less frequently referenced when the underlying "
+        "information was produced. Third, Q16 (overall quality rating) closely tracked "
         "the total DISCERN score pattern, with websites receiving the highest overall "
         "quality ratings and Instagram the lowest."
     )
@@ -638,12 +647,32 @@ def build_chapter4():
 
     add_body(doc,
         "The non-significant JAMA aggregate result (p = .143) alongside significant "
-        "individual criteria is instructive. It suggests that while platforms differ in "
-        "specific transparency practices, the overall level of formal quality indicators "
-        "(authorship, attribution, disclosure, currency) remains uniformly low across "
-        "the digital landscape. The universally poor attribution rates\u2014even websites "
-        "achieved only 30% compliance\u2014indicate a systemic deficit in evidence-based "
-        "communication of physical activity information, regardless of platform."
+        "individual criteria is instructive and warrants careful interpretation. "
+        "Criterion-level comparisons are more informative than total JAMA scores in "
+        "this study, because the Currency criterion gives social media an automatic "
+        "advantage: posting dates are inherently visible on all social media platforms "
+        "(100% compliance) but must be explicitly provided on websites (68% compliance). "
+        "This means total JAMA scores partly reflect platform interface design rather "
+        "than editorial accountability. When Currency is set aside, the remaining "
+        "criteria\u2014Authorship, Attribution, and Disclosure\u2014paint a clearer picture "
+        "of genuine transparency practices. Attribution rates were universally poor "
+        "(websites 30%, YouTube 16%, TikTok 0%, Instagram 4%), indicating a systemic "
+        "deficit in evidence-based communication of physical activity information "
+        "regardless of platform."
+    )
+
+    add_body(doc,
+        "The significant variation in quality across search terms (H[4] = 27.72, "
+        "p < .001) is a secondary finding that merits attention. Items retrieved using "
+        "\u2018how to start exercising\u2019 scored highest (Mdn = 46.0), while \u2018home workout "
+        "routine\u2019 yielded the lowest scores (Mdn = 34.0). This likely reflects "
+        "differences in the clinical relevance and specificity of queries: more general "
+        "health-oriented terms may retrieve content from authoritative institutional "
+        "sources, whereas commercially oriented terms such as \u2018home workout routine\u2019 "
+        "may disproportionately surface influencer-generated content. This finding "
+        "suggests that the search query itself functions as an implicit filter on "
+        "information quality, with practical implications for how public health "
+        "practitioners frame their recommendations to information-seeking audiences."
     )
 
     # ---- 4.3 Implications for Public Health ----
@@ -666,19 +695,25 @@ def build_chapter4():
         "content. This has implications for health literacy education: consumers should "
         "be taught that high view counts and engagement do not signal information "
         "trustworthiness. The negative correlation between views and quality on YouTube "
-        "(rho = -0.316, p = .035) is particularly concerning, as it suggests that the "
-        "platform's recommendation algorithm may inadvertently promote lower-quality "
-        "content."
+        "(rho = -0.316, p = .035) raises concern that the platform\u2019s recommendation "
+        "system may not reliably prioritise accurate health information, though this "
+        "single cross-sectional correlation cannot establish a causal relationship "
+        "between algorithmic promotion and content quality."
     )
 
     add_body(doc,
-        "Third, the creator type analysis suggests that professional credentials alone "
-        "are an insufficient heuristic for quality, given the non-significant binary "
-        "comparison (p = .094). However, the significant five-category analysis (p = .024) "
-        "and the consistently lower scores among general users (Mdn = 33.0) indicate "
-        "that content from unverified general users should be treated with particular "
-        "caution. Public health communication strategies could leverage platform "
-        "verification features to help users identify credentialed sources."
+        "Third, the creator type analysis reveals that the binary professional versus "
+        "non-professional classification was analytically crude and failed to reach "
+        "significance (p = .094). The five-category analysis is the more informative "
+        "result (H[4] = 11.26, p = .024): it shows that general users score lowest "
+        "(Mdn = 33.0), healthcare professionals and certified fitness professionals "
+        "score highest (Mdn = 41.0 each), and fitness influencers and organisations "
+        "fall between these extremes. This pattern suggests that creator type does "
+        "moderate quality, but in a graded rather than dichotomous fashion. The binary "
+        "null result is partially an artefact of grouping organisations (n = 85)\u2014which "
+        "include high-quality institutional sources such as NHS and WHO\u2014into the "
+        "non-professional category, thereby diluting the apparent quality advantage of "
+        "credentialed creators."
     )
 
     # ---- 4.4 Strengths ----
@@ -858,12 +893,23 @@ def build_chapter5():
         "information quality? Overall correlations suggested moderate positive associations "
         "between likes (rho = 0.413, p < .001), comments (rho = 0.415, p < .001), and "
         "DISCERN scores. However, within-platform analyses revealed these to be ecological "
-        "artefacts (Simpson's paradox): no significant likes\u2013quality correlation existed "
+        "artefacts (Simpson\u2019s paradox): no significant likes\u2013quality correlation existed "
         "within any individual platform. Views showed a negligible overall correlation "
         "(rho = -0.073, p = .571) and a significant negative correlation within YouTube "
-        "(rho = -0.316, p = .035). It can be concluded that engagement metrics are not "
-        "reliable indicators of information quality and that popular content is not "
-        "synonymous with accurate content."
+        "(rho = -0.316, p = .035). It can be concluded that engagement metrics do not "
+        "appear to reliably indicate information quality and that popular content is not "
+        "necessarily accurate content. The YouTube views\u2013quality pattern raises concern "
+        "about whether recommendation systems may not reliably prioritise accurate health "
+        "information, though this cross-sectional finding cannot establish causation."
+    )
+
+    add_body(doc,
+        "Additionally, search query phrasing significantly influenced the quality of "
+        "content retrieved (H[4] = 27.72, p < .001), with \u2018how to start exercising\u2019 "
+        "yielding the highest-scoring content and \u2018home workout routine\u2019 the lowest. "
+        "This suggests that the wording of health information queries functions as an "
+        "implicit quality filter, a finding with practical implications for how clinicians "
+        "advise patients on information seeking."
     )
 
     # ---- 5.2 Practical Recommendations ----
@@ -893,12 +939,12 @@ def build_chapter5():
     )
 
     add_body(doc,
-        "For platform developers: Implement evidence-based content labelling systems "
-        "that signal information quality to users. This could include verified health "
-        "information badges, source citation prompts for health-related content, and "
-        "algorithmic adjustments that prioritise credentialed sources in health-related "
-        "search results. The finding that YouTube's algorithm may promote lower-quality "
-        "content (negative views\u2013quality correlation) warrants particular attention."
+        "For platform developers: Consider implementing evidence-based content labelling "
+        "systems that signal information quality to users. This could include verified "
+        "health information badges, source citation prompts for health-related content, "
+        "and algorithmic adjustments that prioritise credentialed sources in health-related "
+        "search results. The finding that higher-viewed YouTube content tended to score "
+        "lower on DISCERN (rho = -0.316) warrants further investigation."
     )
 
     add_body(doc,
@@ -959,10 +1005,23 @@ def build_chapter5():
         "Finally, participatory research involving content creators, healthcare "
         "professionals, and platform users could inform the design of practical "
         "interventions to improve the quality of physical activity information "
-        "in the social media ecosystem. The gap between the information quality "
-        "available on traditional websites and social media represents both a "
-        "public health challenge and an opportunity for evidence-based digital "
-        "health communication."
+        "in the social media ecosystem."
+    )
+
+    add_body(doc,
+        "In closing, this study provides evidence that the quality of physical "
+        "activity information varies substantially across digital platforms, with "
+        "short-form social media presenting the greatest quality concerns. However, "
+        "these conclusions should be tempered by the study\u2019s limitations, particularly "
+        "the reliance on metadata-based scoring for video and image content, which may "
+        "have systematically underestimated social media quality and thereby inflated "
+        "the observed gradient. The mixed automated and manual collection approach and "
+        "the classification of diverse organisations as non-professional further qualify "
+        "the precision of these findings. Notwithstanding these caveats, the overall "
+        "pattern\u2014that platform architecture constrains information completeness and "
+        "that engagement does not reliably signal accuracy\u2014is consistent with the "
+        "broader literature and has clear implications for public health practice, "
+        "health literacy education, and platform governance."
     )
 
     doc.save(os.path.join(CHAPTERS, "chapter5_conclusions.docx"))

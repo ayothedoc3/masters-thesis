@@ -1,17 +1,101 @@
-# QUALITY OF PHYSICAL ACTIVITY INFORMATION ON TRADITIONAL WEBSITES VERSUS SOCIAL MEDIA PLATFORMS: A CROSS-SECTIONAL CONTENT ANALYSIS USING DISCERN AND JAMA BENCHMARKS
 
-**Master’s Thesis**
 
-**Ayokunle Ademola-John**  
+
+
+
+
+QUALITY OF PHYSICAL ACTIVITY INFORMATION ON TRADITIONAL WEBSITES VERSUS SOCIAL MEDIA PLATFORMS:
+A CROSS-SECTIONAL CONTENT ANALYSIS USING DISCERN AND JAMA BENCHMARKS
+
+
+
+Master’s Thesis
+
+
+Ayokunle Ademola-John
+
 Master of Public Health Programme
 
-**Supervisor:** Dr. Antanas Ūsas
 
-Lithuanian Sports University  
-Faculty of Sport Medicine  
+Supervisor: Dr. Antanas Ūsas
+
+
+Lithuanian Sports University
+
+Faculty of Sport Medicine
+
 Kaunas, 2026
 
----
+
+
+
+# TABLE OF CONTENTS
+
+
+ABSTRACT
+
+ACKNOWLEDGMENTS
+
+LIST OF ABBREVIATIONS
+
+1. LITERATURE REVIEW
+
+1.1 Digital Transformation of Health Information Seeking
+
+1.2 Theoretical Frameworks
+
+1.3 Traditional Websites as Sources of Health and PA Information
+
+1.4 Social Media Platforms as Sources of Health Information
+
+1.5 Quality Assessment Tools and Cross-Platform Applicability
+
+1.6 Evidence for the Quality Gap and Moderating Factors
+
+1.7 Summary and Rationale for the Present Study
+
+2. RESEARCH METHODOLOGY
+
+2.1 Research Object
+
+2.2 Research Strategy and Logic
+
+2.3 Nature of Research
+
+2.4 Study Sample and Sampling Frame
+
+2.5 Research Methods
+
+2.6 Research Organisation
+
+2.7 Methods of Statistical Analysis
+
+3. RESEARCH FINDINGS
+
+4. DISCUSSION
+
+5. CONCLUSIONS AND RECOMMENDATIONS
+
+REFERENCES
+
+APPENDIX A: DISCERN INSTRUMENT
+
+APPENDIX B: JAMA BENCHMARKS
+
+APPENDIX C: DATA SUMMARY TABLES
+
+APPENDIX D: STATISTICAL ANALYSIS CODE
+
+
+
+
+
+
+
+
+
+
+
 
 # ABSTRACT
 
@@ -19,21 +103,18 @@ Kaunas, 2026
 Ademola-John, A. (2026). Quality of Physical Activity Information on Traditional Websites Versus Social Media Platforms: A Cross-Sectional Content Analysis Using DISCERN and JAMA Benchmarks. Master’s Thesis. Lithuanian Sports University, Kaunas.
 
 
-Background. The internet and social media platforms have become primary sources of physical activity (PA) information for the general public. However, the quality of this information varies across platforms, and no study has simultaneously compared traditional websites, YouTube, TikTok, and Instagram using standardised quality assessment instruments for PA content.
+Background. The internet and social media platforms have become primary sources of physical activity (PA) information for the general public. However, the quality of this information varies considerably across platforms, and no study has simultaneously compared traditional websites, YouTube, TikTok, and Instagram using standardised quality assessment instruments.
 
 Objective. This study aimed to evaluate and compare the quality of PA information across four digital platform types using the DISCERN instrument and JAMA benchmarks, and to examine whether creator type and engagement metrics moderate information quality.
 
 Methods. A cross-sectional content analysis was conducted on 200 items (50 per platform) retrieved using five standardised search terms simulating typical user queries. Each item was assessed using the 16-item DISCERN instrument (scored 1–5 per question; total range 16–80) and four binary JAMA benchmark criteria (Authorship, Attribution, Disclosure, Currency). Inter-rater reliability was established on 20% of the sample (n = 40). Statistical analyses included Kruskal–Wallis H tests, Dunn’s post-hoc comparisons with Bonferroni correction, Chi-square tests, Mann–Whitney U tests, and Spearman correlations.
 
-Results. A significant quality gradient was observed across platforms, H(3) = 93.84, p < .001, with a large effect size (η² = .46). Traditional websites scored highest (Mdn = 48.5, Fair), followed by YouTube (Mdn = 42.0, Fair), TikTok (Mdn = 35.0, Poor), and Instagram (Mdn = 27.5, Poor–Very Poor). Five of six pairwise comparisons were significant at p < .001; the Website–YouTube difference reached p = .038. JAMA compliance was universally low (M = 1.4/4 criteria met). When individual creator types were compared, a significant effect emerged (H = 11.26, p = .024), with healthcare professionals and certified fitness professionals scoring highest (Mdn = 41.0) and general users lowest (Mdn = 33.0). Views bore no relationship to information quality (ρ = −.073, p = .571). Inter-rater reliability was excellent (ICC = 0.932, 95% CI [.870, .960]).
+Results. A significant quality gradient was observed across platforms, H(3) = 93.84, p < .001, η² ≈ .46 (large effect). Traditional websites scored highest (Mdn = 48.5, Fair), followed by YouTube (Mdn = 42.0, Fair), TikTok (Mdn = 35.0, Poor), and Instagram (Mdn = 27.5, Poor–Very Poor). All six pairwise comparisons were statistically significant (p < .05), though the website–YouTube contrast was more modest (p = .038). JAMA compliance was universally low (M = 1.4/4 criteria met). A five-category creator type analysis was significant (H[4] = 11.26, p = .024), though the binary professional versus non-professional comparison was not (p = .094). Within-platform engagement–quality correlations were generally non-significant, and the apparent overall positive correlation between likes and quality was identified as a Simpson’s paradox artefact. Inter-rater reliability was excellent (ICC = 0.932, 95% CI [0.870, 0.960]).
 
-Conclusions. Physical activity information quality varies substantially across digital platforms, with social media—particularly Instagram and TikTok—providing lower-quality content than traditional websites. The absence of any relationship between view counts and quality suggests that platform algorithms do not promote accurate health information. Multi-stakeholder interventions targeting platform design, creator education, and consumer health literacy are needed to improve the quality of PA information in the digital ecosystem.
+Conclusions. Physical activity information quality differs substantially across digital platforms, with short-form social media—particularly Instagram and TikTok—providing lower-quality content than traditional websites. Engagement metrics do not appear to reliably indicate information quality within platforms, suggesting that popular content is not necessarily accurate content. These findings highlight the need for multi-stakeholder interventions targeting platform design, creator education, and consumer health literacy to improve the quality of PA information in the digital ecosystem.
 
 
 Keywords: physical activity, health information quality, DISCERN, JAMA benchmarks, social media, content analysis, digital health, health literacy
-
-
----
 
 # ACKNOWLEDGMENTS
 
@@ -46,14 +127,8 @@ I also wish to thank my family and friends for their unwavering support and pati
 
 Finally, I acknowledge that this study analysed publicly available online content and did not involve human participants. No external funding was received for this research.
 
-
----
-
 # LIST OF ABBREVIATIONS
 
-
-
----
 
 # CHAPTER 1. LITERATURE REVIEW
 
@@ -183,9 +258,6 @@ By addressing these questions within a single, standardised methodological frame
 
 
 
-
----
-
 # CHAPTER 2. RESEARCH METHODOLOGY
 
 This chapter presents the methodological framework employed to investigate the quality of physical activity (PA) information across traditional websites and social media platforms. The research methodology encompasses the research object, strategy and logic, nature of the research, description of research subjects, data collection and assessment methods, organisational procedures, and statistical analysis techniques. Each component is detailed to ensure transparency, replicability, and methodological rigour in alignment with established standards for content analysis in health communication research.
@@ -204,15 +276,15 @@ The research follows a deductive approach, applying established quality assessme
 
 The study design was structured using the SPIDER framework (Cooke et al., 2012), adapted for content analysis as follows:
 
-**• Sample: **200 content items across four platforms (50 per platform).
+• Sample: 200 content items across four platforms (50 per platform).
 
-**• Phenomenon of Interest: **Quality of physical activity information.
+• Phenomenon of Interest: Quality of physical activity information.
 
-**• Design: **Cross-sectional content analysis.
+• Design: Cross-sectional content analysis.
 
-**• Evaluation: **DISCERN instrument and JAMA benchmarks.
+• Evaluation: DISCERN instrument and JAMA benchmarks.
 
-**• Research type: **Quantitative.
+• Research type: Quantitative.
 
 The rationale for employing a cross-sectional content analysis rather than a systematic review lies in the current state of the literature. Recent meta-analyses have already synthesised the existing body of evidence on health information quality across individual platforms (Ayyash et al., 2025; Ayyash, Musaad, et al., 2025). However, no study to date has conducted a direct, head-to-head comparison of physical activity information quality across traditional websites, YouTube, TikTok, and Instagram using both the DISCERN and JAMA instruments simultaneously. The present study addresses this gap by providing the first four-platform comparative analysis using dual quality assessment frameworks applied specifically to physical activity content.
 
@@ -222,7 +294,7 @@ The present study is quantitative in nature, employing numerical scoring instrum
 
 Furthermore, this study represents applied research with practical implications for multiple stakeholders. The findings are intended to inform health literacy initiatives, guide content regulation policies on social media platforms, assist healthcare professionals in directing patients toward reliable information sources, and contribute to the broader understanding of digital health information ecosystems. The applied orientation aligns with the growing recognition that the quality of online health information has direct consequences for public health behaviours and outcomes (Swire-Thompson & Lazer, 2020).
 
-## 2.4 Contingent of Research Subjects
+## 2.4 Study Sample and Sampling Frame
 
 The study sample comprises a total of N = 200 content items collected from four digital platforms: traditional websites accessed through Google search (n = 50), YouTube (n = 50), TikTok (n = 50), and Instagram (n = 50). This sample size was determined based on precedent in health information quality research, where samples of 40–60 items per platform have been established as sufficient for detecting meaningful quality differences (Leong et al., 2021; Drozd et al., 2018).
 
@@ -240,127 +312,124 @@ Content was retrieved using five standardised search terms designed to simulate 
 
 These search terms were selected to represent a range of common physical activity information-seeking behaviours, from general exercise initiation to specific activity modalities. For each search term, the first 10 results were collected from each platform, yielding 10 results × 5 search terms × 4 platforms = 200 content items. The sampling strategy employed convenience sampling of top-ranked search results, which simulates the actual information-seeking behaviour of typical users who predominantly access the first page of search results (Pan et al., 2007).
 
-**Inclusion criteria. **Content items were included if they met all of the following criteria: (a) written or presented in English, (b) publicly accessible without account registration or payment, (c) containing substantive physical activity information (i.e., providing guidance, instructions, or educational content about exercise or physical activity), and (d) posted or last updated within the three years preceding data collection (i.e., from February 2023 onward).
+Inclusion criteria. Content items were included if they met all of the following criteria: (a) written or presented in English, (b) publicly accessible without account registration or payment, (c) containing substantive physical activity information (i.e., providing guidance, instructions, or educational content about exercise or physical activity), and (d) posted or last updated within the three years preceding data collection (i.e., from February 2023 onward).
 
-**Exclusion criteria. **Content items were excluded if they met any of the following criteria: (a) duplicate content appearing across multiple platforms, (b) content behind a paywall or requiring subscription access, (c) content not primarily focused on physical activity (e.g., product-only advertisements, unrelated entertainment), or (d) content in languages other than English. When a result was excluded, the next sequential result from the same search was included as a replacement to maintain the target sample size.
+Exclusion criteria. Content items were excluded if they met any of the following criteria: (a) duplicate content appearing across multiple platforms, (b) content behind a paywall or requiring subscription access, (c) content not primarily focused on physical activity (e.g., product-only advertisements, unrelated entertainment), or (d) content in languages other than English. When a result was excluded, the next sequential result from the same search was included as a replacement to maintain the target sample size.
 
 Table 2.1 presents the sampling matrix illustrating the distribution of content items across search terms and platforms.
 
-**Table 2.1**
+Table 2.1
 
 Sampling Matrix: Distribution of Content Items by Search Term and Platform
 
-*Note. Each cell represents the number of content items collected per search term per platform. Total sample N = 200.*
+Note. Each cell represents the number of content items collected per search term per platform. Total sample N = 200.
 
 ## 2.5 Research Methods
 
-2.5.1 Data Collection Procedures
+## 2.5.1 Data Collection Procedures
 
-Data collection was conducted using a systematic protocol designed to minimise algorithmic bias and ensure reproducibility. All searches were performed using incognito or private browsing mode to reduce the influence of personalised search algorithms and browsing history on result rankings (Tripodi, 2018). The browser geolocation was configured to a neutral English-speaking region to standardise the search environment across all platforms.
+Data collection was conducted over a two-day window (1–2 March 2026) using a systematic protocol designed to minimise algorithmic bias and ensure reproducibility. All searches were performed in logged-out, incognito (private) browsing mode in Google Chrome to eliminate the influence of personalised search algorithms, browsing history, and account-based recommendations on result rankings (Tripodi, 2018). The browser’s language was set to English (United States) and geolocation was configured to Kaunas, Lithuania, the researcher’s institutional location, to standardise the search environment across all platforms. No VPN was used.
 
-For traditional websites (Google) and YouTube, an automated data collection approach was employed using Playwright, an open-source browser automation framework. The automated scripts navigated to each platform, entered the standardised search terms, and systematically recorded the top 10 results for each query. This approach ensured consistency in result capture and eliminated human error in the recording of search rankings, URLs, and metadata. For TikTok and Instagram, manual data collection was conducted due to these platforms’ implementation of anti-bot measures that prevent reliable browser automation. The primary researcher manually searched each term within the platform’s native search function, recording the first 10 relevant results in order of appearance.
+For traditional websites, searches were conducted on Google (google.com) using the default ‘All’ results tab; sponsored results and advertisements were excluded. For YouTube, searches were conducted on youtube.com using the default ‘Relevance’ sort. For both platforms, an automated data collection approach was employed using Playwright, an open-source browser automation framework. The automated scripts navigated to each platform, entered the standardised search terms, and systematically recorded the top 10 organic results for each query. This approach ensured consistency in result capture and eliminated human error in the recording of search rankings, URLs, and metadata. For TikTok and Instagram, manual data collection was conducted due to these platforms’ implementation of anti-bot measures that prevent reliable browser automation. TikTok searches used the in-app ‘Top’ tab; Instagram searches used the ‘Tags’ and ‘Top’ tabs. The primary researcher manually searched each term within the platform’s native search function, recording the first 10 relevant results in order of appearance. Reposts, advertisements, pinned/promoted content, and duplicate items from the same creator for the same search term were excluded and replaced by the next sequential organic result.
 
 All search results were recorded in their order of appearance within the search ranking. For each content item, the following information was documented: platform, search term used, ranking position, URL or content identifier, creator name, creator type classification, content format, date of publication or last update, and engagement metrics (views, likes, shares, and comments where available). Screenshots were captured for each content item to establish an audit trail, supporting the verification and reliability of the assessment process.
 
-2.5.2 Quality Assessment Instruments
+## 2.5.2 Quality Assessment Instruments
 
-**DISCERN Instrument. **The DISCERN instrument (Charnock et al., 1999) is a validated and widely used tool for assessing the quality of written consumer health information. The instrument comprises 16 items, each scored on a Likert-type scale ranging from 1 (definite no) to 5 (definite yes). The instrument is divided into three sections: Section 1 (Questions 1–8) evaluates the reliability of the publication, addressing whether the content has clear aims, achieves those aims, is relevant, identifies its sources, is balanced, and provides sufficient detail for decision-making. Section 2 (Questions 9–15) assesses the quality of information about treatment choices, including descriptions of how treatments work, their benefits, risks, effects on quality of life, and what would happen without treatment. Section 3 comprises a single item (Question 16) providing an overall quality rating. Total scores range from 16 to 80.
+DISCERN Instrument. The DISCERN instrument (Charnock et al., 1999) is a validated and widely used tool for assessing the quality of written consumer health information. The instrument comprises 16 items, each scored on a Likert-type scale ranging from 1 (definite no) to 5 (definite yes). The instrument is divided into three sections: Section 1 (Questions 1–8) evaluates the reliability of the publication, addressing whether the content has clear aims, achieves those aims, is relevant, identifies its sources, is balanced, and provides sufficient detail for decision-making. Section 2 (Questions 9–15) assesses the quality of information about treatment choices, including descriptions of how treatments work, their benefits, risks, effects on quality of life, and what would happen without treatment. Section 3 comprises a single item (Question 16) providing an overall quality rating. Total scores range from 16 to 80.
 
 For the purposes of the present study, DISCERN quality scores were categorised using the following established thresholds: Very Poor (16–26), Poor (27–38), Fair (39–50), Good (51–62), and Excellent (63–80). These categories facilitate meaningful interpretation and cross-study comparison of quality ratings. In adapting the instrument for social media content, questions pertaining to treatment information were interpreted in the context of exercise and physical activity recommendations, consistent with the approach adopted in prior studies examining fitness-related content (Kocyigit et al., 2024; Kong et al., 2024).
 
 Table 2.2 presents the complete DISCERN instrument with all 16 assessment questions.
 
-**Table 2.2**
+Table 2.2
 
 DISCERN Instrument Assessment Questions
 
-*Note. Adapted from “DISCERN: An instrument for judging the quality of written consumer health information on treatment choices,” by D. Charnock, S. Shepperd, G. Needham, and R. Gann, 1999, Journal of Epidemiology & Community Health, 53(2), 105–111. Each item is scored from 1 (definite no) to 5 (definite yes). For social media content, treatment-related questions (Q9–Q15) were interpreted as referring to exercise and physical activity recommendations.*
+Note. Adapted from “DISCERN: An instrument for judging the quality of written consumer health information on treatment choices,” by D. Charnock, S. Shepperd, G. Needham, and R. Gann, 1999, Journal of Epidemiology & Community Health, 53(2), 105–111. Each item is scored from 1 (definite no) to 5 (definite yes). For social media content, treatment-related questions (Q9–Q15) were interpreted as referring to exercise and physical activity recommendations.
 
-**JAMA Benchmarks. **The JAMA benchmarks (Silberg et al., 1997) provide a concise accountability framework for evaluating health information. The instrument assesses four criteria, each scored dichotomously as present (Y) or absent (N): (a) Authorship—whether authors and their credentials or affiliations are clearly identified; (b) Attribution—whether references and sources for content are cited; (c) Disclosure—whether sponsorship, advertising, conflicts of interest, or financial relationships are declared; and (d) Currency—whether the date of content creation or most recent update is provided. The total JAMA score ranges from 0 to 4, representing the number of criteria met.
+JAMA Benchmarks. The JAMA benchmarks (Silberg et al., 1997) provide a concise accountability framework for evaluating health information. The instrument assesses four criteria, each scored dichotomously as present (Y) or absent (N): (a) Authorship—whether authors and their credentials or affiliations are clearly identified; (b) Attribution—whether references and sources for content are cited; (c) Disclosure—whether sponsorship, advertising, conflicts of interest, or financial relationships are declared; and (d) Currency—whether the date of content creation or most recent update is provided. The total JAMA score ranges from 0 to 4, representing the number of criteria met.
 
 To apply the JAMA benchmarks to social media content, which differs substantially in format from traditional web-based health information, the criteria were operationalised as described in Table 2.3. This operationalisation draws on adaptations employed in prior research assessing social media health content (Delli et al., 2016; Kocyigit et al., 2024).
 
-**Table 2.3**
+Table 2.3
 
 JAMA Benchmarks Criteria and Social Media Operationalisation
 
-*Note. Adapted from “Assessing, controlling, and assuring the quality of medical information on the internet,” by W. M. Silberg, G. D. Lundberg, and R. A. Musacchio, 1997, JAMA, 277(15), 1244–1245. Each criterion is scored as present (Y) or absent (N). CSCS = Certified Strength and Conditioning Specialist; MD = Medical Doctor; PT = Physical Therapist.*
+Note. Adapted from “Assessing, controlling, and assuring the quality of medical information on the internet,” by W. M. Silberg, G. D. Lundberg, and R. A. Musacchio, 1997, JAMA, 277(15), 1244–1245. Each criterion is scored as present (Y) or absent (N). CSCS = Certified Strength and Conditioning Specialist; MD = Medical Doctor; PT = Physical Therapist.
 
-2.5.3 Additional Variables
+## 2.5.3 Additional Variables
 
 In addition to the primary quality assessment instruments, several supplementary variables were recorded for each content item to facilitate secondary analyses examining the moderating role of creator characteristics and content features on information quality.
 
-**Creator type classification. **Each content creator was classified into one of five categories based on the information available in their profile, bio, and content: (a) Healthcare professional (e.g., physicians, physiotherapists, registered nurses), (b) Certified fitness professional (e.g., certified personal trainers, strength and conditioning specialists), (c) Fitness influencer (individuals with substantial followings who create fitness content without verified professional credentials), (d) General user (individuals without identifiable fitness or health credentials), and (e) Organisation (institutional accounts such as hospitals, health agencies, or fitness organisations). This classification scheme was developed based on typologies employed in prior research on health information creators (Kocyigit et al., 2024; Yurdaisik, 2022).
+Creator type classification. Each content creator was classified into one of five categories based on the information available in their profile, bio, and content: (a) Healthcare professional (e.g., physicians, physiotherapists, registered nurses), (b) Certified fitness professional (e.g., certified personal trainers, strength and conditioning specialists), (c) Fitness influencer (individuals with substantial followings who create fitness content without verified professional credentials), (d) General user (individuals without identifiable fitness or health credentials), and (e) Organisation (institutional accounts such as hospitals, health agencies, or fitness organisations). This classification scheme was developed based on typologies employed in prior research on health information creators (Kocyigit et al., 2024; Yurdaisik, 2022).
 
-**Engagement metrics. **Where available, the following engagement metrics were recorded at the time of data collection: total views, likes (or equivalent reactions), shares, and comments. These metrics serve as indicators of content reach and audience interaction, enabling the examination of the relationship between content popularity and information quality (Osman et al., 2022).
+Engagement metrics. Where available, the following engagement metrics were recorded at the time of data collection: total views, likes (or equivalent reactions), shares, and comments. These metrics serve as indicators of content reach and audience interaction, enabling the examination of the relationship between content popularity and information quality (Osman et al., 2022).
 
-**Content format. **Each content item was classified by format: (a) Text article (traditional websites), (b) Long-form video (>5 minutes; primarily YouTube), (c) Short-form video (<60 seconds; primarily TikTok and Instagram Reels), (d) Image with caption (primarily Instagram posts), and (e) Carousel (multi-image Instagram posts). This classification enables the examination of whether content format is associated with information quality.
+Content format. Each content item was classified by format: (a) Text article (traditional websites), (b) Long-form video (>5 minutes; primarily YouTube), (c) Short-form video (<60 seconds; primarily TikTok and Instagram Reels), (d) Image with caption (primarily Instagram posts), and (e) Carousel (multi-image Instagram posts). This classification enables the examination of whether content format is associated with information quality.
 
 ## 2.6 Research Organisation
 
 The study was conducted over a defined period from February to March 2026, with data collection completed within a concentrated two-day window to minimise temporal variation in search results and engagement metrics. The research process was organised into six sequential phases, as illustrated in Figure 2.1.
 
-**Phase 1: Automated data collection (Day 1). **Playwright browser automation scripts were executed to collect search results from Google and YouTube. The scripts performed searches for all five search terms, captured the top 10 results per term, and recorded URLs, metadata, and screenshots.
+Phase 1: Automated data collection (Day 1). Playwright browser automation scripts were executed to collect search results from Google and YouTube. The scripts performed searches for all five search terms, captured the top 10 results per term, and recorded URLs, metadata, and screenshots.
 
-**Phase 2: Manual data collection (Days 1–2). **The primary researcher manually collected search results from TikTok and Instagram using the platform-native search functions. Results were recorded in the same standardised format as the automated collection.
+Phase 2: Manual data collection (Days 1–2). The primary researcher manually collected search results from TikTok and Instagram using the platform-native search functions. Results were recorded in the same standardised format as the automated collection.
 
-**Phase 3: Primary quality assessment. **The primary researcher assessed all 200 content items using both the DISCERN instrument and the JAMA benchmarks. Each content item was reviewed in its entirety, and scores were recorded in a structured data collection spreadsheet.
+Phase 3: Primary quality assessment. The primary researcher assessed all 200 content items using both the DISCERN instrument and the JAMA benchmarks. For text-based website content, each article was read in full. For video content (YouTube and TikTok), scoring was based on a combination of the video content itself, visible captions, descriptions, and on-screen text; full verbatim transcription was not performed. For Instagram carousels and image posts, scoring was based on all visible text, captions, and associated profile information. This approach reflects the information a typical user would encounter when engaging with each item. Scores were recorded in a structured data collection spreadsheet.
 
-**Phase 4: Second rater assessment. **A trained second rater independently scored a 20% subsample of content items (n = 40; 10 randomly selected items per platform) using both instruments. The second rater was provided with the same scoring guidelines and training materials as the primary researcher to ensure standardised application of the assessment criteria.
+Phase 4: Second rater assessment. A trained second rater independently scored a 20% subsample of content items (n = 40; 10 randomly selected items per platform) using both instruments. The second rater was provided with the same scoring guidelines and training materials as the primary researcher to ensure standardised application of the assessment criteria.
 
-**Phase 5: Inter-rater reliability assessment. **Agreement between the primary researcher and the second rater was evaluated using the Intraclass Correlation Coefficient (ICC) for DISCERN scores and Cohen’s kappa (κ) for JAMA criteria. These metrics are reported in the Results chapter.
+Phase 5: Inter-rater reliability assessment. Agreement between the primary researcher and the second rater was evaluated using the Intraclass Correlation Coefficient (ICC) for DISCERN scores and Cohen’s kappa (κ) for JAMA criteria. These metrics are reported in the Results chapter.
 
-**Phase 6: Statistical analysis. **Following the completion of quality assessments, all data were compiled and analysed using R statistical software, as detailed in Section 2.7.
+Phase 6: Statistical analysis. Following the completion of quality assessments, all data were compiled and analysed using Python 3.13 with scientific computing libraries, as detailed in Section 2.7.
 
 
 Figure 2.1
 
 Flow Diagram of the Research Process
 
-*Note. The research process proceeded sequentially through six phases over the study period (February–March 2026).*
+Note. The research process proceeded sequentially through six phases over the study period (February–March 2026).
 
-2.6.1 Ethical Considerations
+## 2.6.1 Ethical Considerations
 
 The present study does not involve human subjects, as all data were derived from publicly available online content. Consequently, formal ethics committee approval was not required, consistent with standard practice for content analyses of publicly accessible materials (Snelson, 2016). No personal data of content creators were collected beyond publicly displayed profile information relevant to the creator type classification. All content was accessed through standard public-facing interfaces, and no private or restricted materials were accessed at any point during the data collection process.
 
 ## 2.7 Methods of Statistical Analysis
 
-All statistical analyses were conducted using the R statistical environment (R Core Team, 2024) with the following packages: tidyverse for data manipulation and visualisation (Wickham et al., 2019), FSA and dunn.test for non-parametric post-hoc comparisons (Ogle et al., 2023; Dinno, 2017), irr for inter-rater reliability calculations (Gamer et al., 2019), DescTools for effect size computations (Signorell, 2024), and ggplot2 for publication-quality graphical representations (Wickham, 2016). The significance level was set at α = 0.05 for all inferential tests.
+All statistical analyses were conducted using Python 3.13 with the following scientific computing libraries: pandas (McKinney, 2010) for data manipulation, SciPy (Virtanen et al., 2020) for non-parametric inferential tests including Kruskal–Wallis, Mann–Whitney U, chi-square, and Spearman correlations, scikit-posthocs (Terpilowski, 2019) for Dunn’s post-hoc comparisons with Bonferroni correction, pingouin (Vallat, 2018) for intraclass correlation coefficient computation, and matplotlib/seaborn for publication-quality graphical representations. The significance level was set at α = 0.05 for all inferential tests. The complete analysis code is reproduced in Appendix D.
 
-2.7.1 Descriptive Statistics
+## 2.7.1 Descriptive Statistics
 
 Descriptive statistics were employed to characterise the distribution of quality scores across platforms and content categories. For DISCERN total scores, the median, interquartile range (IQR), and range were reported for each platform, as ordinal Likert-type data are best represented by median-based measures of central tendency (Sullivan & Artino, 2013). For JAMA benchmarks, frequencies and percentages of compliance for each criterion were calculated per platform, along with overall JAMA score distributions.
 
-2.7.2 Inter-Rater Reliability
+## 2.7.2 Inter-Rater Reliability
 
 Inter-rater reliability was assessed for the 20% subsample (n = 40) independently scored by both the primary researcher and the second rater. For DISCERN total scores, the Intraclass Correlation Coefficient (ICC) was calculated using a two-way mixed-effects model, single measures, with absolute agreement (ICC[3,1]; Koo & Li, 2016). ICC values were interpreted according to established guidelines: values less than 0.50 indicate poor reliability, 0.50–0.75 indicate moderate reliability, 0.75–0.90 indicate good reliability, and values greater than 0.90 indicate excellent reliability (Koo & Li, 2016).
 
 For the JAMA benchmark criteria, which are scored dichotomously (present/absent), Cohen’s kappa (κ) was calculated for each criterion. Kappa values were interpreted using the guidelines proposed by Landis and Koch (1977): values below 0.20 indicate slight agreement, 0.21–0.40 indicate fair agreement, 0.41–0.60 indicate moderate agreement, 0.61–0.80 indicate substantial agreement, and values above 0.80 indicate almost perfect agreement.
 
-2.7.3 Inferential Statistics
+## 2.7.3 Inferential Statistics
 
 Non-parametric statistical tests were selected as the primary inferential methods due to the ordinal nature of DISCERN scores and the anticipated non-normal distribution of quality data, consistent with methodological recommendations for health information quality research (Naaman et al., 2022).
 
-**Platform comparisons of DISCERN scores. **The Kruskal-Wallis H test was employed to examine whether DISCERN total scores differed significantly across the four platforms (Google, YouTube, TikTok, and Instagram). When a statistically significant omnibus result was obtained, Dunn’s post-hoc test with Bonferroni correction was applied to identify which specific platform pairs differed significantly. The effect size was quantified using epsilon-squared (ε²), where values of 0.01, 0.06, and 0.14 correspond to small, medium, and large effects, respectively (Tomczak & Tomczak, 2014).
+Platform comparisons of DISCERN scores. The Kruskal-Wallis H test was employed to examine whether DISCERN total scores differed significantly across the four platforms (Google, YouTube, TikTok, and Instagram). When a statistically significant omnibus result was obtained, Dunn’s post-hoc test with Bonferroni correction was applied to identify which specific platform pairs differed significantly. The effect size was quantified using eta-squared (η²), computed as η² = (H − k + 1) / (N − k), where H is the Kruskal-Wallis statistic, k the number of groups, and N the total sample size. This is an approximation rather than a true proportion of variance explained and should be interpreted accordingly; values of approximately 0.01, 0.06, and 0.14 correspond to small, medium, and large effects, respectively (Cohen, 1988).
 
-**Platform comparisons of JAMA compliance. **The chi-square test of independence was used to assess whether the proportion of content meeting each JAMA criterion differed across platforms. Where expected cell frequencies fell below 5, Fisher’s exact test was employed as an alternative. The effect size was reported as Cramér’s V, interpreted according to Cohen’s (1988) guidelines: values of 0.10, 0.30, and 0.50 represent small, medium, and large effects for tables with three degrees of freedom.
+Platform comparisons of JAMA compliance. The chi-square test of independence was used to assess whether the proportion of content meeting each JAMA criterion differed across platforms. Where expected cell frequencies fell below 5, Fisher’s exact test was employed as an alternative. The effect size was reported as Cramér’s V, interpreted according to Cohen’s (1988) guidelines: values of 0.10, 0.30, and 0.50 represent small, medium, and large effects for tables with three degrees of freedom.
 
-**Creator type and quality scores. **To investigate whether creator type moderates information quality, DISCERN scores were compared between professional creators (healthcare professionals and certified fitness professionals combined) and non-professional creators (fitness influencers and general users combined) using the Mann-Whitney U test. The effect size was reported as rank-biserial correlation (r*rb*), where values of 0.10, 0.30, and 0.50 correspond to small, medium, and large effects (Fritz et al., 2012).
+Creator type and quality scores. To investigate whether creator type moderates information quality, DISCERN scores were compared between professional creators (healthcare professionals and certified fitness professionals combined) and non-professional creators (fitness influencers and general users combined) using the Mann-Whitney U test. The effect size was reported as rank-biserial correlation (rrb), where values of 0.10, 0.30, and 0.50 correspond to small, medium, and large effects (Fritz et al., 2012).
 
-**Engagement metrics and information quality. **Spearman’s rank correlation coefficient (ρ) was calculated to examine the relationship between engagement metrics (views, likes, shares) and DISCERN total scores. This non-parametric correlation was selected due to the highly skewed distribution typically observed in engagement data and the ordinal nature of DISCERN scores. Correlation strength was interpreted as: ρ < 0.10 negligible, 0.10–0.39 weak, 0.40–0.69 moderate, and ≥ 0.70 strong (Schober et al., 2018).
+Engagement metrics and information quality. Spearman’s rank correlation coefficient (ρ) was calculated to examine the relationship between engagement metrics (views, likes, shares) and DISCERN total scores. This non-parametric correlation was selected due to the highly skewed distribution typically observed in engagement data and the ordinal nature of DISCERN scores. Correlation strength was interpreted as: ρ < 0.10 negligible, 0.10–0.39 weak, 0.40–0.69 moderate, and ≥ 0.70 strong (Schober et al., 2018).
 
 Table 2.4 provides a summary of the statistical analysis plan, linking each research question to the corresponding variables, statistical tests, and rationale for test selection.
 
-**Table 2.4**
+Table 2.4
 
 Summary of Statistical Analysis Plan by Research Question
 
-*Note. IV = independent variable; DV = dependent variable; PA = physical activity; ICC = Intraclass Correlation Coefficient; ε² = epsilon-squared; χ² = chi-square; κ = kappa; ρ = Spearman’s rho. Significance level: α = 0.05 for all tests.*
+Note. IV = independent variable; DV = dependent variable; PA = physical activity; ICC = Intraclass Correlation Coefficient; η² = eta-squared (approximation); χ² = chi-square; κ = kappa; ρ = Spearman’s rho. Significance level: α = 0.05 for all tests.
 
 In summary, the methodological approach described in this chapter was designed to provide a rigorous, transparent, and replicable framework for evaluating the quality of physical activity information across four major digital platforms. The combination of the DISCERN instrument and JAMA benchmarks offers a comprehensive assessment of both substantive information quality and accountability standards. The use of non-parametric statistical methods is appropriate given the ordinal nature of the primary outcome measures, and the inclusion of inter-rater reliability assessment ensures the credibility of the quality ratings. The results of the analyses described herein are presented in Chapter 3.
-
-
----
 
 # CHAPTER 3. RESEARCH FINDINGS
 
@@ -370,11 +439,11 @@ A total of 200 items were sampled across four platforms: traditional websites (n
 
 Creator types were classified into five categories. As shown in Table 1, organisations constituted the largest group (n = 85, 42.5%), followed by certified fitness professionals (n = 31, 15.5%), general users (n = 30, 15.0%), fitness influencers (n = 27, 13.5%), and healthcare professionals (n = 17, 8.5%). Notably, organisations were particularly prevalent among traditional websites (n = 34, 68.0%) and YouTube (n = 25, 50.0%), reflecting the dominance of institutional content on these platforms. In contrast, TikTok and Instagram were characterised by greater diversity in creator types, with higher proportions of fitness influencers and general users.
 
-**Table 1. Distribution of Creator Types by Platform**
+Table 1. Distribution of Creator Types by Platform
 
 Content formats varied substantially across platforms (Table 2). Traditional websites exclusively comprised text articles (n = 50, 100%). YouTube content consisted primarily of long-form videos exceeding five minutes (n = 45, 90.0%), with five short videos. TikTok featured predominantly short videos under 60 seconds (n = 42, 84.0%), while Instagram was dominated by carousels (n = 37, 74.0%) and image-with-caption posts (n = 13, 26.0%).
 
-**Table 2. Distribution of Content Formats by Platform**
+Table 2. Distribution of Content Formats by Platform
 
 ## 3.2 Inter-Rater Reliability
 
@@ -386,32 +455,32 @@ For the four binary JAMA benchmark criteria, inter-rater agreement was assessed 
 
 Descriptive statistics for DISCERN total scores by platform are presented in Table 3. The overall sample mean was 38.71 (SD = 10.09), with a median of 38.0 (range: 17–64). Traditional websites achieved the highest median score (Mdn = 48.5, IQR = 9.75), followed by YouTube (Mdn = 42.0, IQR = 9.00), TikTok (Mdn = 35.0, IQR = 8.50), and Instagram (Mdn = 27.5, IQR = 9.00). Using commonly adopted thresholds from subsequent DISCERN literature (16–26 = very poor, 27–38 = poor, 39–50 = fair, 51–62 = good, 63–80 = excellent), the modal category for websites was 'fair' (44%), for YouTube 'fair' (48%), for TikTok 'poor' (54%), and for Instagram 'poor' (50%). Notably, 42% of Instagram items scored in the 'very poor' range, compared with 0% for both websites and YouTube.
 
-**Table 3. DISCERN Total Scores by Platform**
+Table 3. DISCERN Total Scores by Platform
 
-*Note. M = mean; SD = standard deviation; Mdn = median; Q1 = 25th percentile; Q3 = 75th percentile. DISCERN score categories are based on commonly adopted thresholds in the health information quality literature.*
+Note. M = mean; SD = standard deviation; Mdn = median; Q1 = 25th percentile; Q3 = 75th percentile. DISCERN score categories are based on commonly adopted thresholds in the health information quality literature.
 
 
-*Figure 1. Box plot of DISCERN total scores by platform. The horizontal line within each box represents the median; box boundaries indicate Q1 and Q3; whiskers extend to 1.5 times the IQR.*
+Figure 1. Box plot of DISCERN total scores by platform. The horizontal line within each box represents the median; box boundaries indicate Q1 and Q3; whiskers extend to 1.5 times the IQR.
 
 A Kruskal-Wallis H test confirmed that DISCERN total scores differed significantly across the four platforms, H(3) = 93.84, p < .001. The estimated eta-squared (eta-squared = 0.46) indicated a large effect size. It should be noted that eta-squared derived from the Kruskal-Wallis statistic is an approximation and should be interpreted as indicating a large effect rather than a precise proportion of variance explained.
 
 Dunn's post-hoc pairwise comparisons with Bonferroni correction revealed significant differences for all six platform pairs (Table 4). The largest effect sizes were observed for Website versus Instagram (r = -0.891, large) and YouTube versus Instagram (r = -0.850, large). The Website versus YouTube comparison, while statistically significant at the Bonferroni-adjusted threshold (U = 1646, p = .038, r = -0.316), exhibited a small-to-medium effect size, suggesting that these two platforms are relatively more similar in information quality than other pairings. The remaining comparisons—Website versus TikTok (U = 2088, p < .001, r = -0.670), YouTube versus TikTok (U = 1859, p < .001, r = -0.487), and TikTok versus Instagram (U = 1883, p < .001, r = -0.506)—all yielded medium to large effects.
 
 
-*Figure 2. Distribution of DISCERN quality categories by platform. Categories are based on conventional thresholds: Very Poor (16–26), Poor (27–38), Fair (39–50), Good (51–62), and Excellent (63–80).*
+Figure 2. Distribution of DISCERN quality categories by platform. Categories are based on conventional thresholds: Very Poor (16–26), Poor (27–38), Fair (39–50), Good (51–62), and Excellent (63–80).
 
 DISCERN section scores followed a consistent pattern. For Section 1 (reliability of publication, Q1–Q8), median scores decreased from websites (Mdn = 25, IQR = 23–29) to YouTube (Mdn = 24, IQR = 21–27), TikTok (Mdn = 19, IQR = 17–22), and Instagram (Mdn = 15, IQR = 13–18). Section 2 (quality of treatment information, Q9–Q15) showed a parallel decline: websites (Mdn = 18, IQR = 16–21), YouTube (Mdn = 16, IQR = 14–18), TikTok (Mdn = 14, IQR = 11–16), and Instagram (Mdn = 10, IQR = 9–13).
 
 ## 3.4 JAMA Benchmark Compliance by Platform
 
-JAMA benchmark compliance varied by criterion and platform (Table 5). A Kruskal-Wallis test on JAMA total scores (range 0–4) revealed no statistically significant difference across platforms, H(3) = 5.43, p = .143. This finding indicates that, when aggregated across all four criteria, platforms did not differ meaningfully in overall JAMA compliance.
+JAMA benchmark compliance varied by criterion and platform (Table 5). A Kruskal-Wallis test on JAMA total scores (range 0–4) revealed no statistically significant difference across platforms, H(3) = 5.43, p = .143. However, this aggregate result is partly an artefact of the Currency criterion, which gives social media platforms an automatic advantage: posting dates are inherently visible (100% compliance) on social media but must be explicitly stated on websites (68% compliance). Criterion-level comparisons are therefore more informative than total JAMA scores in this study.
 
 However, chi-square tests on individual JAMA criteria revealed significant platform differences for three of the four benchmarks. Attribution differed significantly across platforms (p < .001), with websites (30%) and YouTube (16%) demonstrating the highest compliance, while TikTok (0%) provided no source citations whatsoever. Disclosure also differed significantly (p = .001), with websites (16%) and TikTok (14%) showing the highest rates of sponsorship declaration; YouTube and Instagram both recorded 0% disclosure compliance. Currency showed significant variation (p < .001), driven by the contrast between traditional websites (68%) and social media platforms (100% each), as social media posts inherently display their posting date. Authorship did not differ significantly across platforms (p = .104), with compliance ranging from 16% (Instagram) to 38% (YouTube).
 
-**Table 4. JAMA Benchmark Compliance by Platform (%)**
+Table 4. JAMA Benchmark Compliance by Platform (%)
 
 
-*Figure 3. Heatmap of JAMA benchmark compliance across platforms. Darker cells indicate higher compliance rates.*
+Figure 3. Heatmap of JAMA benchmark compliance across platforms. Darker cells indicate higher compliance rates.
 
 ## 3.5 Creator Type Analysis
 
@@ -419,10 +488,10 @@ To address Research Question 2, creators were initially dichotomised into profes
 
 It is important to note that the binary classification is complicated by the treatment of organisations (n = 85, 42.5% of the sample). Organisations were classified as non-professional because they encompass a heterogeneous mix of entities ranging from government health departments to commercial fitness brands, making uniform professional classification inappropriate. However, this is analytically consequential: many organisational websites (e.g., NHS, WHO, Mayo Clinic) produce content overseen by healthcare professionals. As a sensitivity analysis, when organisations were excluded from the binary classification, the difference between professional (n = 48, Mdn = 41.0) and non-professional creators (n = 67, comprising fitness influencers and general users, Mdn = 35.0) remained non-significant, though the trend was more pronounced.
 
-A more nuanced picture emerged from the Kruskal-Wallis test comparing all five creator types individually, H(4) = 11.26, p = .024. General users scored lowest (Mdn = 33.0), while healthcare professionals and certified fitness professionals both achieved the highest median scores (Mdn = 41.0 each). Fitness influencers (Mdn = 36.0) and organisations (Mdn = 39.0) fell between these extremes. This pattern suggests that while the binary professional/non-professional distinction may lack sufficient sensitivity, meaningful quality differences exist among the five creator categories.
+A more informative picture emerged from the Kruskal-Wallis test comparing all five creator types individually, H(4) = 11.26, p = .024. General users scored lowest (Mdn = 33.0), while healthcare professionals and certified fitness professionals both achieved the highest median scores (Mdn = 41.0 each). Fitness influencers (Mdn = 36.0) and organisations (Mdn = 39.0) fell between these extremes. This five-category result is the more meaningful analysis: the binary classification was analytically crude, collapsing a heterogeneous group of organisations—ranging from NHS and WHO to commercial fitness brands—into the non-professional category, which diluted any real quality difference between credentialed and non-credentialed creators.
 
 
-*Figure 4. DISCERN total scores by creator type. Box plots show median, IQR, and individual observations.*
+Figure 4. DISCERN total scores by creator type. Box plots show median, IQR, and individual observations.
 
 ## 3.6 Engagement-Quality Relationship
 
@@ -435,26 +504,20 @@ These overall positive correlations for likes and comments must be interpreted w
 For views, a significant negative correlation was observed within YouTube (rho = -0.316, p = .035), suggesting that more frequently viewed YouTube physical activity videos tend to be of slightly lower quality. Within TikTok, the views–quality correlation was positive but non-significant (rho = 0.249, p = .318).
 
 
-*Figure 5. Scatter plots of engagement metrics versus DISCERN total scores, separated by platform. Trend lines are fitted using locally weighted smoothing (LOESS).*
+Figure 5. Scatter plots of engagement metrics versus DISCERN total scores, separated by platform. Trend lines are fitted using locally weighted smoothing (LOESS).
 
 ## 3.7 DISCERN Question-Level Patterns
 
 Figure 6 presents a heatmap of mean scores for each of the 16 DISCERN questions across platforms. Several patterns merit attention. First, items relating to treatment choices (Q9–Q15) consistently scored lower than reliability items (Q1–Q8) across all platforms, indicating that even higher-quality sources tended to provide less comprehensive information about exercise alternatives and their relative benefits and risks. Second, Q4 ('Is it clear what sources of information were used to compile the publication?') and Q5 ('Is it clear when the information used or reported was produced?') showed the steepest platform gradients, with traditional websites scoring substantially higher than social media on these transparency-related items. Third, Q16 (overall quality rating) closely tracked the total DISCERN score pattern, with websites receiving the highest overall quality ratings and Instagram the lowest.
 
 
-*Figure 6. Heatmap of mean DISCERN item scores (Q1–Q16) by platform. Darker shading indicates higher mean scores (maximum = 5).*
+Figure 6. Heatmap of mean DISCERN item scores (Q1–Q16) by platform. Darker shading indicates higher mean scores (maximum = 5).
 
 ## 3.8 Content Format and Search Term Effects
 
 Exploratory analysis of content format revealed notable differences in DISCERN scores. Long-form videos exceeding five minutes (predominantly YouTube; n = 45) achieved the highest median score (Mdn = 43.0, M = 43.1), followed by text articles (n = 50, Mdn = 48.5, M = 47.0, which were exclusive to websites). Short videos under 60 seconds (n = 18, Mdn = 31.5, M = 32.8) and carousel posts (n = 50, Mdn = 27.5, M = 29.0) scored substantially lower. These format differences are largely confounded with platform, as content formats were strongly associated with specific platforms.
 
 Search terms also influenced quality scores. A Kruskal-Wallis test indicated significant variation across the five search terms, H(4) = 27.72, p < .001. Items retrieved using the term 'how to start exercising' scored highest, while 'home workout routine' yielded the lowest median DISCERN scores. This may reflect differences in the specificity and clinical relevance of search queries, with more general health-oriented terms retrieving content from authoritative sources.
-
-
-> **Note:** Figures 1–6 are embedded in the .docx version of this chapter. See `analysis/output/figures/` for the PNG files.
-
-
----
 
 # CHAPTER 4. DISCUSSION
 
@@ -472,15 +535,17 @@ The Instagram findings are particularly noteworthy. With 42% of items falling in
 
 The relatively modest difference between websites and YouTube (median difference of 6.5 points, p = .038) is an important nuance. YouTube's position as a long-form video platform appears to permit more comprehensive information delivery than short-form social media, potentially because longer formats allow for more detailed explanations, source citations, and structured presentation of evidence. This finding is consistent with research demonstrating that video length correlates with information completeness in health education contexts (Madathil et al., 2015).
 
-The non-significant JAMA aggregate result (p = .143) alongside significant individual criteria is instructive. It suggests that while platforms differ in specific transparency practices, the overall level of formal quality indicators (authorship, attribution, disclosure, currency) remains uniformly low across the digital landscape. The universally poor attribution rates—even websites achieved only 30% compliance—indicate a systemic deficit in evidence-based communication of physical activity information, regardless of platform.
+The non-significant JAMA aggregate result (p = .143) alongside significant individual criteria is instructive and warrants careful interpretation. Criterion-level comparisons are more informative than total JAMA scores in this study, because the Currency criterion gives social media an automatic advantage: posting dates are inherently visible on all social media platforms (100% compliance) but must be explicitly provided on websites (68% compliance). This means total JAMA scores partly reflect platform interface design rather than editorial accountability. When Currency is set aside, the remaining criteria—Authorship, Attribution, and Disclosure—paint a clearer picture of genuine transparency practices. Attribution rates were universally poor (websites 30%, YouTube 16%, TikTok 0%, Instagram 4%), indicating a systemic deficit in evidence-based communication of physical activity information regardless of platform.
+
+The significant variation in quality across search terms (H[4] = 27.72, p < .001) is a secondary finding that merits attention. Items retrieved using ‘how to start exercising’ scored highest (Mdn = 46.0), while ‘home workout routine’ yielded the lowest scores (Mdn = 34.0). This likely reflects differences in the clinical relevance and specificity of queries: more general health-oriented terms may retrieve content from authoritative institutional sources, whereas commercially oriented terms such as ‘home workout routine’ may disproportionately surface influencer-generated content. This finding suggests that the search query itself functions as an implicit filter on information quality, with practical implications for how public health practitioners frame their recommendations to information-seeking audiences.
 
 ## 4.3 Implications for Public Health Practice
 
 These findings carry several implications for public health practice. First, the pronounced quality gradient across platforms suggests that public health agencies should prioritise maintaining high-quality website content as an anchor for physical activity information, while simultaneously investing in platform-native content for social media. Simply repurposing website content for Instagram or TikTok is unlikely to be effective; instead, organisations should develop format-specific strategies that maximise information quality within the constraints of each platform.
 
-Second, the finding that engagement metrics do not predict quality within platforms undermines the common assumption that popular content is reliable content. This has implications for health literacy education: consumers should be taught that high view counts and engagement do not signal information trustworthiness. The negative correlation between views and quality on YouTube (rho = -0.316, p = .035) is particularly concerning, as it suggests that the platform's recommendation algorithm may inadvertently promote lower-quality content.
+Second, the finding that engagement metrics do not predict quality within platforms undermines the common assumption that popular content is reliable content. This has implications for health literacy education: consumers should be taught that high view counts and engagement do not signal information trustworthiness. The negative correlation between views and quality on YouTube (rho = -0.316, p = .035) raises concern that the platform’s recommendation system may not reliably prioritise accurate health information, though this single cross-sectional correlation cannot establish a causal relationship between algorithmic promotion and content quality.
 
-Third, the creator type analysis suggests that professional credentials alone are an insufficient heuristic for quality, given the non-significant binary comparison (p = .094). However, the significant five-category analysis (p = .024) and the consistently lower scores among general users (Mdn = 33.0) indicate that content from unverified general users should be treated with particular caution. Public health communication strategies could leverage platform verification features to help users identify credentialed sources.
+Third, the creator type analysis reveals that the binary professional versus non-professional classification was analytically crude and failed to reach significance (p = .094). The five-category analysis is the more informative result (H[4] = 11.26, p = .024): it shows that general users score lowest (Mdn = 33.0), healthcare professionals and certified fitness professionals score highest (Mdn = 41.0 each), and fitness influencers and organisations fall between these extremes. This pattern suggests that creator type does moderate quality, but in a graded rather than dichotomous fashion. The binary null result is partially an artefact of grouping organisations (n = 85)—which include high-quality institutional sources such as NHS and WHO—into the non-professional category, thereby diluting the apparent quality advantage of credentialed creators.
 
 ## 4.4 Strengths of the Study
 
@@ -510,9 +575,6 @@ Eighth, the DISCERN quality categories used in this study (Very Poor 16–26, Po
 
 Several directions for future research emerge from this study. First, longitudinal designs could track how physical activity information quality changes over time as platforms modify their algorithms and content policies. Second, multilingual studies incorporating non-English content would address a significant gap, given that the majority of global internet users access health information in languages other than English. Third, future studies should incorporate full transcription and coding of audio-visual content to address the metadata-only scoring limitation identified here. Fourth, the role of platform algorithms in promoting or suppressing high-quality health content warrants dedicated investigation, particularly given the negative views–quality correlation observed on YouTube. Fifth, intervention studies could evaluate whether platform-specific quality labels or health information verification badges improve the quality of content that users encounter and trust. Finally, qualitative research exploring how users perceive and evaluate physical activity information across different platforms would complement the quantitative quality assessment approach used here.
 
-
----
-
 # CHAPTER 5. CONCLUSIONS AND RECOMMENDATIONS
 
 ## 5.1 Summary of Conclusions
@@ -523,7 +585,9 @@ Research Question 1: How does physical activity information quality differ betwe
 
 Research Question 2: Does creator type moderate quality scores? The binary professional versus non-professional comparison was not statistically significant (U = 4233, p = .094), though this null finding is partially attributable to the classification of organisations (n = 85) within the non-professional category. The five-category creator type analysis was significant (H[4] = 11.26, p = .024), with general users scoring lowest (Mdn = 33.0) and healthcare professionals and certified fitness professionals scoring highest (Mdn = 41.0 each). It can be concluded that creator type influences information quality, but the relationship is more nuanced than a simple professional/non-professional dichotomy suggests.
 
-Research Question 3: What is the relationship between engagement metrics and information quality? Overall correlations suggested moderate positive associations between likes (rho = 0.413, p < .001), comments (rho = 0.415, p < .001), and DISCERN scores. However, within-platform analyses revealed these to be ecological artefacts (Simpson's paradox): no significant likes–quality correlation existed within any individual platform. Views showed a negligible overall correlation (rho = -0.073, p = .571) and a significant negative correlation within YouTube (rho = -0.316, p = .035). It can be concluded that engagement metrics are not reliable indicators of information quality and that popular content is not synonymous with accurate content.
+Research Question 3: What is the relationship between engagement metrics and information quality? Overall correlations suggested moderate positive associations between likes (rho = 0.413, p < .001), comments (rho = 0.415, p < .001), and DISCERN scores. However, within-platform analyses revealed these to be ecological artefacts (Simpson’s paradox): no significant likes–quality correlation existed within any individual platform. Views showed a negligible overall correlation (rho = -0.073, p = .571) and a significant negative correlation within YouTube (rho = -0.316, p = .035). It can be concluded that engagement metrics do not appear to reliably indicate information quality and that popular content is not necessarily accurate content. The YouTube views–quality pattern raises concern about whether recommendation systems may not reliably prioritise accurate health information, though this cross-sectional finding cannot establish causation.
+
+Additionally, search query phrasing significantly influenced the quality of content retrieved (H[4] = 27.72, p < .001), with ‘how to start exercising’ yielding the highest-scoring content and ‘home workout routine’ the lowest. This suggests that the wording of health information queries functions as an implicit quality filter, a finding with practical implications for how clinicians advise patients on information seeking.
 
 ## 5.2 Practical Recommendations
 
@@ -533,7 +597,7 @@ For public health organisations: Maintain and promote high-quality traditional w
 
 For healthcare professionals: Engage actively on social media platforms to counter the dominance of unqualified content creators. Professional credentials should be prominently displayed in profile biographies, and content should include source citations where feasible. Healthcare professionals can leverage platform verification features to signal credibility to users.
 
-For platform developers: Implement evidence-based content labelling systems that signal information quality to users. This could include verified health information badges, source citation prompts for health-related content, and algorithmic adjustments that prioritise credentialed sources in health-related search results. The finding that YouTube's algorithm may promote lower-quality content (negative views–quality correlation) warrants particular attention.
+For platform developers: Consider implementing evidence-based content labelling systems that signal information quality to users. This could include verified health information badges, source citation prompts for health-related content, and algorithmic adjustments that prioritise credentialed sources in health-related search results. The finding that higher-viewed YouTube content tended to score lower on DISCERN (rho = -0.316) warrants further investigation.
 
 For health literacy educators: Teach critical appraisal skills that are platform-specific. Users should understand that high engagement (likes, views, shares) does not indicate information accuracy. Educational programmes should include practical exercises in evaluating social media health content using simplified versions of tools such as DISCERN and JAMA benchmarks.
 
@@ -547,10 +611,9 @@ Future research should address the methodological limitations identified in this
 
 Fourth, experimental studies could investigate the causal impact of information quality on user behaviour—specifically, whether exposure to higher-quality physical activity information on social media leads to greater adoption of evidence-based exercise practices. Fifth, the development and validation of social media-specific quality assessment tools, adapted from but distinct from DISCERN and JAMA, would address the limitations of applying traditional print-oriented instruments to digital media formats. Sixth, algorithmic audit studies could examine how platform recommendation systems interact with content quality, building on the negative views–quality correlation observed on YouTube in the present study.
 
-Finally, participatory research involving content creators, healthcare professionals, and platform users could inform the design of practical interventions to improve the quality of physical activity information in the social media ecosystem. The gap between the information quality available on traditional websites and social media represents both a public health challenge and an opportunity for evidence-based digital health communication.
+Finally, participatory research involving content creators, healthcare professionals, and platform users could inform the design of practical interventions to improve the quality of physical activity information in the social media ecosystem.
 
-
----
+In closing, this study provides evidence that the quality of physical activity information varies substantially across digital platforms, with short-form social media presenting the greatest quality concerns. However, these conclusions should be tempered by the study’s limitations, particularly the reliance on metadata-based scoring for video and image content, which may have systematically underestimated social media quality and thereby inflated the observed gradient. The mixed automated and manual collection approach and the classification of diverse organisations as non-professional further qualify the precision of these findings. Notwithstanding these caveats, the overall pattern—that platform architecture constrains information completeness and that engagement does not reliably signal accuracy—is consistent with the broader literature and has clear implications for public health practice, health literacy education, and platform governance.
 
 # REFERENCES
 
@@ -639,9 +702,6 @@ World Health Organization. (2023). Health promotion glossary of terms 2021. Worl
 
 Yurdaisik, I. (2022). Analysis of the reliability and quality of YouTube videos on rotator cuff tears. Cureus, 14(6), e26180.
 
-
----
-
 # APPENDIX A: DISCERN INSTRUMENT
 
 
@@ -650,66 +710,66 @@ The DISCERN instrument (Charnock et al., 1999) is a validated tool for assessing
 
 ## Section 1: Reliability of the Publication (Questions 1–8)
 
-Q1: Are the aims clear?
+## Q1: Are the aims clear?
 
 Does the publication clearly state what it is about and what topics will be covered?
 
-Q2: Does it achieve its aims?
+## Q2: Does it achieve its aims?
 
 Does the content deliver on the stated purpose?
 
-Q3: Is it relevant?
+## Q3: Is it relevant?
 
 Is the information relevant to the target audience?
 
-Q4: Is it clear what sources of information were used?
+## Q4: Is it clear what sources of information were used?
 
 Are references, sources, or evidence cited?
 
-Q5: Is it clear when the information was produced?
+## Q5: Is it clear when the information was produced?
 
 Is the date of creation or last update stated?
 
-Q6: Is it balanced and unbiased?
+## Q6: Is it balanced and unbiased?
 
 Does the content present information objectively, or is it one-sided?
 
-Q7: Does it provide details of additional sources of support?
+## Q7: Does it provide details of additional sources of support?
 
 Are links to further reading, helplines, or professional resources provided?
 
-Q8: Does it refer to areas of uncertainty?
+## Q8: Does it refer to areas of uncertainty?
 
 Does the content acknowledge limitations, uncertainties, or areas where evidence is lacking?
 
 
 ## Section 2: Quality of Information on Treatment Choices (Questions 9–15)
 
-Q9: Does it describe how each treatment works?
+## Q9: Does it describe how each treatment works?
 
 Does the content explain the mechanism or rationale behind recommended exercises or activities?
 
-Q10: Does it describe the benefits of each treatment?
+## Q10: Does it describe the benefits of each treatment?
 
 Are the expected benefits of the recommended physical activity clearly stated?
 
-Q11: Does it describe the risks of each treatment?
+## Q11: Does it describe the risks of each treatment?
 
 Are potential risks, contraindications, or side effects of the recommended exercises discussed?
 
-Q12: Does it describe what would happen if no treatment is used?
+## Q12: Does it describe what would happen if no treatment is used?
 
 Does the content explain the consequences of physical inactivity?
 
-Q13: Does it describe how treatment choices affect overall quality of life?
+## Q13: Does it describe how treatment choices affect overall quality of life?
 
 Does the content address how physical activity affects wellbeing beyond the specific condition?
 
-Q14: Is it clear that there may be more than one possible treatment choice?
+## Q14: Is it clear that there may be more than one possible treatment choice?
 
 Does the content present multiple exercise options rather than a single approach?
 
-Q15: Does it provide support for shared decision-making?
+## Q15: Does it provide support for shared decision-making?
 
 Does the content encourage consulting a professional or making personalised decisions?
 
@@ -723,9 +783,6 @@ Q16: Based on the answers to all of the above questions, rate the overall qualit
 
 Each question is scored from 1 (Definitely No) to 5 (Definitely Yes). The total score ranges from 16 to 80. The following categories are used for interpretation:
 
-
-
----
 
 # APPENDIX B: JAMA BENCHMARKS — OPERATIONALISATION FOR SOCIAL MEDIA
 
@@ -761,41 +818,35 @@ Definition: Dates of content posting and any updates should be clearly displayed
 
 Each criterion is scored as Y (Yes, criterion met) or N (No, criterion not met). The JAMA Total score is the count of criteria met, ranging from 0 to 4.
 
-
----
-
 Appendix C: Data Summary Tables
 
-**Table C1. DISCERN Total Score Descriptive Statistics by Platform**
+Table C1. DISCERN Total Score Descriptive Statistics by Platform
 
 
-**Table C2. DISCERN Quality Categories by Platform, n (%)**
+Table C2. DISCERN Quality Categories by Platform, n (%)
 
-*Note. Categories: Very Poor (16–26), Poor (27–38), Fair (39–50), Good (51–62), Excellent (63–80).*
-
-
-**Table C3. Pairwise Platform Comparisons (Dunn's Test, Bonferroni-Adjusted)**
+Note. Categories: Very Poor (16–26), Poor (27–38), Fair (39–50), Good (51–62), Excellent (63–80).
 
 
-**Table C4. JAMA Benchmark Compliance by Platform (%)**
+Table C3. Pairwise Platform Comparisons (Dunn's Test, Bonferroni-Adjusted)
 
 
-**Table C5. Inter-Rater Reliability Statistics**
+Table C4. JAMA Benchmark Compliance by Platform (%)
 
 
-**Table C6. Spearman Correlations Between Engagement Metrics and DISCERN Scores**
+Table C5. Inter-Rater Reliability Statistics
 
 
-**Table C7. DISCERN Section Scores by Platform (Median, IQR)**
+Table C6. Spearman Correlations Between Engagement Metrics and DISCERN Scores
 
 
-**Table C8. DISCERN Scores by Creator Type**
+Table C7. DISCERN Section Scores by Platform (Median, IQR)
 
 
-**Table C9. DISCERN Scores by Content Format**
+Table C8. DISCERN Scores by Creator Type
 
 
----
+Table C9. DISCERN Scores by Content Format
 
 # APPENDIX D: STATISTICAL ANALYSIS CODE
 
@@ -820,20 +871,17 @@ matplotlib 3.9.x + seaborn 0.13.x — figure generation
 
 ## D.2 Key Statistical Tests
 
-**Inter-rater reliability. **ICC(3,1) computed via pingouin.intraclass_corr() for DISCERN total scores. Cohen’s kappa calculated manually for binary JAMA criteria using observed vs. expected agreement.
+Inter-rater reliability. ICC(3,1) computed via pingouin.intraclass_corr() for DISCERN total scores. Cohen’s kappa calculated manually for binary JAMA criteria using observed vs. expected agreement.
 
-**Platform comparisons (DISCERN). **Kruskal-Wallis H test (scipy.stats.kruskal) followed by Dunn’s post-hoc test (scikit_posthocs.posthoc_dunn) with Bonferroni correction. Effect size: eta-squared = H / (N-1).
+Platform comparisons (DISCERN). Kruskal-Wallis H test (scipy.stats.kruskal) followed by Dunn’s post-hoc test (scikit_posthocs.posthoc_dunn) with Bonferroni correction. Effect size: eta-squared = H / (N-1).
 
-**Platform comparisons (JAMA). **Chi-square test of independence (scipy.stats.chi2_contingency) for each JAMA criterion. Fisher’s exact test used when expected cell counts < 5.
+Platform comparisons (JAMA). Chi-square test of independence (scipy.stats.chi2_contingency) for each JAMA criterion. Fisher’s exact test used when expected cell counts < 5.
 
-**Creator type analysis. **Mann-Whitney U test (scipy.stats.mannwhitneyu) comparing professional vs. non-professional creators. Effect size: r = Z / sqrt(N).
+Creator type analysis. Mann-Whitney U test (scipy.stats.mannwhitneyu) comparing professional vs. non-professional creators. Effect size: r = Z / sqrt(N).
 
-**Engagement-quality correlations. **Spearman’s rank correlation (scipy.stats.spearmanr) between engagement metrics and DISCERN total, both overall and stratified by platform.
+Engagement-quality correlations. Spearman’s rank correlation (scipy.stats.spearmanr) between engagement metrics and DISCERN total, both overall and stratified by platform.
 
 
 ## D.3 Reproducibility
 
 All data, scripts, and analysis outputs are maintained in a version-controlled Git repository. The complete analysis can be reproduced by running: python analysis/run_analysis.py from the project root directory. Input data are located in data/csv/master_dataset.csv and data/csv/second_rater_scores.csv. Output files (figures, tables, and the analysis report) are written to analysis/output/.
-
-
----

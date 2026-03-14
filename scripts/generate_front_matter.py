@@ -99,26 +99,29 @@ def generate_abstract():
 
     add_para(
         doc,
-        "Results. A significant quality gradient was observed across platforms, H(3) = 136.58, "
-        "p < .001, \u03b7\u00b2 = .68. Traditional websites scored highest (Mdn = 48, Fair), "
-        "followed by YouTube (Mdn = 39, Poor\u2013Fair), TikTok (Mdn = 31, Poor), and Instagram "
-        "(Mdn = 21, Very Poor). All six pairwise comparisons were statistically significant "
-        "(p < .001). JAMA compliance was universally low (M = 1.4/4 criteria met). Professional "
-        "creators produced higher-quality content than non-professionals (p = .033), though the "
-        "effect was small (r = \u2212.204). Engagement metrics bore no meaningful relationship to "
-        "information quality (views\u2013DISCERN: \u03c1 = .017, p = .894). Inter-rater reliability "
-        "was excellent (ICC = 0.994).",
+        "Results. A significant quality gradient was observed across platforms, H(3) = 93.84, "
+        "p < .001, \u03b7\u00b2 \u2248 .46 (large effect). Traditional websites scored highest "
+        "(Mdn = 48.5, Fair), followed by YouTube (Mdn = 42.0, Fair), TikTok (Mdn = 35.0, Poor), "
+        "and Instagram (Mdn = 27.5, Poor\u2013Very Poor). All six pairwise comparisons were "
+        "statistically significant (p < .05), though the website\u2013YouTube contrast was more "
+        "modest (p = .038). JAMA compliance was universally low (M = 1.4/4 criteria met). "
+        "A five-category creator type analysis was significant (H[4] = 11.26, p = .024), though "
+        "the binary professional versus non-professional comparison was not (p = .094). "
+        "Within-platform engagement\u2013quality correlations were generally non-significant, "
+        "and the apparent overall positive correlation between likes and quality was identified "
+        "as a Simpson\u2019s paradox artefact. Inter-rater reliability was excellent (ICC = 0.932, "
+        "95% CI [0.870, 0.960]).",
     )
 
     add_para(
         doc,
-        "Conclusions. Physical activity information quality varies dramatically across digital "
-        "platforms, with social media\u2014particularly Instagram and TikTok\u2014providing substantially "
-        "lower-quality content than traditional websites. The absence of any relationship between "
-        "engagement and quality suggests that platform algorithms do not promote accurate health "
-        "information. Multi-stakeholder interventions targeting platform design, creator education, "
-        "and consumer health literacy are needed to improve the quality of PA information in the "
-        "digital ecosystem.",
+        "Conclusions. Physical activity information quality differs substantially across digital "
+        "platforms, with short-form social media\u2014particularly Instagram and TikTok\u2014providing "
+        "lower-quality content than traditional websites. Engagement metrics do not appear to "
+        "reliably indicate information quality within platforms, suggesting that popular content "
+        "is not necessarily accurate content. These findings highlight the need for multi-stakeholder "
+        "interventions targeting platform design, creator education, and consumer health literacy "
+        "to improve the quality of PA information in the digital ecosystem.",
     )
 
     add_para(doc, "")

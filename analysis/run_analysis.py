@@ -549,26 +549,56 @@ fig4.savefig(os.path.join(FIGURES_DIR, "fig4_creator_type_discern.png"))
 plt.close(fig4)
 report("  Fig 4: Creator type boxplot saved")
 
-# Figure 5: Engagement vs quality scatter (Views vs DISCERN, social media only)
-fig5, axes5 = plt.subplots(1, 3, figsize=(15, 5))
+# Figure 5: Engagement vs quality scatter
+# Row 1: Views vs DISCERN (YouTube and TikTok only — Instagram lacks view counts)
+# Row 2: Likes vs DISCERN (all three platforms)
+fig5, axes5 = plt.subplots(2, 3, figsize=(15, 10))
+
+# Top row: Views
 for idx, p in enumerate(["YouTube", "TikTok", "Instagram"]):
-    ax = axes5[idx]
+    ax = axes5[0][idx]
     sub = sm[sm["Platform"] == p][["Views", "DISCERN_Total"]].dropna()
-    if len(sub) > 0:
+    if len(sub) > 2:
         ax.scatter(sub["Views"], sub["DISCERN_Total"], alpha=0.6,
                    color=colors[p], edgecolor="black", linewidth=0.5, s=60)
         ax.set_xlabel("Views")
         ax.set_ylabel("DISCERN Total")
-        ax.set_title(p)
+        ax.set_title(f"{p} — Views")
         ax.xaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"{x/1e6:.1f}M" if x >= 1e6 else f"{x/1e3:.0f}K" if x >= 1e3 else f"{x:.0f}"))
-        # Add trend line
-        if len(sub) > 2:
-            z = np.polyfit(sub["Views"], sub["DISCERN_Total"], 1)
-            x_line = np.linspace(sub["Views"].min(), sub["Views"].max(), 100)
-            ax.plot(x_line, np.polyval(z, x_line), "r--", alpha=0.5)
-fig5.suptitle("Views vs DISCERN Quality Score (Social Media)", y=1.02)
+        z = np.polyfit(sub["Views"], sub["DISCERN_Total"], 1)
+        x_line = np.linspace(sub["Views"].min(), sub["Views"].max(), 100)
+        ax.plot(x_line, np.polyval(z, x_line), "r--", alpha=0.5)
+    else:
+        ax.set_title(f"{p} — Views")
+        ax.text(0.5, 0.5, "Insufficient data\n(platform does not\nexpose view counts)",
+                ha="center", va="center", transform=ax.transAxes, fontsize=11, color="grey")
+        ax.set_xlabel("Views")
+        ax.set_ylabel("DISCERN Total")
+
+# Bottom row: Likes
+for idx, p in enumerate(["YouTube", "TikTok", "Instagram"]):
+    ax = axes5[1][idx]
+    sub = sm[sm["Platform"] == p][["Likes", "DISCERN_Total"]].dropna()
+    if len(sub) > 2:
+        ax.scatter(sub["Likes"], sub["DISCERN_Total"], alpha=0.6,
+                   color=colors[p], edgecolor="black", linewidth=0.5, s=60)
+        ax.set_xlabel("Likes")
+        ax.set_ylabel("DISCERN Total")
+        ax.set_title(f"{p} — Likes")
+        ax.xaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"{x/1e6:.1f}M" if x >= 1e6 else f"{x/1e3:.0f}K" if x >= 1e3 else f"{x:.0f}"))
+        z = np.polyfit(sub["Likes"], sub["DISCERN_Total"], 1)
+        x_line = np.linspace(sub["Likes"].min(), sub["Likes"].max(), 100)
+        ax.plot(x_line, np.polyval(z, x_line), "r--", alpha=0.5)
+    else:
+        ax.set_title(f"{p} — Likes")
+        ax.text(0.5, 0.5, "Insufficient data", ha="center", va="center",
+                transform=ax.transAxes, fontsize=11, color="grey")
+        ax.set_xlabel("Likes")
+        ax.set_ylabel("DISCERN Total")
+
+fig5.suptitle("Engagement Metrics vs DISCERN Quality Score (Social Media)", y=1.02, fontsize=14)
 fig5.tight_layout()
-fig5.savefig(os.path.join(FIGURES_DIR, "fig5_engagement_vs_quality.png"))
+fig5.savefig(os.path.join(FIGURES_DIR, "fig5_engagement_vs_quality.png"), dpi=150, bbox_inches="tight")
 plt.close(fig5)
 report("  Fig 5: Engagement scatter plots saved")
 

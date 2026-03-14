@@ -341,7 +341,7 @@ def create_chapter2():
     # ================================================================
     # 2.4 CONTINGENT OF RESEARCH SUBJECTS
     # ================================================================
-    add_heading_custom(doc, "2.4 Contingent of Research Subjects", level=2, size=12, space_before=12, space_after=6)
+    add_heading_custom(doc, "2.4 Study Sample and Sampling Frame", level=2, size=12, space_before=12, space_after=6)
 
     add_formatted_paragraph(
         doc,
@@ -456,13 +456,13 @@ def create_chapter2():
 
     add_formatted_paragraph(
         doc,
-        "Data collection was conducted using a systematic protocol designed to minimise algorithmic bias and ensure reproducibility. All searches were performed using incognito or private browsing mode to reduce the influence of personalised search algorithms and browsing history on result rankings (Tripodi, 2018). The browser geolocation was configured to a neutral English-speaking region to standardise the search environment across all platforms.",
+        "Data collection was conducted over a two-day window (1\u20132 March 2026) using a systematic protocol designed to minimise algorithmic bias and ensure reproducibility. All searches were performed in logged-out, incognito (private) browsing mode in Google Chrome to eliminate the influence of personalised search algorithms, browsing history, and account-based recommendations on result rankings (Tripodi, 2018). The browser\u2019s language was set to English (United States) and geolocation was configured to Kaunas, Lithuania, the researcher\u2019s institutional location, to standardise the search environment across all platforms. No VPN was used.",
         first_line_indent=1.27
     )
 
     add_formatted_paragraph(
         doc,
-        "For traditional websites (Google) and YouTube, an automated data collection approach was employed using Playwright, an open-source browser automation framework. The automated scripts navigated to each platform, entered the standardised search terms, and systematically recorded the top 10 results for each query. This approach ensured consistency in result capture and eliminated human error in the recording of search rankings, URLs, and metadata. For TikTok and Instagram, manual data collection was conducted due to these platforms\u2019 implementation of anti-bot measures that prevent reliable browser automation. The primary researcher manually searched each term within the platform\u2019s native search function, recording the first 10 relevant results in order of appearance.",
+        "For traditional websites, searches were conducted on Google (google.com) using the default \u2018All\u2019 results tab; sponsored results and advertisements were excluded. For YouTube, searches were conducted on youtube.com using the default \u2018Relevance\u2019 sort. For both platforms, an automated data collection approach was employed using Playwright, an open-source browser automation framework. The automated scripts navigated to each platform, entered the standardised search terms, and systematically recorded the top 10 organic results for each query. This approach ensured consistency in result capture and eliminated human error in the recording of search rankings, URLs, and metadata. For TikTok and Instagram, manual data collection was conducted due to these platforms\u2019 implementation of anti-bot measures that prevent reliable browser automation. TikTok searches used the in-app \u2018Top\u2019 tab; Instagram searches used the \u2018Tags\u2019 and \u2018Top\u2019 tabs. The primary researcher manually searched each term within the platform\u2019s native search function, recording the first 10 relevant results in order of appearance. Reposts, advertisements, pinned/promoted content, and duplicate items from the same creator for the same search term were excluded and replaced by the next sequential organic result.",
         first_line_indent=1.27
     )
 
@@ -660,7 +660,7 @@ def create_chapter2():
     add_mixed_paragraph(
         doc,
         [("Phase 3: Primary quality assessment. ", True, False),
-         ("The primary researcher assessed all 200 content items using both the DISCERN instrument and the JAMA benchmarks. Each content item was reviewed in its entirety, and scores were recorded in a structured data collection spreadsheet.", False, False)],
+         ("The primary researcher assessed all 200 content items using both the DISCERN instrument and the JAMA benchmarks. For text-based website content, each article was read in full. For video content (YouTube and TikTok), scoring was based on a combination of the video content itself, visible captions, descriptions, and on-screen text; full verbatim transcription was not performed. For Instagram carousels and image posts, scoring was based on all visible text, captions, and associated profile information. This approach reflects the information a typical user would encounter when engaging with each item. Scores were recorded in a structured data collection spreadsheet.", False, False)],
         first_line_indent=1.27
     )
 
@@ -681,7 +681,7 @@ def create_chapter2():
     add_mixed_paragraph(
         doc,
         [("Phase 6: Statistical analysis. ", True, False),
-         ("Following the completion of quality assessments, all data were compiled and analysed using R statistical software, as detailed in Section 2.7.", False, False)],
+         ("Following the completion of quality assessments, all data were compiled and analysed using Python 3.13 with scientific computing libraries, as detailed in Section 2.7.", False, False)],
         first_line_indent=1.27
     )
 
@@ -712,7 +712,7 @@ def create_chapter2():
         "Phase 3: Primary DISCERN & JAMA Assessment\n(N = 200 content items)",
         "Phase 4: Second Rater Assessment\n(20% subsample, n = 40)",
         "Phase 5: Inter-Rater Reliability\n(ICC for DISCERN; Cohen\u2019s \u03ba for JAMA)",
-        "Phase 6: Statistical Analysis\n(R statistical environment)"
+        "Phase 6: Statistical Analysis\n(Python 3.13 with SciPy, pingouin, scikit-posthocs)"
     ]
 
     flow_table = doc.add_table(rows=11, cols=1)
@@ -776,7 +776,7 @@ def create_chapter2():
 
     add_formatted_paragraph(
         doc,
-        "All statistical analyses were conducted using the R statistical environment (R Core Team, 2024) with the following packages: tidyverse for data manipulation and visualisation (Wickham et al., 2019), FSA and dunn.test for non-parametric post-hoc comparisons (Ogle et al., 2023; Dinno, 2017), irr for inter-rater reliability calculations (Gamer et al., 2019), DescTools for effect size computations (Signorell, 2024), and ggplot2 for publication-quality graphical representations (Wickham, 2016). The significance level was set at \u03b1 = 0.05 for all inferential tests.",
+        "All statistical analyses were conducted using Python 3.13 with the following scientific computing libraries: pandas (McKinney, 2010) for data manipulation, SciPy (Virtanen et al., 2020) for non-parametric inferential tests including Kruskal\u2013Wallis, Mann\u2013Whitney U, chi-square, and Spearman correlations, scikit-posthocs (Terpilowski, 2019) for Dunn\u2019s post-hoc comparisons with Bonferroni correction, pingouin (Vallat, 2018) for intraclass correlation coefficient computation, and matplotlib/seaborn for publication-quality graphical representations. The significance level was set at \u03b1 = 0.05 for all inferential tests. The complete analysis code is reproduced in Appendix D.",
         first_line_indent=1.27
     )
 
@@ -816,7 +816,7 @@ def create_chapter2():
     add_mixed_paragraph(
         doc,
         [("Platform comparisons of DISCERN scores. ", True, False),
-         ("The Kruskal-Wallis H test was employed to examine whether DISCERN total scores differed significantly across the four platforms (Google, YouTube, TikTok, and Instagram). When a statistically significant omnibus result was obtained, Dunn\u2019s post-hoc test with Bonferroni correction was applied to identify which specific platform pairs differed significantly. The effect size was quantified using epsilon-squared (\u03b5\u00b2), where values of 0.01, 0.06, and 0.14 correspond to small, medium, and large effects, respectively (Tomczak & Tomczak, 2014).", False, False)],
+         ("The Kruskal-Wallis H test was employed to examine whether DISCERN total scores differed significantly across the four platforms (Google, YouTube, TikTok, and Instagram). When a statistically significant omnibus result was obtained, Dunn\u2019s post-hoc test with Bonferroni correction was applied to identify which specific platform pairs differed significantly. The effect size was quantified using eta-squared (\u03b7\u00b2), computed as \u03b7\u00b2 = (H \u2212 k + 1) / (N \u2212 k), where H is the Kruskal-Wallis statistic, k the number of groups, and N the total sample size. This is an approximation rather than a true proportion of variance explained and should be interpreted accordingly; values of approximately 0.01, 0.06, and 0.14 correspond to small, medium, and large effects, respectively (Cohen, 1988).", False, False)],
         first_line_indent=1.27
     )
 
@@ -865,7 +865,7 @@ def create_chapter2():
         (
             "RQ1: How does PA information quality differ between traditional websites and social media?",
             "IV: Platform (4 levels)\nDV: DISCERN total score; JAMA criteria compliance",
-            "Kruskal-Wallis H test (DISCERN)\nDunn\u2019s post-hoc with Bonferroni\n\u03c7\u00b2 / Fisher\u2019s exact test (JAMA)\nEffect sizes: \u03b5\u00b2, Cram\u00e9r\u2019s V",
+            "Kruskal-Wallis H test (DISCERN)\nDunn\u2019s post-hoc with Bonferroni\n\u03c7\u00b2 / Fisher\u2019s exact test (JAMA)\nEffect sizes: \u03b7\u00b2, Cram\u00e9r\u2019s V",
             "Non-parametric; ordinal DISCERN data likely non-normally distributed. Chi-square appropriate for categorical JAMA data."
         ),
         (
@@ -904,7 +904,7 @@ def create_chapter2():
     p_note4 = doc.add_paragraph()
     run_n4a = p_note4.add_run("Note. ")
     format_run(run_n4a, italic=True, size=10)
-    run_n4b = p_note4.add_run("IV = independent variable; DV = dependent variable; PA = physical activity; ICC = Intraclass Correlation Coefficient; \u03b5\u00b2 = epsilon-squared; \u03c7\u00b2 = chi-square; \u03ba = kappa; \u03c1 = Spearman\u2019s rho. Significance level: \u03b1 = 0.05 for all tests.")
+    run_n4b = p_note4.add_run("IV = independent variable; DV = dependent variable; PA = physical activity; ICC = Intraclass Correlation Coefficient; \u03b7\u00b2 = eta-squared (approximation); \u03c7\u00b2 = chi-square; \u03ba = kappa; \u03c1 = Spearman\u2019s rho. Significance level: \u03b1 = 0.05 for all tests.")
     format_run(run_n4b, size=10)
     add_paragraph_spacing(p_note4, before=3, after=12, line_spacing=1.0)
 
