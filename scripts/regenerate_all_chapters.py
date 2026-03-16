@@ -234,8 +234,8 @@ def build_chapter3():
         "websites exclusively comprised text articles (n = 50, 100%). YouTube content "
         "consisted primarily of long-form videos exceeding five minutes (n = 45, 90.0%), "
         "with five short videos. TikTok featured predominantly short videos under 60 seconds "
-        "(n = 42, 84.0%), while Instagram was dominated by carousels (n = 37, 74.0%) and "
-        "image-with-caption posts (n = 13, 26.0%)."
+        "(n = 42, 84.0%) alongside eight image-with-caption posts (16.0%). Instagram was "
+        "dominated by carousels (n = 37, 74.0%) and image-with-caption posts (n = 13, 26.0%)."
     )
 
     # Table 2: Content format
@@ -400,7 +400,7 @@ def build_chapter3():
         "(YouTube)."
     )
 
-    # Table 5: JAMA compliance
+    # Table 4: JAMA compliance
     add_table_caption(doc, "Table 4. JAMA Benchmark Compliance by Platform (%)")
     t5 = doc.add_table(rows=6, cols=5)
     t5.style = "Table Grid"
