@@ -1,66 +1,47 @@
 """
 Assemble the complete thesis from all components into a single .docx file.
-Order:
-  1. Title Page
-  2. Abstract
-  3. Acknowledgments
-  4. Table of Contents (placeholder)
-  5. List of Abbreviations
-  6. Chapter 1: Literature Review
-  7. Chapter 2: Methodology
-  8. Chapter 3: Findings
-  9. Chapter 4: Discussion
-  10. Chapter 5: Conclusions
-  11. References
-  12. Appendix A: DISCERN Instrument
-  13. Appendix B: JAMA Benchmarks
-  14. Appendix C: Data Summary Tables
-  15. Appendix D: Analysis Code
 
-LSU Formatting: Times New Roman 12pt, A4, 1" margins, 1.5 spacing, justified.
+Front matter sections are intentionally excluded from the automatic table of contents.
+The TOC begins with Introduction and ends with Annexes to match LSU regulations.
 """
-from docx import Document
-from docx.shared import Pt, Inches, Cm, RGBColor
-from docx.enum.text import WD_ALIGN_PARAGRAPH
+from __future__ import annotations
+
 import os
 import re
+from copy import deepcopy
+
+from docx import Document
+from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.oxml import OxmlElement
+from docx.oxml.ns import qn
+from docx.shared import Cm, Inches, Pt, RGBColor
+
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUTPUT = os.path.join(ROOT, "final", "thesis_complete.docx")
-os.makedirs(os.path.join(ROOT, "final"), exist_ok=True)
+FINAL_DIR = os.path.join(ROOT, "final")
+os.makedirs(FINAL_DIR, exist_ok=True)
 
 
-def setup_doc():
+def setup_doc() -> Document:
     doc = Document()
-    # Normal style
     style = doc.styles["Normal"]
     style.font.name = "Times New Roman"
     style.font.size = Pt(12)
     style.font.color.rgb = RGBColor(0, 0, 0)
-    pf = style.paragraph_format
-    pf.line_spacing = 1.5
-    pf.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-    pf.space_after = Pt(0)
-    pf.space_before = Pt(0)
+    style.paragraph_format.line_spacing = 1.5
+    style.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
-    # Heading styles
     for level in range(1, 4):
         hs = doc.styles[f"Heading {level}"]
         hs.font.name = "Times New Roman"
         hs.font.color.rgb = RGBColor(0, 0, 0)
         hs.font.bold = True
-        if level == 1:
-            hs.font.size = Pt(14)
-        elif level == 2:
-            hs.font.size = Pt(13)
-        else:
-            hs.font.size = Pt(12)
+        hs.font.size = Pt(14 if level == 1 else 12)
         hs.paragraph_format.line_spacing = 1.5
-        hs.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.LEFT
         hs.paragraph_format.space_before = Pt(12)
         hs.paragraph_format.space_after = Pt(6)
 
-    # Page setup
     for section in doc.sections:
         section.page_width = Cm(21.0)
         section.page_height = Cm(29.7)
@@ -72,277 +53,240 @@ def setup_doc():
     return doc
 
 
-def apply_formatting(paragraph):
-    """Ensure LSU formatting on a paragraph."""
-    for run in paragraph.runs:
-        run.font.name = "Times New Roman"
-        if not run.bold:
-            run.font.size = Pt(12)
-        run.font.color.rgb = RGBColor(0, 0, 0)
-    paragraph.paragraph_format.line_spacing = 1.5
+def add_centered_line(doc: Document, text: str, *, bold: bool = False, size: int = 12) -> None:
+    p = doc.add_paragraph()
+    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p.paragraph_format.line_spacing = 1.5
+    run = p.add_run(text)
+    run.font.name = "Times New Roman"
+    run.font.size = Pt(size)
+    run.font.color.rgb = RGBColor(0, 0, 0)
+    run.bold = bold
 
 
-def detect_heading_level(text, style_name):
-    """Detect if a paragraph is a heading and what level."""
-    if style_name and style_name.startswith("Heading"):
-        try:
-            return int(style_name.split()[-1])
-        except ValueError:
-            return 1
-
-    # Chapter titles: "1. LITERATURE REVIEW", "CHAPTER 1.", etc.
-    if re.match(r"^(CHAPTER\s+)?\d+\.\s+", text) and len(text) < 80:
-        return 1
-
-    # Section headings: "1.1 ", "2.3 ", "C.1 ", "D.2 " etc.
-    if re.match(r"^[A-Z0-9]+\.\d+\s", text) and len(text) < 100:
-        return 2
-
-    # Subsection: e.g. "Section 1:", "Scoring and Interpretation"
-    if style_name and "Heading" in style_name:
-        return 2
-
-    return 0
-
-
-def append_docx(doc, source_path, label=""):
-    """Append all paragraphs and tables from a source docx into doc.
-
-    Handles images by copying the binary image parts from the source
-    document and creating new relationships in the target document.
-    """
-    print(f"  Appending: {label or source_path}")
-    src = Document(source_path)
-    from copy import deepcopy
-    from docx.oxml.ns import qn
-
-    # Build a mapping from source relationship IDs to target relationship IDs
-    # for any image parts that need to be copied
-    rel_map = {}
-
-    # First pass: find all image relationships in the source
-    for rel in src.part.rels.values():
-        if "image" in rel.reltype:
-            # Copy the image part to the target document
-            image_part = rel.target_part
-            # Add the image to the target document's package
-            new_rel = doc.part.relate_to(image_part, rel.reltype)
-            rel_map[rel.rId] = new_rel
-
-    # Now copy elements, updating relationship IDs for images
-    for element in src.element.body:
-        tag = element.tag.split("}")[-1] if "}" in element.tag else element.tag
-
-        if tag in ("p", "tbl"):
-            new_elem = deepcopy(element)
-
-            # Update any image relationship IDs in the copied element
-            if rel_map:
-                # Find all blip elements (embedded images)
-                nsmap = {"a": "http://schemas.openxmlformats.org/drawingml/2006/main",
-                         "r": "http://schemas.openxmlformats.org/officeDocument/2006/relationships"}
-                for blip in new_elem.iter(qn("a:blip")):
-                    embed = blip.get(qn("r:embed"))
-                    if embed and embed in rel_map:
-                        blip.set(qn("r:embed"), rel_map[embed])
-
-            doc.element.body.append(new_elem)
-
-
-def add_title_page(doc):
-    """Create the title page."""
-    for _ in range(6):
+def add_title_page(doc: Document) -> None:
+    for _ in range(3):
         doc.add_paragraph("")
 
-    # Title
-    title_p = doc.add_paragraph()
-    title_p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run = title_p.add_run(
+    add_centered_line(doc, "LITHUANIAN SPORTS UNIVERSITY", bold=True)
+    add_centered_line(doc, "MASTER OF PUBLIC HEALTH PROGRAMME", bold=True)
+    add_centered_line(doc, "FACULTY OF SPORT MEDICINE", bold=True)
+
+    for _ in range(5):
+        doc.add_paragraph("")
+
+    add_centered_line(
+        doc,
         "QUALITY OF PHYSICAL ACTIVITY INFORMATION ON TRADITIONAL WEBSITES "
-        "VERSUS SOCIAL MEDIA PLATFORMS:\nA CROSS-SECTIONAL CONTENT ANALYSIS "
-        "USING DISCERN AND JAMA BENCHMARKS"
+        "VERSUS SOCIAL MEDIA PLATFORMS:",
+        bold=True,
+        size=14,
     )
-    run.bold = True
-    run.font.size = Pt(16)
-    run.font.name = "Times New Roman"
+    add_centered_line(
+        doc,
+        "A CROSS-SECTIONAL CONTENT ANALYSIS USING DISCERN AND JAMA BENCHMARKS",
+        bold=True,
+        size=14,
+    )
 
-    doc.add_paragraph("")
-    doc.add_paragraph("")
+    for _ in range(4):
+        doc.add_paragraph("")
 
-    lines = [
-        "Master\u2019s Thesis",
+    title_lines = [
+        "Final Master's Thesis",
         "",
-        "Ayokunle Ademola-John",
-        "Master of Public Health Programme",
+        "Student: Ayokunle Ademola-John ____________________",
+        "Scientific supervisor: Dr. Antanas Usas ____________________",
+        "Scientific adviser: _________________________________________",
         "",
-        "Supervisor: Dr. Antanas \u016asas",
-        "",
-        "Lithuanian Sports University",
-        "Faculty of Sport Medicine",
         "Kaunas, 2026",
     ]
-    for line in lines:
-        p = doc.add_paragraph()
-        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        r = p.add_run(line)
-        r.font.name = "Times New Roman"
-        r.font.size = Pt(12)
+    for line in title_lines:
+        add_centered_line(doc, line)
 
     doc.add_page_break()
 
 
-def add_toc_placeholder(doc):
-    """Add a table of contents placeholder page."""
-    h = doc.add_heading("TABLE OF CONTENTS", level=1)
-    for run in h.runs:
-        run.font.name = "Times New Roman"
-        run.font.color.rgb = RGBColor(0, 0, 0)
+def append_docx(doc: Document, source_path: str, label: str = "") -> None:
+    print(f"  Appending: {label or source_path}")
+    src = Document(source_path)
 
-    doc.add_paragraph("")
+    rel_map: dict[str, str] = {}
+    for rel in src.part.rels.values():
+        if "image" in rel.reltype:
+            new_rel = doc.part.relate_to(rel.target_part, rel.reltype)
+            rel_map[rel.rId] = new_rel
 
-    # Manual TOC entries
-    toc_entries = [
-        ("ABSTRACT", ""),
-        ("ACKNOWLEDGMENTS", ""),
-        ("LIST OF ABBREVIATIONS", ""),
-        ("1. LITERATURE REVIEW", ""),
-        ("    1.1 Digital Transformation of Health Information Seeking", ""),
-        ("    1.2 Theoretical Frameworks", ""),
-        ("    1.3 Traditional Websites as Sources of Health and PA Information", ""),
-        ("    1.4 Social Media Platforms as Sources of Health Information", ""),
-        ("    1.5 Quality Assessment Tools and Cross-Platform Applicability", ""),
-        ("    1.6 Evidence for the Quality Gap and Moderating Factors", ""),
-        ("    1.7 Summary and Rationale for the Present Study", ""),
-        ("2. RESEARCH METHODOLOGY", ""),
-        ("    2.1 Research Object", ""),
-        ("    2.2 Research Strategy and Logic", ""),
-        ("    2.3 Nature of Research", ""),
-        ("    2.4 Study Sample and Sampling Frame", ""),
-        ("    2.5 Research Methods", ""),
-        ("    2.6 Research Organisation", ""),
-        ("    2.7 Methods of Statistical Analysis", ""),
-        ("3. RESEARCH FINDINGS", ""),
-        ("    3.1 Sample Characteristics", ""),
-        ("    3.2 Inter-Rater Reliability", ""),
-        ("    3.3 DISCERN Scores by Platform", ""),
-        ("    3.4 JAMA Benchmark Compliance by Platform", ""),
-        ("    3.5 Creator Type Analysis", ""),
-        ("    3.6 Engagement-Quality Relationship", ""),
-        ("    3.7 DISCERN Question-Level Patterns", ""),
-        ("    3.8 Content Format and Search Term Effects", ""),
-        ("4. DISCUSSION", ""),
-        ("    4.1 Summary of Key Findings", ""),
-        ("    4.2 Comparison with Existing Literature", ""),
-        ("    4.3 Implications for Public Health Practice", ""),
-        ("    4.4 Strengths of the Study", ""),
-        ("    4.5 Limitations", ""),
-        ("    4.6 Recommendations for Future Research", ""),
-        ("5. CONCLUSIONS AND RECOMMENDATIONS", ""),
-        ("    5.1 Summary of Conclusions", ""),
-        ("    5.2 Practical Recommendations", ""),
-        ("    5.3 Recommendations for Future Research", ""),
-        ("REFERENCES", ""),
-        ("APPENDIX A: DISCERN INSTRUMENT", ""),
-        ("APPENDIX B: JAMA BENCHMARKS", ""),
-        ("APPENDIX C: DATA SUMMARY TABLES", ""),
-        ("APPENDIX D: STATISTICAL ANALYSIS CODE", ""),
-    ]
+    for element in src.element.body:
+        tag = element.tag.split("}")[-1] if "}" in element.tag else element.tag
+        if tag not in ("p", "tbl"):
+            continue
+        new_elem = deepcopy(element)
+        if rel_map:
+            for blip in new_elem.iter(qn("a:blip")):
+                embed = blip.get(qn("r:embed"))
+                if embed and embed in rel_map:
+                    blip.set(qn("r:embed"), rel_map[embed])
+        body = doc.element.body
+        insert_at = len(body)
+        if len(body) and body[-1].tag == qn("w:sectPr"):
+            insert_at = len(body) - 1
+        body.insert(insert_at, new_elem)
 
-    for entry, _ in toc_entries:
-        p = doc.add_paragraph()
-        p.alignment = WD_ALIGN_PARAGRAPH.LEFT
-        r = p.add_run(entry)
-        r.font.name = "Times New Roman"
-        r.font.size = Pt(12)
-        p.paragraph_format.line_spacing = 1.5
 
+def add_toc_field(paragraph) -> None:
+    run = paragraph.add_run()
+    fld_begin = OxmlElement("w:fldChar")
+    fld_begin.set(qn("w:fldCharType"), "begin")
+
+    instr = OxmlElement("w:instrText")
+    instr.set(qn("xml:space"), "preserve")
+    instr.text = ' TOC \\o "1-2" \\h \\z '
+
+    fld_sep = OxmlElement("w:fldChar")
+    fld_sep.set(qn("w:fldCharType"), "separate")
+
+    fld_text = OxmlElement("w:t")
+    fld_text.text = "Right-click and update field in Word if page numbers do not appear automatically."
+
+    fld_end = OxmlElement("w:fldChar")
+    fld_end.set(qn("w:fldCharType"), "end")
+
+    run._r.append(fld_begin)
+    run._r.append(instr)
+    run._r.append(fld_sep)
+    run._r.append(fld_text)
+    run._r.append(fld_end)
+
+
+def add_toc_page(doc: Document) -> None:
+    add_centered_line(doc, "TABLE OF CONTENTS", bold=True, size=14)
+    toc_paragraph = doc.add_paragraph()
+    toc_paragraph.paragraph_format.line_spacing = 1.5
+    add_toc_field(toc_paragraph)
     doc.add_page_break()
 
 
-def main():
+def add_annexes_heading(doc: Document) -> None:
+    p = doc.add_paragraph("ANNEXES", style="Heading 1")
+    p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+
+
+def normalize_structure(doc: Document) -> None:
+    front_matter_titles = {
+        "CONFIRMATION OF INDEPENDENT COMPOSITION OF THE THESIS",
+        "CONFIRMATION OF LIABILITY FOR THE REGULARITY OF THE ENGLISH LANGUAGE",
+        "FINAL MASTER'S THESIS SUPERVISOR'S ASSESSMENT",
+        "ABSTRACT",
+        "SANTRAUKA",
+        "ACKNOWLEDGMENTS",
+        "LIST OF ABBREVIATIONS",
+        "TABLE OF CONTENTS",
+    }
+    top_level_titles = {"INTRODUCTION", "CONCLUSIONS", "RECOMMENDATIONS", "REFERENCES", "ANNEXES"}
+
+    in_toc = False
+    in_annexes = False
+
+    for paragraph in doc.paragraphs:
+        text = paragraph.text.strip()
+        if not text:
+            continue
+
+        if text == "TABLE OF CONTENTS":
+            in_toc = True
+            paragraph.style = "Normal"
+            continue
+
+        if in_toc:
+            if text == "CONFIRMATION OF INDEPENDENT COMPOSITION OF THE THESIS":
+                in_toc = False
+            else:
+                continue
+
+        if text == "CHAPTER 4. DISCUSSION":
+            paragraph.text = "CHAPTER 4. CONSIDERATIONS"
+            text = paragraph.text.strip()
+
+        if text in front_matter_titles:
+            paragraph.style = "Normal"
+            continue
+
+        if text == "ANNEXES":
+            in_annexes = True
+            paragraph.style = "Heading 1"
+            continue
+
+        if in_annexes:
+            paragraph.style = "Normal"
+            continue
+
+        if text in top_level_titles or re.match(r"^CHAPTER\s+\d+\.\s+", text):
+            paragraph.style = "Heading 1"
+            continue
+
+        if re.match(r"^\d+\.\d+\s+", text):
+            paragraph.style = "Heading 2"
+            continue
+
+
+def main() -> None:
     print("=" * 60)
     print("ASSEMBLING COMPLETE THESIS")
     print("=" * 60)
 
     doc = setup_doc()
 
-    # 1. Title Page
-    print("\n1. Title Page")
     add_title_page(doc)
-
-    # 2. Abstract
-    print("2. Abstract")
+    append_docx(doc, os.path.join(ROOT, "chapters", "flyleaf.docx"), "Flyleaf")
+    doc.add_page_break()
     append_docx(doc, os.path.join(ROOT, "chapters", "abstract.docx"), "Abstract")
     doc.add_page_break()
-
-    # 3. Acknowledgments
-    print("3. Acknowledgments")
     append_docx(doc, os.path.join(ROOT, "chapters", "acknowledgments.docx"), "Acknowledgments")
     doc.add_page_break()
-
-    # 4. Table of Contents
-    print("4. Table of Contents")
-    add_toc_placeholder(doc)
-
-    # 5. List of Abbreviations
-    print("5. List of Abbreviations")
+    add_toc_page(doc)
     append_docx(doc, os.path.join(ROOT, "chapters", "abbreviations.docx"), "Abbreviations")
     doc.add_page_break()
-
-    # 6. Chapter 1
-    print("6. Chapter 1: Literature Review")
+    append_docx(doc, os.path.join(ROOT, "chapters", "introduction.docx"), "Introduction")
+    doc.add_page_break()
     append_docx(doc, os.path.join(ROOT, "chapters", "chapter1_literature_review.docx"), "Chapter 1")
     doc.add_page_break()
-
-    # 7. Chapter 2
-    print("7. Chapter 2: Methodology")
     append_docx(doc, os.path.join(ROOT, "chapters", "chapter2_methodology.docx"), "Chapter 2")
     doc.add_page_break()
-
-    # 8. Chapter 3
-    print("8. Chapter 3: Findings")
     append_docx(doc, os.path.join(ROOT, "chapters", "chapter3_findings.docx"), "Chapter 3")
     doc.add_page_break()
-
-    # 9. Chapter 4
-    print("9. Chapter 4: Discussion")
     append_docx(doc, os.path.join(ROOT, "chapters", "chapter4_discussion.docx"), "Chapter 4")
     doc.add_page_break()
-
-    # 10. Chapter 5
-    print("10. Chapter 5: Conclusions")
-    append_docx(doc, os.path.join(ROOT, "chapters", "chapter5_conclusions.docx"), "Chapter 5")
+    append_docx(doc, os.path.join(ROOT, "chapters", "chapter5_conclusions.docx"), "Conclusions and Recommendations")
     doc.add_page_break()
-
-    # 11. References
-    print("11. References")
     append_docx(doc, os.path.join(ROOT, "references", "references.docx"), "References")
     doc.add_page_break()
+    add_annexes_heading(doc)
+    doc.add_page_break()
 
-    # 12-15. Appendices
     appendices = [
         ("appendix_a_discern.docx", "Appendix A: DISCERN"),
         ("appendix_b_jama.docx", "Appendix B: JAMA"),
         ("appendix_c_data_summary.docx", "Appendix C: Data Summary"),
         ("appendix_d_analysis_code.docx", "Appendix D: Analysis Code"),
+        ("appendix_e_article.docx", "Appendix E: Article"),
+        ("appendix_f_conference_evidence.docx", "Appendix F: Conference Evidence"),
+        ("appendix_g_consultations_timesheet.docx", "Appendix G: Consultations Timesheet"),
+        ("appendix_h_ethics_evidence.docx", "Appendix H: Ethics Evidence"),
     ]
-    for i, (fname, label) in enumerate(appendices, 12):
-        print(f"{i}. {label}")
-        append_docx(doc, os.path.join(ROOT, "appendices", fname), label)
-        if i < 15:
+    for idx, (filename, label) in enumerate(appendices, start=1):
+        append_docx(doc, os.path.join(ROOT, "appendices", filename), label)
+        if idx < len(appendices):
             doc.add_page_break()
 
-    # Save
     doc.save(OUTPUT)
+    normalized = Document(OUTPUT)
+    normalize_structure(normalized)
+    normalized.save(OUTPUT)
+
     print(f"\n{'=' * 60}")
     print(f"COMPLETE THESIS SAVED: {OUTPUT}")
     print(f"{'=' * 60}")
-
-    # Verify
-    verify = Document(OUTPUT)
-    total_paras = sum(1 for p in verify.paragraphs if p.text.strip())
-    print(f"Total non-empty paragraphs: {total_paras}")
-    print(f"Total sections: {len(verify.sections)}")
 
 
 if __name__ == "__main__":
