@@ -14,6 +14,7 @@ Output: analysis/output/tables/*.csv, analysis/output/figures/*.png,
 """
 
 import os
+import re
 import csv
 import warnings
 warnings.filterwarnings("ignore")
@@ -49,7 +50,7 @@ print("=" * 70)
 print("  THESIS ANALYSIS — Python")
 print("=" * 70)
 
-df = pd.read_csv(os.path.join(DATA_DIR, "master_dataset.csv"))
+df = pd.read_csv(os.path.join(DATA_DIR, "master_dataset_corrected.csv"))
 print(f"\nLoaded {len(df)} rows, {len(df.columns)} columns")
 
 # Ensure numeric columns
@@ -60,9 +61,33 @@ df["DISCERN_Total"] = pd.to_numeric(df["DISCERN_Total"], errors="coerce")
 df["DISCERN_Section1"] = pd.to_numeric(df["DISCERN_Section1"], errors="coerce")
 df["DISCERN_Section2"] = pd.to_numeric(df["DISCERN_Section2"], errors="coerce")
 df["JAMA_Total"] = pd.to_numeric(df["JAMA_Total"], errors="coerce")
+CONTENT_FORMAT_ALIASES = {
+    "text article": "Text article",
+    "long video (>5min)": "Long video (>5min)",
+    "long video (>5 min)": "Long video (>5min)",
+    "long-form video (>5min)": "Long video (>5min)",
+    "long-form video (>5 min)": "Long video (>5min)",
+    "short video (<60s)": "Short video (<60s)",
+    "short video (<60 s)": "Short video (<60s)",
+    "short-form video (<60s)": "Short video (<60s)",
+    "short-form video (<60 s)": "Short video (<60s)",
+    "image+caption": "Image+caption",
+    "image + caption": "Image+caption",
+    "image with caption": "Image+caption",
+    "image-with-caption": "Image+caption",
+    "carousel": "Carousel",
+}
+
+
+def normalize_content_format(value):
+    if pd.isna(value):
+        return None
+    text = re.sub(r"\s+", " ", str(value)).strip()
+    if not text:
+        return None
+    return CONTENT_FORMAT_ALIASES.get(text.lower())
 # Clean Content_Format — fix any non-standard values
-valid_formats = ["Text article", "Long video (>5min)", "Short video (<60s)", "Image+caption", "Carousel"]
-df["Content_Format"] = df["Content_Format"].apply(lambda x: x if x in valid_formats else None)
+df["Content_Format"] = df["Content_Format"].apply(normalize_content_format)
 
 # Clean Creator_Type
 valid_ctypes = ["Healthcare professional", "Certified fitness professional",
@@ -93,6 +118,14 @@ def report(text):
     except UnicodeEncodeError:
         print(text.encode("ascii", "replace").decode())
     report_lines.append(text)
+
+
+def cramers_v(ct, chi2_stat):
+    n = ct.to_numpy().sum()
+    min_dim = min(ct.shape) - 1
+    if n == 0 or min_dim <= 0:
+        return np.nan
+    return np.sqrt((chi2_stat / n) / min_dim)
 
 report("\n" + "=" * 70)
 report("SECTION 1: SAMPLE CHARACTERISTICS")
@@ -336,6 +369,7 @@ report("=" * 70)
 
 # 4a. Chi-square for each JAMA criterion
 report("\n4a. Chi-Square Tests for JAMA Criteria by Platform:")
+jama_chi_results = []
 for col in ["JAMA_Authorship", "JAMA_Attribution", "JAMA_Disclosure", "JAMA_Currency"]:
     ct = pd.crosstab(df["Platform"], df[col])
     # Check if we have both Y and N
@@ -343,13 +377,28 @@ for col in ["JAMA_Authorship", "JAMA_Attribution", "JAMA_Disclosure", "JAMA_Curr
         report(f"  {col}: Only one category present, chi-square not applicable")
         continue
     chi2, p_val, dof, expected = chi2_contingency(ct)
+    v_stat = cramers_v(ct, chi2)
     # Check if Fisher's exact is needed (any expected < 5)
     min_expected = expected.min()
+    jama_chi_results.append({
+        "criterion": col.replace("JAMA_", ""),
+        "chi2": round(chi2, 3),
+        "df": int(dof),
+        "p_value": round(p_val, 4),
+        "cramers_v": round(v_stat, 3),
+        "min_expected": round(float(min_expected), 3),
+        "expected_count_warning": bool(min_expected < 5),
+    })
     if min_expected < 5:
-        report(f"  {col}: chi2={chi2:.3f}, df={dof}, p={p_val:.4f} "
+        report(f"  {col}: chi2={chi2:.3f}, df={dof}, p={p_val:.4f}"
+               f", Cramer's V={v_stat:.3f} "
                f"(NOTE: min expected={min_expected:.1f} < 5, interpret with caution)")
     else:
-        report(f"  {col}: chi2={chi2:.3f}, df={dof}, p={p_val:.4f}")
+        report(f"  {col}: chi2={chi2:.3f}, df={dof}, p={p_val:.4f}, Cramer's V={v_stat:.3f}")
+
+pd.DataFrame(jama_chi_results).to_csv(
+    os.path.join(TABLES_DIR, "jama_chi_square_results.csv"), index=False
+)
 
 # 4b. Chi-square for JAMA Total (categorized)
 report("\n4b. JAMA Total Distribution by Platform:")

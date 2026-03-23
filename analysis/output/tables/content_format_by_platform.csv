@@ -1,4 +1,5 @@
-Platform,Carousel,Long video (>5min),Short video (<60s)
-YouTube,0,45,0
-TikTok,0,0,18
-Instagram,50,0,0
+Platform,Carousel,Long video (>5min),Short video (<60s),Text article
+Website,0,0,0,50
+YouTube,0,50,0,0
+TikTok,0,0,47,0
+Instagram,50,0,0,0

@@ -99,18 +99,19 @@ def generate_abstract():
 
     add_para(
         doc,
-        "Results. A significant quality gradient was observed across platforms, H(3) = 93.84, "
-        "p < .001, \u03b7\u00b2 \u2248 .46 (large effect). Traditional websites scored highest "
+        "Results. A significant quality gradient was observed across platforms, H(3) = 93.49, "
+        "p < .001, \u03b7\u00b2 \u2248 .47 (large effect). Traditional websites scored highest "
         "(Mdn = 48.5, Fair), followed by YouTube (Mdn = 42.0, Fair), TikTok (Mdn = 35.0, Poor), "
         "and Instagram (Mdn = 27.5, Poor\u2013Very Poor). All six pairwise comparisons were "
         "statistically significant (p < .05), though the website\u2013YouTube contrast was more "
         "modest (p = .038). JAMA compliance was universally low (M = 1.4/4 criteria met). "
-        "A five-category creator type analysis was significant (H[4] = 11.26, p = .024), though "
-        "the binary professional versus non-professional comparison was not (p = .094). "
-        "Within-platform engagement\u2013quality correlations were generally non-significant, "
-        "and the apparent overall positive correlation between likes and quality was identified "
-        "as a Simpson\u2019s paradox artefact. Inter-rater reliability was excellent (ICC = 0.932, "
-        "95% CI [0.870, 0.960]).",
+        "Both the binary professional versus non-professional comparison (p = .036) and the "
+        "five-category creator type analysis (H[4] = 12.76, p = .012) were significant, "
+        "with healthcare professionals scoring highest (Mdn = 45.0) and general users lowest "
+        "(Mdn = 33.0). Within YouTube, views and likes showed significant negative correlations "
+        "with quality (rho = \u22120.340, p = .016; rho = \u22120.286, p = .044), while other "
+        "within-platform correlations were non-significant. Inter-rater reliability was excellent "
+        "(ICC = 0.932, 95% CI [0.870, 0.960]).",
     )
 
     add_para(

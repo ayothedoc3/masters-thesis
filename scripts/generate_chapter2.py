@@ -659,6 +659,13 @@ def create_chapter2():
 
     add_mixed_paragraph(
         doc,
+        [("Pilot scoring. ", True, False),
+         ("Prior to the full assessment, the primary researcher conducted a pilot scoring exercise on 10 content items (2\u20133 per platform, not included in the final sample) to test the operationalisation of the DISCERN and JAMA instruments for social media content. This pilot identified that DISCERN questions Q4 (sources of information) and Q11 (risks of treatment) were the most challenging to adapt to short-form video, as these items often required inference from visual and verbal cues rather than explicit textual statements. Scoring rules were refined accordingly: for Q4, on-screen citation of sources or verbal references to guidelines were accepted; for Q11, any mention of injury risk, contraindications, or the advice to consult a professional was scored positively. These pilot-derived rules were documented in the scoring guide and applied consistently across all 200 items.", False, False)],
+        first_line_indent=1.27
+    )
+
+    add_mixed_paragraph(
+        doc,
         [("Phase 3: Primary quality assessment. ", True, False),
          ("The primary researcher assessed all 200 content items using both the DISCERN instrument and the JAMA benchmarks. For text-based website content, each article was read in full. For video content (YouTube and TikTok), scoring was based on a combination of the video content itself, visible captions, descriptions, and on-screen text; full verbatim transcription was not performed. For Instagram carousels and image posts, scoring was based on all visible text, captions, and associated profile information. This approach reflects the information a typical user would encounter when engaging with each item. Scores were recorded in a structured data collection spreadsheet.", False, False)],
         first_line_indent=1.27
@@ -667,7 +674,7 @@ def create_chapter2():
     add_mixed_paragraph(
         doc,
         [("Phase 4: Second rater assessment. ", True, False),
-         ("A trained second rater independently scored a 20% subsample of content items (n = 40; 10 randomly selected items per platform) using both instruments. The second rater was provided with the same scoring guidelines and training materials as the primary researcher to ensure standardised application of the assessment criteria.", False, False)],
+         ("A trained second rater\u2014a fellow Master of Public Health student with prior coursework in epidemiology and health communication\u2014independently scored a 20% subsample of content items (n = 40; 10 randomly selected items per platform) using both instruments. Prior to independent scoring, the second rater received a two-hour training session covering the DISCERN instrument, JAMA benchmarks, and their social media operationalisations, followed by supervised practice scoring of five items (not included in the final sample) with discussion of discrepancies. The second rater was then provided with the same scoring guidelines, quick-reference card, and worked examples as the primary researcher to ensure standardised application of the assessment criteria.", False, False)],
         first_line_indent=1.27
     )
 

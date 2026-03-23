@@ -1,0 +1,5 @@
+criterion,chi2,df,p_value,cramers_v,min_expected,expected_count_warning
+Authorship,6.151,3,0.1045,0.177,13.36,False
+Attribution,24.255,3,0.0,0.351,5.964,False
+Disclosure,15.921,3,0.0012,0.284,3.34,True
+Currency,51.198,3,0.0,0.51,3.817,True

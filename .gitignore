@@ -8,6 +8,7 @@ desktop.ini
 
 # Editor
 .vscode/
+.claude/
 
 # Python
 __pycache__/
@@ -20,3 +21,11 @@ data/screenshots/
 # Temp files
 *.tmp
 ~$*
+
+# Local Word pass backups / scratch files
+final/thesis_complete_pre_word_pass_*.docx
+final/thesis_complete_before_repo_link_*.docx
+final/thesis_complete_wordpass_test.docx
+
+# Deprecated local scratch script not used in the final audited workflow
+scripts/clean_dataset.py

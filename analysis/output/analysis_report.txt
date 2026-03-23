@@ -6,41 +6,42 @@ SECTION 1: SAMPLE CHARACTERISTICS
 1a. Sample by Platform:
   Website: n = 50
   YouTube: n = 50
-  TikTok: n = 50
+  TikTok: n = 47
   Instagram: n = 50
-  Total: N = 200
+  Total: N = 197
 
 1b. Creator Type by Platform:
 Creator_Type  Certified fitness professional  Fitness influencer  General user  Healthcare professional  Organization
 Platform                                                                                                             
-Website                                    7                   0             4                        0            39
-YouTube                                   12                  19             4                        3            12
-TikTok                                     7                  21             9                        8             5
+Website                                    5                   0             4                        5            36
+YouTube                                   13                  16             4                        3            14
+TikTok                                     6                  19             9                        8             5
 Instagram                                  8                   3             7                        3            29
 
 1c. Content Format by Platform:
-Content_Format  Carousel  Long video (>5min)  Short video (<60s)
-Platform                                                        
-YouTube                0                  45                   0
-TikTok                 0                   0                  18
-Instagram             50                   0                   0
+Content_Format  Carousel  Long video (>5min)  Short video (<60s)  Text article
+Platform                                                                      
+Website                0                   0                   0            50
+YouTube                0                  50                   0             0
+TikTok                 0                   0                  47             0
+Instagram             50                   0                   0             0
 
 1d. DISCERN Total — Descriptive Statistics by Platform:
-            N   Mean    SD  Median     Q1     Q3  Min  Max   IQR
-Platform                                                        
-Website    50  47.02  7.90    48.5  43.00  52.75   28   64  9.75
-YouTube    50  42.88  7.10    42.0  38.00  47.00   30   57  9.00
-TikTok     50  35.96  7.86    35.0  31.25  39.75   20   57  8.50
-Instagram  50  28.98  6.82    27.5  25.00  34.00   17   52  9.00
+            N   Mean    SD  Median    Q1     Q3  Min  Max   IQR
+Platform                                                       
+Website    50  47.02  7.90    48.5  43.0  52.75   28   64  9.75
+YouTube    50  42.88  7.10    42.0  38.0  47.00   30   57  9.00
+TikTok     47  35.64  7.97    35.0  31.0  39.00   20   57  8.00
+Instagram  50  28.98  6.82    27.5  25.0  34.00   17   52  9.00
 
-  Overall: Mean=38.71, SD=10.09, Median=38.0, Min=17.0, Max=64.0
+  Overall: Mean=38.68, SD=10.16, Median=38.0, Min=17.0, Max=64.0
 
 1e. DISCERN Category Distribution by Platform:
 DISCERN_Category  Very Poor  Poor  Fair  Good  Excellent
 Platform                                                
 Website                   0     9    22    18          1
 YouTube                   0    16    24    10          0
-TikTok                    6    27    15     2          0
+TikTok                    6    26    13     2          0
 Instagram                21    25     3     1          0
 
   Percentages:
@@ -48,7 +49,7 @@ DISCERN_Category  Very Poor  Poor  Fair  Good  Excellent
 Platform                                                
 Website                 0.0  18.0  44.0  36.0        2.0
 YouTube                 0.0  32.0  48.0  20.0        0.0
-TikTok                 12.0  54.0  30.0   4.0        0.0
+TikTok                 12.8  55.3  27.7   4.3        0.0
 Instagram              42.0  50.0   6.0   2.0        0.0
 
 1f. JAMA Total — Descriptive Statistics by Platform:
@@ -56,7 +57,7 @@ Instagram              42.0  50.0   6.0   2.0        0.0
 Platform                         
 Website    50  1.44  1.13     1.0
 YouTube    50  1.54  0.73     1.0
-TikTok     50  1.44  0.54     1.0
+TikTok     47  1.43  0.54     1.0
 Instagram  50  1.20  0.40     1.0
 
   JAMA Criteria Compliance (% Y) by Platform:
@@ -64,7 +65,7 @@ Instagram  50  1.20  0.40     1.0
 Platform                                                
 Website          30.0         30.0        16.0      68.0
 YouTube          38.0         16.0         0.0     100.0
-TikTok           30.0          0.0        14.0     100.0
+TikTok           29.8          0.0        12.8     100.0
 Instagram        16.0          4.0         0.0     100.0
 
 ======================================================================
@@ -77,39 +78,39 @@ SECTION 2: INTER-RATER RELIABILITY
     Interpretation: EXCELLENT agreement (>= 0.75)
 
   Cohen's Kappa for JAMA criteria:
-    Authorship: kappa = 0.671
-    Attribution: kappa = 0.615
-    Disclosure: kappa = 0.273
-    Currency: kappa = 0.216
+    Authorship: kappa = 0.719
+    Attribution: kappa = 0.686
+    Disclosure: kappa = 0.305
+    Currency: kappa = 0.215
 
 ======================================================================
 SECTION 3: RQ1 — DISCERN SCORES ACROSS PLATFORMS
 ======================================================================
 
 3a. Kruskal-Wallis H Test:
-  H(3) = 93.837, p = 0.000000
-  Eta-squared = 0.4635
+  H(3) = 93.489, p = 0.000000
+  Eta-squared = 0.4689
   Result: HIGHLY SIGNIFICANT (p < 0.001)
 
 3b. Dunn's Post-Hoc Tests (Bonferroni corrected):
             Website   YouTube    TikTok  Instagram
-Website    1.000000  0.384577  0.000000   0.000000
-YouTube    0.384577  1.000000  0.001809   0.000000
-TikTok     0.000000  0.001809  1.000000   0.003356
-Instagram  0.000000  0.000000  0.003356   1.000000
+Website    1.000000  0.410201  0.000000   0.000000
+YouTube    0.410201  1.000000  0.001200   0.000000
+TikTok     0.000000  0.001200  1.000000   0.008041
+Instagram  0.000000  0.000000  0.008041   1.000000
 
   Pairwise comparisons (Mann-Whitney U with effect size):
   Website vs YouTube: U=1646, p_adj=0.0384 *, r=-0.316
-  Website vs TikTok: U=2088, p_adj=0.0000 ***, r=-0.670
+  Website vs TikTok: U=1972, p_adj=0.0000 ***, r=-0.678
   Website vs Instagram: U=2364, p_adj=0.0000 ***, r=-0.891
-  YouTube vs TikTok: U=1859, p_adj=0.0002 ***, r=-0.487
+  YouTube vs TikTok: U=1775, p_adj=0.0001 ***, r=-0.511
   YouTube vs Instagram: U=2313, p_adj=0.0000 ***, r=-0.850
-  TikTok vs Instagram: U=1883, p_adj=0.0001 ***, r=-0.506
+  TikTok vs Instagram: U=1740, p_adj=0.0003 ***, r=-0.480
 
 3c. DISCERN Section Scores by Platform:
   Website: Section1 Mdn=25 (IQR 23-29), Section2 Mdn=18 (IQR 16-21)
   YouTube: Section1 Mdn=24 (IQR 21-27), Section2 Mdn=16 (IQR 14-18)
-  TikTok: Section1 Mdn=19 (IQR 17-22), Section2 Mdn=14 (IQR 11-16)
+  TikTok: Section1 Mdn=18 (IQR 17-22), Section2 Mdn=13 (IQR 11-16)
   Instagram: Section1 Mdn=15 (IQR 13-18), Section2 Mdn=10 (IQR 9-13)
 
 ======================================================================
@@ -117,76 +118,76 @@ SECTION 4: RQ1 — JAMA COMPLIANCE ACROSS PLATFORMS
 ======================================================================
 
 4a. Chi-Square Tests for JAMA Criteria by Platform:
-  JAMA_Authorship: chi2=6.159, df=3, p=0.1041
-  JAMA_Attribution: chi2=25.006, df=3, p=0.0000
-  JAMA_Disclosure: chi2=16.360, df=3, p=0.0010 (NOTE: min expected=3.8 < 5, interpret with caution)
-  JAMA_Currency: chi2=52.174, df=3, p=0.0000 (NOTE: min expected=4.0 < 5, interpret with caution)
+  JAMA_Authorship: chi2=6.151, df=3, p=0.1045, Cramer's V=0.177
+  JAMA_Attribution: chi2=24.255, df=3, p=0.0000, Cramer's V=0.351
+  JAMA_Disclosure: chi2=15.921, df=3, p=0.0012, Cramer's V=0.284 (NOTE: min expected=3.3 < 5, interpret with caution)
+  JAMA_Currency: chi2=51.198, df=3, p=0.0000, Cramer's V=0.510 (NOTE: min expected=3.8 < 5, interpret with caution)
 
 4b. JAMA Total Distribution by Platform:
 JAMA_Total   0   1   2   3  4
 Platform                     
 Website     12  16  11  10  1
 YouTube      0  30  13   7  0
-TikTok       0  29  20   1  0
+TikTok       0  28  18   1  0
 Instagram    0  40  10   0  0
 
-  Kruskal-Wallis on JAMA Total: H(3) = 5.433, p = 0.142684
+  Kruskal-Wallis on JAMA Total: H(3) = 5.123, p = 0.163019
 
 ======================================================================
 SECTION 5: RQ2 — CREATOR TYPE AND QUALITY SCORES
 ======================================================================
 
 5a. DISCERN by Creator Professional Status:
-  Professional: n=48, Mdn=41.0, IQR=34.8-47.0
-  Non-professional: n=152, Mdn=37.5, IQR=31.0-46.0
-  Mann-Whitney U = 4233, p = 0.094329, r = -0.160
+  Professional: n=51, Mdn=41.0, IQR=34.5-49.0
+  Non-professional: n=146, Mdn=37.0, IQR=30.2-45.0
+  Mann-Whitney U = 4457, p = 0.036270, r = -0.197
 
 5b. DISCERN by Individual Creator Type:
-  Certified fitness professional: n=34, Mdn=41.0, Mean=40.4, SD=9.0
-  Fitness influencer: n=43, Mdn=37.0, Mean=37.4, SD=7.9
+  Certified fitness professional: n=32, Mdn=39.5, Mean=39.8, SD=9.3
+  Fitness influencer: n=38, Mdn=36.0, Mean=37.3, SD=8.3
   General user: n=24, Mdn=33.0, Mean=32.7, SD=9.7
-  Healthcare professional: n=14, Mdn=41.0, Mean=40.9, SD=9.7
-  Organization: n=85, Mdn=39.0, Mean=40.0, SD=11.1
+  Healthcare professional: n=19, Mdn=45.0, Mean=43.3, SD=9.2
+  Organization: n=84, Mdn=39.0, Mean=39.6, SD=10.9
 
-  Kruskal-Wallis by Creator Type: H = 11.256, p = 0.023833
+  Kruskal-Wallis by Creator Type: H = 12.764, p = 0.012487
 
 5c. JAMA Total by Creator Professional Status:
-  Professional: Mdn=2.0, Mean=1.96
+  Professional: Mdn=2.0, Mean=1.90
   Non-professional: Mdn=1.0, Mean=1.23
-  Mann-Whitney U = 5780, p = 0.000000
+  Mann-Whitney U = 5700, p = 0.000000
 
 ======================================================================
 SECTION 6: RQ3 — ENGAGEMENT METRICS VS QUALITY
 ======================================================================
 
-  Social media items with engagement data: 150
+  Social media items with engagement data: 147
 
   Views vs DISCERN Total:
-    n = 63, Spearman's rho = -0.073, p = 0.5713
+    n = 97, Spearman's rho = -0.044, p = 0.6689
     Interpretation: Negligible correlation
 
   Likes vs DISCERN Total:
-    n = 121, Spearman's rho = 0.413, p = 0.0000
-    Interpretation: Moderate correlation
+    n = 147, Spearman's rho = 0.284, p = 0.0005
+    Interpretation: Weak correlation
 
   Comments vs DISCERN Total:
-    n = 111, Spearman's rho = 0.415, p = 0.0000
+    n = 147, Spearman's rho = 0.371, p = 0.0000
     Interpretation: Moderate correlation
 
   Engagement-Quality correlations by platform:
-    YouTube — Views: rho=-0.316, p=0.0345 *
-    YouTube — Likes: rho=-0.279, p=0.0632 
-    YouTube — Comments: rho=-0.169, p=0.2846 
-    TikTok — Views: rho=0.249, p=0.3181 
-    TikTok — Likes: rho=0.280, p=0.0976 
-    TikTok — Comments: rho=0.133, p=0.4014 
-    Instagram — Likes: rho=-0.013, p=0.9360 
-    Instagram — Comments: rho=0.058, p=0.7722 
+    YouTube — Views: rho=-0.340, p=0.0158 *
+    YouTube — Likes: rho=-0.286, p=0.0442 *
+    YouTube — Comments: rho=-0.178, p=0.2160 
+    TikTok — Views: rho=-0.057, p=0.7017 
+    TikTok — Likes: rho=0.109, p=0.4670 
+    TikTok — Comments: rho=0.124, p=0.4078 
+    Instagram — Likes: rho=-0.174, p=0.2264 
+    Instagram — Comments: rho=-0.045, p=0.7581 
 
   Engagement vs JAMA Total:
-    Views: rho=-0.370, p=0.0028
-    Likes: rho=0.054, p=0.5575
-    Comments: rho=0.002, p=0.9844
+    Views: rho=-0.346, p=0.0005
+    Likes: rho=-0.048, p=0.5652
+    Comments: rho=-0.019, p=0.8166
 
 ======================================================================
 SECTION 7: GENERATING FIGURES
@@ -205,12 +206,13 @@ SECTION 8: ADDITIONAL ANALYSES
 8a. DISCERN by Search Term:
   'how to start exercising': n=40, Mdn=46.0, Mean=43.8
   'best exercises to lose weight': n=40, Mdn=37.0, Mean=36.7
-  'strength training for beginners': n=40, Mdn=39.0, Mean=39.7
+  'strength training for beginners': n=37, Mdn=39.0, Mean=39.6
   'physical activity guidelines': n=40, Mdn=39.5, Mean=40.7
   'home workout routine': n=40, Mdn=34.0, Mean=32.6
-  Kruskal-Wallis: H = 27.716, p = 0.0000
+  Kruskal-Wallis: H = 27.255, p = 0.0000
 
 8b. DISCERN by Content Format:
-  'Long video (>5min)': n=45, Mdn=43.0, Mean=43.1
-  'Short video (<60s)': n=18, Mdn=31.5, Mean=32.8
+  'Text article': n=50, Mdn=48.5, Mean=47.0
+  'Long video (>5min)': n=50, Mdn=42.0, Mean=42.9
+  'Short video (<60s)': n=47, Mdn=35.0, Mean=35.6
   'Carousel': n=50, Mdn=27.5, Mean=29.0

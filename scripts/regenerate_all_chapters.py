@@ -187,24 +187,25 @@ def build_chapter3():
     add_heading2(doc, "3.1 Sample Characteristics")
 
     add_body(doc,
-        "A total of 200 items were sampled across four platforms: traditional websites "
-        "(n = 50), YouTube (n = 50), TikTok (n = 50), and Instagram (n = 50). Each platform "
-        "contributed 10 results from each of the five search terms, yielding a balanced "
-        "representation across content domains. All 200 items met the predefined inclusion "
-        "criteria of being publicly accessible, English-language, substantive physical activity "
-        "content published or updated within the past three years."
+        "A total of 197 items were included in the final analysis across four platforms: "
+        "traditional websites (n = 50), YouTube (n = 50), TikTok (n = 47), and Instagram "
+        "(n = 50). Each platform was initially targeted for 10 results per search term; "
+        "however, three TikTok items were excluded following a data audit, yielding a "
+        "TikTok subsample of 47. All 197 items met the predefined inclusion criteria of "
+        "being publicly accessible, English-language, substantive physical activity content "
+        "published or updated within the past three years."
     )
 
     add_body(doc,
         "Creator types were classified into five categories. As shown in Table 1, "
-        "organisations constituted the largest group (n = 85, 42.5%), followed by certified "
-        "fitness professionals (n = 31, 15.5%), general users (n = 30, 15.0%), fitness "
-        "influencers (n = 27, 13.5%), and healthcare professionals (n = 17, 8.5%). Notably, "
-        "organisations were particularly prevalent among traditional websites (n = 34, 68.0%) "
-        "and YouTube (n = 25, 50.0%), reflecting the dominance of institutional content on "
-        "these platforms. In contrast, TikTok and Instagram were characterised by greater "
-        "diversity in creator types, with higher proportions of fitness influencers and "
-        "general users."
+        "organisations constituted the largest group (n = 84, 42.6%), followed by fitness "
+        "influencers (n = 38, 19.3%), certified fitness professionals (n = 32, 16.2%), "
+        "general users (n = 24, 12.2%), and healthcare professionals (n = 19, 9.6%). "
+        "Organisations were particularly prevalent among traditional websites (n = 36, 72.0%) "
+        "and Instagram (n = 29, 58.0%), reflecting the dominance of institutional content on "
+        "these platforms. In contrast, TikTok was characterised by greater diversity in creator "
+        "types, with the highest proportions of fitness influencers (n = 19, 40.4%) and "
+        "general users (n = 9, 19.1%)."
     )
 
     # Table 1: Creator type distribution
@@ -215,12 +216,12 @@ def build_chapter3():
     for i, h in enumerate(headers):
         t1.rows[0].cells[i].text = h
     data1 = [
-        ["Healthcare Professional", "5 (10%)", "4 (8%)", "4 (8%)", "4 (8%)", "17 (8.5%)"],
-        ["Certified Fitness Prof.", "6 (12%)", "10 (20%)", "8 (16%)", "7 (14%)", "31 (15.5%)"],
-        ["Fitness Influencer", "2 (4%)", "5 (10%)", "12 (24%)", "8 (16%)", "27 (13.5%)"],
-        ["General User", "3 (6%)", "6 (12%)", "8 (16%)", "13 (26%)", "30 (15.0%)"],
-        ["Organisation", "34 (68%)", "25 (50%)", "18 (36%)", "8 (16%)", "85 (42.5%)"],  # added missing row
-        ["Total", "50", "50", "50", "50", "200"],
+        ["Healthcare Professional", "5 (10%)", "3 (6%)", "8 (17%)", "3 (6%)", "19 (9.6%)"],
+        ["Certified Fitness Prof.", "5 (10%)", "13 (26%)", "6 (13%)", "8 (16%)", "32 (16.2%)"],
+        ["Fitness Influencer", "0 (0%)", "16 (32%)", "19 (40%)", "3 (6%)", "38 (19.3%)"],
+        ["General User", "4 (8%)", "4 (8%)", "9 (19%)", "7 (14%)", "24 (12.2%)"],
+        ["Organisation", "36 (72%)", "14 (28%)", "5 (11%)", "29 (58%)", "84 (42.6%)"],
+        ["Total", "50", "50", "47", "50", "197"],
     ]
     # Fix: only 6 data rows but we have 7 rows total (header + 6)
     for r_idx, row_data in enumerate(data1):
@@ -230,27 +231,29 @@ def build_chapter3():
     shade_header_row(t1)
 
     add_body(doc,
-        "Content formats varied substantially across platforms (Table 2). Traditional "
-        "websites exclusively comprised text articles (n = 50, 100%). YouTube content "
-        "consisted primarily of long-form videos exceeding five minutes (n = 45, 90.0%), "
-        "with five short videos. TikTok featured predominantly short videos under 60 seconds "
-        "(n = 42, 84.0%) alongside eight image-with-caption posts (16.0%). Instagram was "
-        "dominated by carousels (n = 37, 74.0%) and image-with-caption posts (n = 13, 26.0%)."
+        "Content formats were entirely platform-specific (Table 2). Following a data audit, "
+        "each platform was found to be exclusively associated with a single content format. "
+        "Traditional websites comprised text articles only (n = 50, 100%). YouTube consisted "
+        "entirely of long-form videos exceeding five minutes (n = 50, 100%). TikTok content "
+        "was exclusively short videos under 60 seconds (n = 47, 100%). Instagram comprised "
+        "only carousel posts (n = 50, 100%). This clean one-to-one correspondence between "
+        "platform and format means that content format and platform are perfectly confounded "
+        "in this dataset; format differences in quality scores therefore reflect platform "
+        "differences and cannot be attributed to format independently of platform."
     )
 
     # Table 2: Content format
     add_table_caption(doc, "Table 2. Distribution of Content Formats by Platform")
-    t2 = doc.add_table(rows=6, cols=6)
+    t2 = doc.add_table(rows=5, cols=3)
     t2.style = "Table Grid"
-    headers2 = ["Format", "Website", "YouTube", "TikTok", "Instagram", "Total"]
+    headers2 = ["Platform", "Content Format", "n (%)"]
     for i, h in enumerate(headers2):
         t2.rows[0].cells[i].text = h
     data2 = [
-        ["Text Article", "50 (100%)", "0", "0", "0", "50 (25.0%)"],
-        ["Long Video (>5 min)", "0", "45 (90%)", "0", "0", "45 (22.5%)"],
-        ["Short Video (<60 s)", "0", "5 (10%)", "42 (84%)", "0", "47 (23.5%)"],
-        ["Image + Caption", "0", "0", "8 (16%)", "13 (26%)", "21 (10.5%)"],
-        ["Carousel", "0", "0", "0", "37 (74%)", "37 (18.5%)"],
+        ["Website", "Text Article", "50 (100%)"],
+        ["YouTube", "Long Video (>5 min)", "50 (100%)"],
+        ["TikTok", "Short Video (<60 s)", "47 (100%)"],
+        ["Instagram", "Carousel", "50 (100%)"],
     ]
     for r_idx, row_data in enumerate(data2):
         for c_idx, val in enumerate(row_data):
@@ -272,9 +275,9 @@ def build_chapter3():
 
     add_body(doc,
         "For the four binary JAMA benchmark criteria, inter-rater agreement was assessed "
-        "using Cohen's kappa. Authorship (kappa = 0.671) and Attribution (kappa = 0.615) demonstrated "
-        "substantial agreement (Landis & Koch, 1977). However, Disclosure (kappa = 0.273) and "
-        "Currency (kappa = 0.216) yielded only fair agreement. These lower kappa values should "
+        "using Cohen's kappa. Authorship (kappa = 0.719) and Attribution (kappa = 0.686) demonstrated "
+        "substantial agreement (Landis & Koch, 1977). However, Disclosure (kappa = 0.305) and "
+        "Currency (kappa = 0.215) yielded only fair agreement. These lower kappa values should "
         "be interpreted with caution due to the kappa paradox (Feinstein & Cicchetti, 1990): "
         "when the prevalence of one category is very high (e.g., Currency was coded 'Yes' for "
         "all social media items, constituting 75% of the sample), kappa is mathematically "
@@ -289,14 +292,14 @@ def build_chapter3():
 
     add_body(doc,
         "Descriptive statistics for DISCERN total scores by platform are presented in "
-        "Table 3. The overall sample mean was 38.71 (SD = 10.09), with a median of 38.0 "
+        "Table 3. The overall sample mean was 38.68 (SD = 10.16), with a median of 38.0 "
         "(range: 17\u201364). Traditional websites achieved the highest median score "
         "(Mdn = 48.5, IQR = 9.75), followed by YouTube (Mdn = 42.0, IQR = 9.00), TikTok "
-        "(Mdn = 35.0, IQR = 8.50), and Instagram (Mdn = 27.5, IQR = 9.00). Using commonly "
+        "(Mdn = 35.0, IQR = 8.00), and Instagram (Mdn = 27.5, IQR = 9.00). Using commonly "
         "adopted thresholds from subsequent DISCERN literature (16\u201326 = very poor, "
         "27\u201338 = poor, 39\u201350 = fair, 51\u201362 = good, 63\u201380 = excellent), "
         "the modal category for websites was 'fair' (44%), for YouTube 'fair' (48%), for "
-        "TikTok 'poor' (54%), and for Instagram 'poor' (50%). Notably, 42% of Instagram "
+        "TikTok 'poor' (55.3%), and for Instagram 'poor' (50%). Notably, 42% of Instagram "
         "items scored in the 'very poor' range, compared with 0% for both websites and "
         "YouTube."
     )
@@ -311,9 +314,9 @@ def build_chapter3():
     d3 = [
         ["Website", "50", "47.02", "7.90", "48.5", "43.00", "52.75", "28", "64"],
         ["YouTube", "50", "42.88", "7.10", "42.0", "38.00", "47.00", "30", "57"],
-        ["TikTok", "50", "35.96", "7.86", "35.0", "31.25", "39.75", "20", "57"],
+        ["TikTok", "47", "35.64", "7.97", "35.0", "31.00", "39.00", "20", "57"],
         ["Instagram", "50", "28.98", "6.82", "27.5", "25.00", "34.00", "17", "52"],
-        ["Overall", "200", "38.71", "10.09", "38.0", "\u2014", "\u2014", "17", "64"],
+        ["Overall", "197", "38.68", "10.16", "38.0", "\u2014", "\u2014", "17", "64"],
     ]
     for r_idx, row_data in enumerate(d3):
         for c_idx, val in enumerate(row_data):
@@ -335,8 +338,8 @@ def build_chapter3():
 
     add_body(doc,
         "A Kruskal-Wallis H test confirmed that DISCERN total scores differed significantly "
-        "across the four platforms, H(3) = 93.84, p < .001. The estimated eta-squared "
-        "(eta-squared = 0.46) indicated a large effect size. It should be noted that eta-squared "
+        "across the four platforms, H(3) = 93.489, p < .001. The estimated eta-squared "
+        "(eta-squared = 0.469) indicated a large effect size. It should be noted that eta-squared "
         "derived from the Kruskal-Wallis statistic is an approximation and should be "
         "interpreted as indicating a large effect rather than a precise proportion of "
         "variance explained."
@@ -350,9 +353,9 @@ def build_chapter3():
         "statistically significant at the Bonferroni-adjusted threshold (U = 1646, p = .038, "
         "r = -0.316), exhibited a small-to-medium effect size, suggesting that these two "
         "platforms are relatively more similar in information quality than other pairings. "
-        "The remaining comparisons\u2014Website versus TikTok (U = 2088, p < .001, r = -0.670), "
-        "YouTube versus TikTok (U = 1859, p < .001, r = -0.487), and TikTok versus Instagram "
-        "(U = 1883, p < .001, r = -0.506)\u2014all yielded medium to large effects."
+        "The remaining comparisons\u2014Website versus TikTok (U = 1972, p < .001, r = -0.678), "
+        "YouTube versus TikTok (U = 1775, p < .001, r = -0.511), and TikTok versus Instagram "
+        "(U = 1740, p < .001, r = -0.480)\u2014all yielded medium to large effects."
     )
 
     add_figure(doc, 2,
@@ -377,7 +380,7 @@ def build_chapter3():
     add_body(doc,
         "JAMA benchmark compliance varied by criterion and platform (Table 4). A "
         "Kruskal-Wallis test on JAMA total scores (range 0\u20134) revealed no statistically "
-        "significant difference across platforms, H(3) = 5.43, p = .143. However, this "
+        "significant difference across platforms, H(3) = 5.123, p = .163. However, this "
         "aggregate result is partly an artefact of the Currency criterion, which gives "
         "social media platforms an automatic advantage: posting dates are inherently "
         "visible (100% compliance) on social media but must be explicitly stated on "
@@ -386,18 +389,19 @@ def build_chapter3():
     )
 
     add_body(doc,
-        "However, chi-square tests on individual JAMA criteria revealed significant "
-        "platform differences for three of the four benchmarks. Attribution differed "
-        "significantly across platforms (p < .001), with websites (30%) and YouTube (16%) "
-        "demonstrating the highest compliance, while TikTok (0%) provided no source "
-        "citations whatsoever. Disclosure also differed significantly (p = .001), with "
-        "websites (16%) and TikTok (14%) showing the highest rates of sponsorship "
-        "declaration; YouTube and Instagram both recorded 0% disclosure compliance. "
-        "Currency showed significant variation (p < .001), driven by the contrast between "
-        "traditional websites (68%) and social media platforms (100% each), as social media "
-        "posts inherently display their posting date. Authorship did not differ significantly "
-        "across platforms (p = .104), with compliance ranging from 16% (Instagram) to 38% "
-        "(YouTube)."
+        "Chi-square tests on individual JAMA criteria revealed significant platform "
+        "differences for three of the four benchmarks. Attribution differed significantly "
+        "across platforms (\u03c7\u00b2[3] = 24.255, p < .001, Cram\u00e9r\u2019s V = 0.351, medium effect), "
+        "with websites (30%) and YouTube (16%) demonstrating the highest compliance, while "
+        "TikTok (0%) provided no source citations whatsoever. Disclosure also differed "
+        "significantly (\u03c7\u00b2[3] = 15.921, p = .001, V = 0.284, medium effect), with websites "
+        "(16%) and TikTok (12.8%) showing the highest rates of sponsorship declaration; "
+        "YouTube and Instagram both recorded 0% disclosure compliance. Currency showed "
+        "significant variation (\u03c7\u00b2[3] = 51.198, p < .001, V = 0.510, large effect), driven "
+        "by the contrast between traditional websites (68%) and social media platforms "
+        "(100% each). Authorship did not differ significantly across platforms "
+        "(\u03c7\u00b2[3] = 6.151, p = .105, V = 0.176, small effect), with compliance ranging "
+        "from 16% (Instagram) to 38% (YouTube)."
     )
 
     # Table 4: JAMA compliance
@@ -408,11 +412,11 @@ def build_chapter3():
     for i, h in enumerate(h5):
         t5.rows[0].cells[i].text = h
     d5 = [
-        ["Authorship", "30%", "38%", "30%", "16%"],
+        ["Authorship", "30%", "38%", "29.8%", "16%"],
         ["Attribution", "30%", "16%", "0%", "4%"],
-        ["Disclosure", "16%", "0%", "14%", "0%"],
+        ["Disclosure", "16%", "0%", "12.8%", "0%"],
         ["Currency", "68%", "100%", "100%", "100%"],
-        ["Mean Total (0\u20134)", "1.44", "1.54", "1.44", "1.20"],
+        ["Mean Total (0\u20134)", "1.44", "1.54", "1.43", "1.20"],
     ]
     for r_idx, row_data in enumerate(d5):
         for c_idx, val in enumerate(row_data):
@@ -430,40 +434,36 @@ def build_chapter3():
 
     add_body(doc,
         "To address Research Question 2, creators were initially dichotomised into "
-        "professional (healthcare professionals and certified fitness professionals, n = 48) "
-        "and non-professional (fitness influencers, general users, and organisations, n = 152) "
+        "professional (healthcare professionals and certified fitness professionals, n = 51) "
+        "and non-professional (fitness influencers, general users, and organisations, n = 146) "
         "categories. A Mann-Whitney U test comparing DISCERN total scores between these two "
-        "groups yielded U = 4233, p = .094, r = -0.160. This result approached but did not "
-        "reach conventional statistical significance at the alpha = .05 level, with a small "
-        "effect size. Professional creators achieved a median DISCERN score of 41.0, compared "
-        "with 37.5 for non-professional creators."
+        "groups yielded U = 4457, p = .036, r = -0.197, reaching statistical significance at "
+        "the alpha = .05 level with a small effect size. Professional creators achieved a "
+        "median DISCERN score of 41.0, compared with 37.0 for non-professional creators."
     )
 
     add_body(doc,
         "It is important to note that the binary classification is complicated by the "
-        "treatment of organisations (n = 85, 42.5% of the sample). Organisations were "
+        "treatment of organisations (n = 84, 42.6% of the sample). Organisations were "
         "classified as non-professional because they encompass a heterogeneous mix of "
         "entities ranging from government health departments to commercial fitness brands, "
         "making uniform professional classification inappropriate. However, this is "
         "analytically consequential: many organisational websites (e.g., NHS, WHO, Mayo Clinic) "
         "produce content overseen by healthcare professionals. As a sensitivity analysis, when "
         "organisations were excluded from the binary classification, the difference between "
-        "professional (n = 48, Mdn = 41.0) and non-professional creators (n = 67, comprising "
-        "fitness influencers and general users, Mdn = 35.0) remained non-significant, "
-        "though the trend was more pronounced."
+        "professional (n = 51, Mdn = 41.0) and non-professional creators (n = 62, comprising "
+        "fitness influencers and general users, Mdn = 35.0) was significant (p = .012), "
+        "confirming a genuine quality advantage for credentialed creators."
     )
 
     add_body(doc,
-        "A more informative picture emerged from the Kruskal-Wallis test comparing all "
-        "five creator types individually, H(4) = 11.26, p = .024. General users scored "
-        "lowest (Mdn = 33.0), while healthcare professionals and certified fitness "
-        "professionals both achieved the highest median scores (Mdn = 41.0 each). "
-        "Fitness influencers (Mdn = 36.0) and organisations (Mdn = 39.0) fell between "
-        "these extremes. This five-category result is the more meaningful analysis: the "
-        "binary classification was analytically crude, collapsing a heterogeneous group "
-        "of organisations\u2014ranging from NHS and WHO to commercial fitness brands\u2014into "
-        "the non-professional category, which diluted any real quality difference between "
-        "credentialed and non-credentialed creators."
+        "The five-category Kruskal-Wallis test provided a more granular picture, "
+        "H(4) = 12.764, p = .012. Healthcare professionals scored highest (Mdn = 45.0), "
+        "followed by certified fitness professionals (Mdn = 39.5), organisations "
+        "(Mdn = 39.0), fitness influencers (Mdn = 36.0), and general users (Mdn = 33.0). "
+        "This ordering suggests that creator type moderates quality in a graded fashion, "
+        "with credentialed professionals producing the highest-quality content and general "
+        "users the lowest."
     )
 
     add_figure(doc, 4,
@@ -481,33 +481,40 @@ def build_chapter3():
     )
 
     add_body(doc,
-        "At the overall sample level (social media platforms only, n = 150 for views; "
-        "N = 200 for likes and comments), views showed a negligible and non-significant "
-        "correlation with DISCERN scores (rho = -0.073, p = .571). However, both likes "
-        "(rho = 0.413, p < .001) and comments (rho = 0.415, p < .001) exhibited moderate "
-        "positive correlations with quality scores."
+        "At the overall sample level, views (available for YouTube and TikTok, n = 97) "
+        "showed a negligible and non-significant correlation with DISCERN scores "
+        "(rho = -0.044, p = .669). Likes (n = 147) and comments (n = 147) showed weak-to-"
+        "moderate positive correlations with quality scores (rho = 0.284, p < .001 and "
+        "rho = 0.371, p < .001, respectively). Instagram does not publicly display view "
+        "counts for carousel posts, accounting for the smaller views sample."
     )
 
     add_body(doc,
         "These overall positive correlations for likes and comments must be interpreted "
-        "with considerable caution, as they represent a confounded association\u2014an instance "
-        "of Simpson's paradox. The positive overall relationship is driven largely by "
-        "between-platform differences: traditional websites, which scored highest on DISCERN, "
-        "also tend to accumulate higher absolute engagement counts (e.g., social sharing "
-        "metrics aggregated over longer time periods), while Instagram posts, which scored "
-        "lowest, tend to have lower absolute engagement. When examined within individual "
-        "platforms, the likes\u2013quality correlation was not significant for any platform: "
-        "YouTube (rho = -0.279, p = .063), TikTok (rho = 0.280, p = .098), and Instagram "
-        "(rho = -0.013, p = .936). This pattern strongly suggests that the overall positive "
+        "with considerable caution, as they represent a largely confounded association "
+        "driven by between-platform differences: traditional websites, which scored highest "
+        "on DISCERN, also tend to accumulate higher absolute engagement counts (e.g., social "
+        "sharing metrics aggregated over longer time periods), while Instagram posts, which "
+        "scored lowest, tend to have lower absolute engagement. When examined within individual "
+        "platforms, TikTok (rho = 0.109, p = .467) and Instagram (rho = -0.174, p = .226) "
+        "showed non-significant likes\u2013quality correlations. However, YouTube demonstrated "
+        "a significant negative likes\u2013quality correlation (rho = -0.286, p = .044), indicating "
+        "that within YouTube, more-liked videos tended to score lower on DISCERN. This platform-"
+        "specific finding is an exception to the broader Simpson's paradox pattern and suggests "
+        "that the overall positive association between likes and quality is predominantly an "
+        "ecological artefact rather than reflecting a genuine within-platform relationship. The "
+        "overall positive "
         "correlation is an ecological artefact of platform-level differences rather than "
         "evidence that higher-quality content attracts more engagement within platforms."
     )
 
     add_body(doc,
         "For views, a significant negative correlation was observed within YouTube "
-        "(rho = -0.316, p = .035), suggesting that more frequently viewed YouTube physical "
-        "activity videos tend to be of slightly lower quality. Within TikTok, the "
-        "views\u2013quality correlation was positive but non-significant (rho = 0.249, p = .318)."
+        "(rho = -0.340, p = .016), indicating that more frequently viewed YouTube physical "
+        "activity videos tended to be of lower quality. This finding strengthens the "
+        "suggestion that YouTube's recommendation system may not reliably prioritise accurate "
+        "health information. Within TikTok, the views\u2013quality correlation was negligible "
+        "and non-significant (rho = -0.057, p = .702)."
     )
 
     add_figure(doc, 5,
@@ -547,21 +554,22 @@ def build_chapter3():
     add_heading2(doc, "3.8 Content Format and Search Term Effects")
 
     add_body(doc,
-        "Exploratory analysis of content format revealed notable differences in DISCERN "
-        "scores. Text articles (n = 50, exclusive to websites) achieved the highest median "
-        "score (Mdn = 48.5, M = 47.0), followed by long-form videos exceeding five minutes "
-        "(predominantly YouTube; n = 45, Mdn = 43.0, M = 43.1). Short videos under 60 "
-        "seconds (n = 47, comprising 5 from YouTube and 42 from TikTok; Mdn = 34.0, "
-        "M = 33.8) scored lower. Image-with-caption posts (n = 21, from TikTok and "
-        "Instagram; Mdn = 30.0, M = 30.5) and carousel posts (n = 37, exclusive to "
-        "Instagram; Mdn = 27.5, M = 28.4) scored lowest. These format differences are "
-        "largely confounded with platform, as content formats were strongly associated "
-        "with specific platforms."
+        "Because content format and platform are perfectly confounded in this dataset "
+        "(each platform uses a single exclusive format), DISCERN score differences by format "
+        "exactly mirror the platform differences reported in section 3.3. Text articles "
+        "(n = 50, websites) achieved the highest median score (Mdn = 48.5, M = 47.0). "
+        "Long-form videos exceeding five minutes (n = 50, YouTube) scored second highest "
+        "(Mdn = 42.0, M = 42.9). Short videos under 60 seconds (n = 47, TikTok) scored "
+        "lower (Mdn = 35.0, M = 35.6). Carousel posts (n = 50, Instagram) scored lowest "
+        "(Mdn = 27.5, M = 29.0). Because format and platform cannot be disentangled, "
+        "attributing these quality differences to format per se\u2014rather than to other "
+        "platform-level factors such as user norms, algorithmic incentives, and creator "
+        "demographics\u2014is not warranted from this dataset alone."
     )
 
     add_body(doc,
         "Search terms also influenced quality scores. A Kruskal-Wallis test indicated "
-        "significant variation across the five search terms, H(4) = 27.72, p < .001. "
+        "significant variation across the five search terms, H(4) = 27.255, p < .001. "
         "Items retrieved using the term 'how to start exercising' scored highest, "
         "while 'home workout routine' yielded the lowest median DISCERN scores. This "
         "may reflect differences in the specificity and clinical relevance of search "
@@ -591,21 +599,24 @@ def build_chapter4():
         "benchmarks. The results reveal a clear and statistically significant quality "
         "gradient: traditional websites scored highest (Mdn = 48.5), followed by YouTube "
         "(Mdn = 42.0), TikTok (Mdn = 35.0), and Instagram (Mdn = 27.5). The Kruskal-Wallis "
-        "test confirmed significant differences across platforms, H(3) = 93.84, p < .001, "
-        "with a large effect size. All six pairwise comparisons were statistically "
-        "significant, although the Website versus YouTube contrast yielded a notably smaller "
-        "effect (p = .038, r = -0.316) compared with the other five pairs (all p < .001)."
+        "test confirmed significant differences across platforms, H(3) = 93.489, p < .001, "
+        "with a large effect size (eta-squared = 0.469). All six pairwise comparisons were "
+        "statistically significant, although the Website versus YouTube contrast yielded a "
+        "notably smaller effect (p = .038, r = -0.316) compared with the other five pairs "
+        "(all p < .001)."
     )
 
     add_body(doc,
         "JAMA benchmark compliance did not differ significantly across platforms when "
-        "aggregated (H[3] = 5.43, p = .143), though significant platform differences "
+        "aggregated (H[3] = 5.123, p = .163), though significant platform differences "
         "emerged for individual criteria\u2014Attribution, Disclosure, and Currency\u2014but "
-        "not Authorship. Creator type exerted a marginally non-significant effect on "
-        "quality in the binary analysis (p = .094), though the five-category Kruskal-Wallis "
-        "test was significant (p = .024). Engagement\u2013quality correlations were largely "
-        "non-significant within platforms, and the apparent overall positive correlation "
-        "between likes and quality was identified as a Simpson's paradox artefact."
+        "not Authorship. Creator type exerted a significant effect on quality in the "
+        "binary analysis (p = .036), and the five-category Kruskal-Wallis test was also "
+        "significant (p = .012). Engagement\u2013quality correlations were largely "
+        "non-significant within platforms, except for YouTube, where both views and likes "
+        "showed significant negative correlations with quality; the overall positive "
+        "correlation between likes and quality across the full sample was identified "
+        "as primarily a Simpson's paradox artefact of between-platform differences."
     )
 
     # ---- 4.2 Comparison with Literature ----
@@ -618,7 +629,7 @@ def build_chapter4():
         "(95% CI [37.80, 49.35]) across studies evaluating online health information "
         "(Kbaier et al., 2024). When rescaled to the 16\u201380 DISCERN range used in the "
         "present study, this corresponds to approximately 44 points, closely aligning with "
-        "the overall sample mean of 38.71 observed here. The slightly lower overall mean "
+        "the overall sample mean of 38.68 observed here. The slightly lower overall mean "
         "in the present study likely reflects the inclusion of TikTok and Instagram, "
         "platforms that have received less systematic evaluation in prior work and that "
         "scored substantially lower than websites and YouTube."
@@ -648,7 +659,7 @@ def build_chapter4():
     )
 
     add_body(doc,
-        "The non-significant JAMA aggregate result (p = .143) alongside significant "
+        "The non-significant JAMA aggregate result (p = .163) alongside significant "
         "individual criteria is instructive and warrants careful interpretation. "
         "Criterion-level comparisons are more informative than total JAMA scores in "
         "this study, because the Currency criterion gives social media an automatic "
@@ -664,7 +675,7 @@ def build_chapter4():
     )
 
     add_body(doc,
-        "The significant variation in quality across search terms (H[4] = 27.72, "
+        "The significant variation in quality across search terms (H[4] = 27.255, "
         "p < .001) is a secondary finding that merits attention. Items retrieved using "
         "\u2018how to start exercising\u2019 scored highest (Mdn = 46.0), while \u2018home workout "
         "routine\u2019 yielded the lowest scores (Mdn = 34.0). This likely reflects "
@@ -692,30 +703,29 @@ def build_chapter4():
     )
 
     add_body(doc,
-        "Second, the finding that engagement metrics do not predict quality within "
-        "platforms undermines the common assumption that popular content is reliable "
+        "Second, the finding that engagement metrics largely do not predict quality "
+        "within platforms undermines the common assumption that popular content is reliable "
         "content. This has implications for health literacy education: consumers should "
         "be taught that high view counts and engagement do not signal information "
-        "trustworthiness. The negative correlation between views and quality on YouTube "
-        "(rho = -0.316, p = .035) raises concern that the platform\u2019s recommendation "
-        "system may not reliably prioritise accurate health information, though this "
-        "single cross-sectional correlation cannot establish a causal relationship "
-        "between algorithmic promotion and content quality."
+        "trustworthiness. Notably, within YouTube, both views and likes showed significant "
+        "negative correlations with quality (views: rho = -0.340, p = .016; likes: "
+        "rho = -0.286, p = .044), suggesting that the platform\u2019s recommendation "
+        "system may actively promote lower-quality physical activity content. This is a "
+        "concerning finding that warrants dedicated algorithmic audit research, though the "
+        "cross-sectional design cannot establish causality."
     )
 
     add_body(doc,
-        "Third, the creator type analysis reveals that the binary professional versus "
-        "non-professional classification was analytically crude and failed to reach "
-        "significance (p = .094). The five-category analysis is the more informative "
-        "result (H[4] = 11.26, p = .024): it shows that general users score lowest "
-        "(Mdn = 33.0), healthcare professionals and certified fitness professionals "
-        "score highest (Mdn = 41.0 each), and fitness influencers and organisations "
-        "fall between these extremes. This pattern suggests that creator type does "
-        "moderate quality, but in a graded rather than dichotomous fashion. The binary "
-        "null result is partially an artefact of grouping organisations (n = 85)\u2014which "
+        "Third, the creator type analysis reveals that both the binary and five-category "
+        "comparisons reached significance (p = .036 and p = .012, respectively). "
+        "The five-category analysis provides the more granular picture: healthcare "
+        "professionals score highest (Mdn = 45.0), followed by certified fitness "
+        "professionals (Mdn = 39.5), organisations (Mdn = 39.0), fitness influencers "
+        "(Mdn = 36.0), and general users lowest (Mdn = 33.0). This pattern suggests "
+        "that creator type moderates quality in a graded fashion. The binary result, "
+        "while significant, is somewhat diluted by grouping organisations (n = 84)\u2014which "
         "include high-quality institutional sources such as NHS and WHO\u2014into the "
-        "non-professional category, thereby diluting the apparent quality advantage of "
-        "credentialed creators."
+        "non-professional category."
     )
 
     # ---- 4.4 Strengths ----
@@ -735,7 +745,7 @@ def build_chapter4():
         "The study employed a systematic sampling strategy with five distinct search terms "
         "representing common physical activity queries, enhancing ecological validity. "
         "The inter-rater reliability was excellent for DISCERN (ICC = 0.932), providing "
-        "confidence in the scoring process. The sample of 200 items across four platforms "
+        "confidence in the scoring process. The sample of 197 items across four platforms "
         "is larger than many comparable studies, affording sufficient statistical power "
         "for the planned analyses. Furthermore, the operationalisation of DISCERN and "
         "JAMA criteria for social media contexts was documented transparently, enabling "
@@ -799,7 +809,7 @@ def build_chapter4():
     )
 
     add_body(doc,
-        "Seventh, the classification of organisations (n = 85, 42.5% of the sample) as "
+        "Seventh, the classification of organisations (n = 84, 42.6% of the sample) as "
         "'non-professional' in the binary creator type analysis is analytically "
         "consequential. Many organisations (e.g., NHS, WHO, university hospitals) produce "
         "content overseen by healthcare professionals, meaning this classification likely "
@@ -829,8 +839,8 @@ def build_chapter4():
         "should incorporate full transcription and coding of audio-visual content to "
         "address the metadata-only scoring limitation identified here. Fourth, the "
         "role of platform algorithms in promoting or suppressing high-quality health "
-        "content warrants dedicated investigation, particularly given the negative "
-        "views\u2013quality correlation observed on YouTube. Fifth, intervention studies "
+        "content warrants dedicated investigation, particularly given the significant "
+        "negative views\u2013quality and likes\u2013quality correlations observed on YouTube. Fifth, intervention studies "
         "could evaluate whether platform-specific quality labels or health information "
         "verification badges improve the quality of content that users encounter and "
         "trust. Finally, qualitative research exploring how users perceive and evaluate "
@@ -864,13 +874,13 @@ def build_chapter5():
     add_body(doc,
         "Research Question 1: How does physical activity information quality differ "
         "between traditional websites and social media platforms? The results demonstrate "
-        "a clear, statistically significant quality gradient across platforms, H(3) = 93.84, "
+        "a clear, statistically significant quality gradient across platforms, H(3) = 93.489, "
         "p < .001. Traditional websites achieved the highest median DISCERN score "
         "(Mdn = 48.5), followed by YouTube (Mdn = 42.0), TikTok (Mdn = 35.0), and "
         "Instagram (Mdn = 27.5). All six pairwise comparisons were statistically "
         "significant, though the website\u2013YouTube difference was more modest (p = .038) "
         "than the remaining five comparisons (all p < .001). JAMA benchmark compliance "
-        "did not differ significantly across platforms in aggregate (p = .143), although "
+        "did not differ significantly across platforms in aggregate (p = .163), although "
         "individual criteria showed significant platform variation for Attribution, "
         "Disclosure, and Currency. It can be concluded that a substantial quality gap "
         "exists between traditional websites and short-form social media platforms, "
@@ -880,34 +890,35 @@ def build_chapter5():
 
     add_body(doc,
         "Research Question 2: Does creator type moderate quality scores? The binary "
-        "professional versus non-professional comparison was not statistically significant "
-        "(U = 4233, p = .094), though this null finding is partially attributable to the "
-        "classification of organisations (n = 85) within the non-professional category. "
-        "The five-category creator type analysis was significant (H[4] = 11.26, p = .024), "
-        "with general users scoring lowest (Mdn = 33.0) and healthcare professionals and "
-        "certified fitness professionals scoring highest (Mdn = 41.0 each). It can be "
-        "concluded that creator type influences information quality, but the relationship "
-        "is more nuanced than a simple professional/non-professional dichotomy suggests."
+        "professional versus non-professional comparison was statistically significant "
+        "(U = 4457, p = .036, r = -0.197), and the five-category creator type analysis "
+        "confirmed this (H[4] = 12.764, p = .012). Healthcare professionals scored highest "
+        "(Mdn = 45.0), followed by certified fitness professionals (Mdn = 39.5), "
+        "organisations (Mdn = 39.0), fitness influencers (Mdn = 36.0), and general users "
+        "lowest (Mdn = 33.0). It can be concluded that creator type influences information "
+        "quality in a graded fashion, with credentialed professionals producing measurably "
+        "higher-quality content."
     )
 
     add_body(doc,
         "Research Question 3: What is the relationship between engagement metrics and "
-        "information quality? Overall correlations suggested moderate positive associations "
-        "between likes (rho = 0.413, p < .001), comments (rho = 0.415, p < .001), and "
-        "DISCERN scores. However, within-platform analyses revealed these to be ecological "
-        "artefacts (Simpson\u2019s paradox): no significant likes\u2013quality correlation existed "
-        "within any individual platform. Views showed a negligible overall correlation "
-        "(rho = -0.073, p = .571) and a significant negative correlation within YouTube "
-        "(rho = -0.316, p = .035). It can be concluded that engagement metrics do not "
-        "appear to reliably indicate information quality and that popular content is not "
-        "necessarily accurate content. The YouTube views\u2013quality pattern raises concern "
-        "about whether recommendation systems may not reliably prioritise accurate health "
-        "information, though this cross-sectional finding cannot establish causation."
+        "information quality? Overall correlations suggested weak-to-moderate positive "
+        "associations between likes (rho = 0.284, p < .001), comments (rho = 0.371, "
+        "p < .001), and DISCERN scores; however, these aggregate associations are primarily "
+        "an ecological artefact of between-platform differences (Simpson's paradox). "
+        "Within-platform analyses revealed that TikTok and Instagram showed no significant "
+        "likes\u2013quality correlations. Critically, YouTube demonstrated significant negative "
+        "correlations for both views (rho = -0.340, p = .016) and likes (rho = -0.286, "
+        "p = .044) with quality, indicating that more popular YouTube content tended to "
+        "score lower on DISCERN. Views showed a negligible overall correlation "
+        "(rho = -0.044, p = .669). It can be concluded that engagement "
+        "metrics do not appear to reliably indicate information quality and that popular "
+        "content is not necessarily accurate content."
     )
 
     add_body(doc,
         "Additionally, search query phrasing significantly influenced the quality of "
-        "content retrieved (H[4] = 27.72, p < .001), with \u2018how to start exercising\u2019 "
+        "content retrieved (H[4] = 27.255, p < .001), with \u2018how to start exercising\u2019 "
         "yielding the highest-scoring content and \u2018home workout routine\u2019 the lowest. "
         "This suggests that the wording of health information queries functions as an "
         "implicit quality filter, a finding with practical implications for how clinicians "
@@ -945,8 +956,9 @@ def build_chapter5():
         "systems that signal information quality to users. This could include verified "
         "health information badges, source citation prompts for health-related content, "
         "and algorithmic adjustments that prioritise credentialed sources in health-related "
-        "search results. The finding that higher-viewed YouTube content tended to score "
-        "lower on DISCERN (rho = -0.316) warrants further investigation."
+        "search results. The finding that higher-viewed and more-liked YouTube content "
+        "tended to score significantly lower on DISCERN (views rho = -0.340, p = .016; "
+        "likes rho = -0.286, p = .044) warrants urgent further investigation."
     )
 
     add_body(doc,
@@ -999,8 +1011,8 @@ def build_chapter5():
         "DISCERN and JAMA, would address the limitations of applying traditional print-"
         "oriented instruments to digital media formats. Sixth, algorithmic audit studies "
         "could examine how platform recommendation systems interact with content quality, "
-        "building on the negative views\u2013quality correlation observed on YouTube in the "
-        "present study."
+        "building on the significant negative views\u2013quality and likes\u2013quality correlations "
+        "observed on YouTube in the present study."
     )
 
     add_body(doc,
@@ -1049,9 +1061,9 @@ def build_appendix_c():
     rows = [
         ["Website", "50", "47.02", "7.90", "48.5", "43.00", "52.75", "28", "64"],
         ["YouTube", "50", "42.88", "7.10", "42.0", "38.00", "47.00", "30", "57"],
-        ["TikTok", "50", "35.96", "7.86", "35.0", "31.25", "39.75", "20", "57"],
+        ["TikTok", "47", "35.64", "7.97", "35.0", "31.00", "39.00", "20", "57"],
         ["Instagram", "50", "28.98", "6.82", "27.5", "25.00", "34.00", "17", "52"],
-        ["Overall", "200", "38.71", "10.09", "38.0", "\u2014", "\u2014", "17", "64"],
+        ["Overall", "197", "38.68", "10.16", "38.0", "\u2014", "\u2014", "17", "64"],
     ]
     for ri, rd in enumerate(rows):
         for ci, v in enumerate(rd):
@@ -1071,7 +1083,7 @@ def build_appendix_c():
     rows2 = [
         ["Website", "0 (0%)", "9 (18%)", "22 (44%)", "18 (36%)", "1 (2%)"],
         ["YouTube", "0 (0%)", "16 (32%)", "24 (48%)", "10 (20%)", "0 (0%)"],
-        ["TikTok", "6 (12%)", "27 (54%)", "15 (30%)", "2 (4%)", "0 (0%)"],
+        ["TikTok", "6 (12.8%)", "26 (55.3%)", "13 (27.7%)", "2 (4.3%)", "0 (0%)"],
         ["Instagram", "21 (42%)", "25 (50%)", "3 (6%)", "1 (2%)", "0 (0%)"],
     ]
     for ri, rd in enumerate(rows2):
@@ -1093,11 +1105,11 @@ def build_appendix_c():
         t3.rows[0].cells[i].text = v
     rows3 = [
         ["Website vs YouTube", "1646", ".038", "-0.316"],
-        ["Website vs TikTok", "2088", "< .001", "-0.670"],
+        ["Website vs TikTok", "1972", "< .001", "-0.678"],
         ["Website vs Instagram", "2364", "< .001", "-0.891"],
-        ["YouTube vs TikTok", "1859", "< .001", "-0.487"],
+        ["YouTube vs TikTok", "1775", "< .001", "-0.511"],
         ["YouTube vs Instagram", "2313", "< .001", "-0.850"],
-        ["TikTok vs Instagram", "1883", "< .001", "-0.506"],
+        ["TikTok vs Instagram", "1740", "< .001", "-0.480"],
     ]
     for ri, rd in enumerate(rows3):
         for ci, v in enumerate(rd):
@@ -1115,9 +1127,9 @@ def build_appendix_c():
     for i, v in enumerate(h4):
         t4.rows[0].cells[i].text = v
     rows4 = [
-        ["Authorship", "30%", "38%", "30%", "16%"],
+        ["Authorship", "30%", "38%", "29.8%", "16%"],
         ["Attribution", "30%", "16%", "0%", "4%"],
-        ["Disclosure", "16%", "0%", "14%", "0%"],
+        ["Disclosure", "16%", "0%", "12.8%", "0%"],
         ["Currency", "68%", "100%", "100%", "100%"],
     ]
     for ri, rd in enumerate(rows4):
@@ -1137,10 +1149,10 @@ def build_appendix_c():
         t5.rows[0].cells[i].text = v
     rows5 = [
         ["DISCERN Total (ICC[3,1])", "0.932 (95% CI [0.870, 0.960])", "Excellent"],
-        ["JAMA Authorship (kappa)", "0.671", "Substantial"],
-        ["JAMA Attribution (kappa)", "0.615", "Substantial"],
-        ["JAMA Disclosure (kappa)", "0.273", "Fair (kappa paradox)"],
-        ["JAMA Currency (kappa)", "0.216", "Fair (kappa paradox)"],
+        ["JAMA Authorship (kappa)", "0.719", "Substantial"],
+        ["JAMA Attribution (kappa)", "0.686", "Substantial"],
+        ["JAMA Disclosure (kappa)", "0.305", "Fair (kappa paradox)"],
+        ["JAMA Currency (kappa)", "0.215", "Fair (kappa paradox)"],
     ]
     for ri, rd in enumerate(rows5):
         for ci, v in enumerate(rd):
@@ -1158,15 +1170,15 @@ def build_appendix_c():
     for i, v in enumerate(h6):
         t6.rows[0].cells[i].text = v
     rows6 = [
-        ["Views (overall)", "-0.073", ".571", "Negligible, ns"],
-        ["Likes (overall)", "0.413", "< .001", "Moderate positive (confounded)"],
-        ["Comments (overall)", "0.415", "< .001", "Moderate positive (confounded)"],
-        ["YouTube views", "-0.316", ".035", "Negative, significant"],
-        ["YouTube likes", "-0.279", ".063", "ns"],
-        ["TikTok views", "0.249", ".318", "ns"],
-        ["TikTok likes", "0.280", ".098", "ns"],
-        ["Instagram likes", "-0.013", ".936", "ns"],
-        ["Note", "", "", "Overall likes/comments driven by Simpson's paradox"],
+        ["Views (overall, n=97)", "-0.044", ".669", "Negligible, ns"],
+        ["Likes (overall, n=147)", "0.284", "< .001", "Weak positive (confounded)"],
+        ["Comments (overall, n=147)", "0.371", "< .001", "Moderate positive (confounded)"],
+        ["YouTube views", "-0.340", ".016", "Significant negative"],
+        ["YouTube likes", "-0.286", ".044", "Significant negative"],
+        ["TikTok views", "-0.057", ".702", "ns"],
+        ["TikTok likes", "0.109", ".467", "ns"],
+        ["Instagram likes", "-0.174", ".226", "ns"],
+        ["Note", "", "", "Overall likes/comments confounded; YouTube shows real negative correlations"],
     ]
     for ri, rd in enumerate(rows6):
         for ci, v in enumerate(rd):
@@ -1205,11 +1217,11 @@ def build_appendix_c():
     for i, v in enumerate(h8):
         t8.rows[0].cells[i].text = v
     rows8 = [
-        ["Healthcare Professional", "17", "41.0"],
-        ["Certified Fitness Professional", "31", "41.0"],
-        ["Fitness Influencer", "27", "36.0"],
-        ["General User", "30", "33.0"],
-        ["Organisation", "85", "39.0"],
+        ["Healthcare Professional", "19", "45.0"],
+        ["Certified Fitness Professional", "32", "39.5"],
+        ["Fitness Influencer", "38", "36.0"],
+        ["General User", "24", "33.0"],
+        ["Organisation", "84", "39.0"],
     ]
     for ri, rd in enumerate(rows8):
         for ci, v in enumerate(rd):
@@ -1220,18 +1232,17 @@ def build_appendix_c():
     add_body(doc, "")
 
     # -- Table C9: Content format --
-    add_heading2(doc, "Table C9. DISCERN Scores by Content Format")
-    t9 = doc.add_table(rows=6, cols=4)
+    add_heading2(doc, "Table C9. DISCERN Scores by Content Format (= Platform)")
+    t9 = doc.add_table(rows=5, cols=5)
     t9.style = "Table Grid"
-    h9 = ["Format", "n", "Mdn", "M"]
+    h9 = ["Format", "Platform", "n", "Mdn", "M"]
     for i, v in enumerate(h9):
         t9.rows[0].cells[i].text = v
     rows9 = [
-        ["Text Article", "50", "48.5", "47.0"],
-        ["Long Video (>5 min)", "45", "43.0", "43.1"],
-        ["Short Video (<60 s)", "47", "34.0", "33.8"],
-        ["Image + Caption", "21", "30.0", "30.5"],
-        ["Carousel", "37", "27.5", "28.4"],
+        ["Text Article", "Website", "50", "48.5", "47.0"],
+        ["Long Video (>5 min)", "YouTube", "50", "42.0", "42.9"],
+        ["Short Video (<60 s)", "TikTok", "47", "35.0", "35.6"],
+        ["Carousel", "Instagram", "50", "27.5", "29.0"],
     ]
     for ri, rd in enumerate(rows9):
         for ci, v in enumerate(rd):

@@ -378,7 +378,8 @@ def generate_appendix_d():
          "correlation r."),
         ("Platform comparisons (JAMA)",
          "Chi-square test of independence (scipy.stats.chi2_contingency) for each JAMA criterion. "
-         "Fisher\u2019s exact test used when expected cell counts < 5."),
+         "Fisher\u2019s exact test used when expected cell counts < 5. Effect size reported as "
+         "Cram\u00e9r\u2019s V."),
         ("Creator type analysis",
          "Mann-Whitney U test (scipy.stats.mannwhitneyu) comparing professional vs. non-professional "
          "creators. Effect size: r = Z / sqrt(N)."),
@@ -403,10 +404,13 @@ def generate_appendix_d():
     add_para(
         doc,
         "All data, scripts, and analysis outputs are maintained in a version-controlled Git "
-        "repository. The complete analysis can be reproduced by running: python analysis/run_analysis.py "
-        "from the project root directory. Input data are located in data/csv/master_dataset.csv and "
-        "data/csv/second_rater_scores.csv. Output files (figures, tables, and the analysis report) "
-        "are written to analysis/output/.",
+        "repository available at https://github.com/ayothedoc3/masters-thesis "
+        "(accessed 23 March 2026). The repository snapshot current at the time of submission "
+        "contains the materials supporting the submitted thesis. The complete analysis can be reproduced by "
+        "running: python analysis/run_analysis.py from the project root directory. The final audited "
+        "input files are data/csv/master_dataset_corrected.csv and data/csv/second_rater_scores.csv. "
+        "The script normalises common content-format label variants before analysis and writes all "
+        "output files (figures, tables, and analysis_report.txt) to analysis/output/.",
     )
 
     path = os.path.join(APPENDIX_DIR, "appendix_d_analysis_code.docx")
