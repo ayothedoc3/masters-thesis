@@ -582,13 +582,13 @@ def build_chapter3():
 
 
 # ============================================================================
-#  CHAPTER 4 — DISCUSSION
+#  CHAPTER 4 — CONSIDERATIONS
 # ============================================================================
 
 def build_chapter4():
     doc = create_doc()
 
-    add_heading1(doc, "CHAPTER 4. DISCUSSION")
+    add_heading1(doc, "CHAPTER 4. CONSIDERATIONS")
 
     # ---- 4.1 Summary of Key Findings ----
     add_heading2(doc, "4.1 Summary of Key Findings")

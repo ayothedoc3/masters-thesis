@@ -124,10 +124,10 @@ rFonts = parse_xml(
 rPr.insert(0, rFonts)
 
 # ============================================================
-# CHAPTER 4: DISCUSSION
+# CHAPTER 4: CONSIDERATIONS
 # ============================================================
 
-add_heading_custom(doc, "4. DISCUSSION", level=1, size=14, space_before=0, space_after=12)
+add_heading_custom(doc, "4. CONSIDERATIONS", level=1, size=14, space_before=0, space_after=12)
 
 # Introductory paragraph
 add_formatted_paragraph(
