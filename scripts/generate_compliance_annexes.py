@@ -1,22 +1,28 @@
 """
 Generate additional annex documents required for LSU compliance:
 - Draft scientific article / manuscript
-- Conference evidence placeholder
+- Conference evidence
 - Consultations timesheet placeholder
 - Ethics evidence placeholder
 """
 from __future__ import annotations
 
+from io import BytesIO
 import os
 
 from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.shared import Cm, Inches, Pt, RGBColor
+try:
+    import fitz  # PyMuPDF
+except ImportError:  # pragma: no cover
+    fitz = None
 
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APPENDICES = os.path.join(ROOT, "appendices")
 os.makedirs(APPENDICES, exist_ok=True)
+CONFERENCE_CERT_PDF = os.path.join(os.path.dirname(ROOT), "conference certificate lsu.pdf")
 
 
 def set_style(doc: Document) -> None:
@@ -166,6 +172,46 @@ def generate_article_annex() -> None:
     print(f"Appendix E saved to {path}")
 
 
+def generate_conference_annex() -> None:
+    doc = Document()
+    set_style(doc)
+    add_heading(doc, "APPENDIX F: EVIDENCE OF SCIENTIFIC CONFERENCE PRESENTATION")
+
+    if os.path.exists(CONFERENCE_CERT_PDF) and fitz is not None:
+        add_para(
+            doc,
+            "Official conference certificate confirming presentation of the thesis findings, "
+            "included in accordance with LSU regulation clause 41.2.",
+            first_line_indent_cm=1.25,
+        )
+        pdf = fitz.open(CONFERENCE_CERT_PDF)
+        try:
+            page = pdf.load_page(0)
+            pix = page.get_pixmap(matrix=fitz.Matrix(2, 2), alpha=False)
+            image_stream = BytesIO(pix.tobytes("png"))
+        finally:
+            pdf.close()
+
+        paragraph = doc.add_paragraph()
+        paragraph.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        run = paragraph.add_run()
+        run.add_picture(image_stream, width=Inches(6.2))
+    else:
+        add_para(
+            doc,
+            "This annex is reserved for the conference certificate, conference program, or other official "
+            "document confirming presentation of the thesis findings at a scientific conference, as required "
+            "by LSU regulation clause 41.2.",
+            first_line_indent_cm=1.25,
+        )
+        add_para(doc, "")
+        add_para(doc, "Insert the signed or official document in this annex before submission.", bold=True)
+
+    path = os.path.join(APPENDICES, "appendix_f_conference_evidence.docx")
+    doc.save(path)
+    print(f"Appendix F saved to {path}")
+
+
 def generate_document_placeholder(filename: str, title: str, body: str) -> None:
     doc = Document()
     set_style(doc)
@@ -180,13 +226,7 @@ def generate_document_placeholder(filename: str, title: str, body: str) -> None:
 
 if __name__ == "__main__":
     generate_article_annex()
-    generate_document_placeholder(
-        "appendix_f_conference_evidence.docx",
-        "APPENDIX F: EVIDENCE OF SCIENTIFIC CONFERENCE PRESENTATION",
-        "This annex is reserved for the conference certificate, conference program, or other official "
-        "document confirming presentation of the thesis findings at a scientific conference, as required "
-        "by LSU regulation clause 41.2.",
-    )
+    generate_conference_annex()
     generate_document_placeholder(
         "appendix_g_consultations_timesheet.docx",
         "APPENDIX G: CONSULTATIONS TIMESHEET",
