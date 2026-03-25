@@ -20,8 +20,6 @@ Chou, W. S., Hunt, Y. M., Beckjord, E. B., Moser, R. P., & Hesse, B. W. (2009). 
 
 Cooke, A., Smith, D., & Booth, A. (2012). Beyond PICO: The SPIDER tool for qualitative evidence synthesis. *Qualitative Health Research*, *22*(10), 1435--1443. https://doi.org/10.1177/1049732312452938
 
-de Moel-Mandel, C., Donnelly, A., & Bugden, M. (2025). "Do you know what birth control actually does to your body?": Assessing contraceptive information on TikTok. *Perspectives on Sexual and Reproductive Health*, *57*(3), 358--367. https://doi.org/10.1111/psrh.70025
-
 Diviani, N., van den Putte, B., Giani, S., & van Weert, J. C. (2015). Low health literacy and evaluation of online health information: A systematic review of the literature. *Journal of Medical Internet Research*, *17*(5), Article e112. https://doi.org/10.2196/jmir.4018
 
 Eysenbach, G., Powell, J., Kuss, O., & Sa, E.-R. (2002). Empirical studies assessing the quality of health information for consumers on the world wide web: A systematic review. *JAMA*, *287*(20), 2691--2700. https://doi.org/10.1001/jama.287.20.2691
@@ -29,8 +27,6 @@ Eysenbach, G., Powell, J., Kuss, O., & Sa, E.-R. (2002). Empirical studies asses
 Fox, S., & Duggan, M. (2013). *Health online 2013*. Pew Research Center. https://www.pewresearch.org/internet/2013/01/15/health-online-2013-2/
 
 Haghighi, R., & Farhadloo, M. (2025). Quality assessment of health information on social media during a public health crisis: Infodemiology study. *JMIR Infodemiology*, *5*, Article e70756. https://doi.org/10.2196/70756
-
-Kbaier, D., Kane, A., McJury, M., & Kenny, I. (2024). Prevalence of health misinformation on social media -- Challenges and mitigation before, during, and beyond the COVID-19 pandemic: Scoping literature review. *Journal of Medical Internet Research*, *26*, Article e38786. https://doi.org/10.2196/38786
 
 Kocyigit, B. F., Cetin, E., & Ozturk, G. Y. (2024). YouTube as a source of information on public health ethics. *Journal of Korean Medical Science*, *39*(7), Article e61. https://doi.org/10.3346/jkms.2024.39.e61
 

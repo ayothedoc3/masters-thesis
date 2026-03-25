@@ -404,10 +404,12 @@ def generate_appendix_d():
         doc,
         "All data, scripts, and analysis outputs are maintained in a version-controlled Git "
         "repository available at https://github.com/ayothedoc3/masters-thesis "
-        "(accessed 25 March 2026). The repository snapshot current at the time of submission "
+        "(accessed 26 March 2026). The repository snapshot current at the time of submission "
         "contains the materials supporting the submitted thesis. The complete analysis can be reproduced by "
         "running: python analysis/run_analysis.py from the project root directory. The final audited "
         "input files are data/csv/master_dataset_corrected.csv and data/csv/second_rater_scores.csv. "
+        "The final audited analytical sample contains 197 items: 50 websites, 50 YouTube videos, "
+        "47 TikTok videos, and 50 Instagram posts. "
         "The script normalises common content-format label variants before analysis and writes all "
         "output files (figures, tables, and analysis_report.txt) to analysis/output/.",
     )
