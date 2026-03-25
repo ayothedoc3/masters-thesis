@@ -104,7 +104,7 @@ def add_formatted_paragraph(doc, text, bold=False, italic=False, size=12,
 
 def add_heading_custom(doc, text, level=1, size=14, space_before=12, space_after=6):
     """Add a custom heading with Times New Roman formatting."""
-    p = doc.add_paragraph()
+    p = doc.add_paragraph(style=f"Heading {1 if level == 1 else 2 if level == 2 else 3}")
     if level == 1:
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     else:
@@ -299,7 +299,7 @@ def create_chapter2():
     )
 
     spider_items = [
-        ("\u2022 Sample: ", "200 content items across four platforms (50 per platform)."),
+        ("\u2022 Sample: ", "Targeted sample of 200 content items across four platforms; final audited analytical sample of 197 items after three unverifiable TikTok records were excluded."),
         ("\u2022 Phenomenon of Interest: ", "Quality of physical activity information."),
         ("\u2022 Design: ", "Cross-sectional content analysis."),
         ("\u2022 Evaluation: ", "DISCERN instrument and JAMA benchmarks."),
@@ -317,7 +317,7 @@ def create_chapter2():
 
     add_formatted_paragraph(
         doc,
-        "The rationale for employing a cross-sectional content analysis rather than a systematic review lies in the current state of the literature. Recent meta-analyses have already synthesised the existing body of evidence on health information quality across individual platforms (Ayyash et al., 2025; Ayyash, Musaad, et al., 2025). However, no study to date has conducted a direct, head-to-head comparison of physical activity information quality across traditional websites, YouTube, TikTok, and Instagram using both the DISCERN and JAMA instruments simultaneously. The present study addresses this gap by providing the first four-platform comparative analysis using dual quality assessment frameworks applied specifically to physical activity content.",
+        "The rationale for employing a cross-sectional content analysis rather than a systematic review lies in the current state of the literature. Recent systematic reviews and meta-analyses have already synthesised major strands of evidence on health information quality across websites, social media, and short-form video content (Daraz et al., 2019; Li et al., 2024; Liu et al., 2025). However, no study to date has conducted a direct, head-to-head comparison of physical activity information quality across traditional websites, YouTube, TikTok, and Instagram using both the DISCERN and JAMA instruments simultaneously. The present study addresses this gap by providing a four-platform comparative analysis using dual quality assessment frameworks applied specifically to physical activity content.",
         first_line_indent=1.27
     )
 
@@ -345,7 +345,7 @@ def create_chapter2():
 
     add_formatted_paragraph(
         doc,
-        "The study sample comprises a total of N = 200 content items collected from four digital platforms: traditional websites accessed through Google search (n = 50), YouTube (n = 50), TikTok (n = 50), and Instagram (n = 50). This sample size was determined based on precedent in health information quality research, where samples of 40\u201360 items per platform have been established as sufficient for detecting meaningful quality differences (Leong et al., 2021; Drozd et al., 2018).",
+        "The sampling design targeted 200 content items from four digital platforms: traditional websites accessed through Google search (target n = 50), YouTube (target n = 50), TikTok (target n = 50), and Instagram (target n = 50). This target sample size was determined based on precedent in health information quality research, where samples of 40\u201360 items per platform have been established as sufficient for detecting meaningful quality differences (Leong et al., 2021; Drozd et al., 2018). Following the post-collection audit, three TikTok records could not be verified against the raw captures and were excluded without replacement, yielding a final analytical sample of 197 items (50 websites, 50 YouTube videos, 47 TikTok videos, and 50 Instagram posts).",
         first_line_indent=1.27
     )
 
@@ -372,7 +372,7 @@ def create_chapter2():
 
     add_formatted_paragraph(
         doc,
-        "These search terms were selected to represent a range of common physical activity information-seeking behaviours, from general exercise initiation to specific activity modalities. For each search term, the first 10 results were collected from each platform, yielding 10 results \u00d7 5 search terms \u00d7 4 platforms = 200 content items. The sampling strategy employed convenience sampling of top-ranked search results, which simulates the actual information-seeking behaviour of typical users who predominantly access the first page of search results (Pan et al., 2007).",
+        "These search terms were selected to represent a range of common physical activity information-seeking behaviours, from general exercise initiation to specific activity modalities. For each search term, the first 10 results were targeted from each platform, yielding a planned collection frame of 10 results \u00d7 5 search terms \u00d7 4 platforms = 200 items. The sampling strategy employed convenience sampling of top-ranked search results, which approximates the actual information-seeking behaviour of typical users who predominantly access the first page or highest-ranked results (Pan et al., 2007). After the audit exclusions described above, the final analytical sample comprised 197 items.",
         first_line_indent=1.27
     )
 
@@ -387,7 +387,13 @@ def create_chapter2():
     add_mixed_paragraph(
         doc,
         [("Exclusion criteria. ", True, False),
-         ("Content items were excluded if they met any of the following criteria: (a) duplicate content appearing across multiple platforms, (b) content behind a paywall or requiring subscription access, (c) content not primarily focused on physical activity (e.g., product-only advertisements, unrelated entertainment), or (d) content in languages other than English. When a result was excluded, the next sequential result from the same search was included as a replacement to maintain the target sample size.", False, False)],
+         ("Content items were excluded if they met any of the following criteria: (a) duplicate content appearing across multiple platforms, (b) content behind a paywall or requiring subscription access, (c) content not primarily focused on physical activity (e.g., product-only advertisements, unrelated entertainment), or (d) content in languages other than English. During initial collection, excluded search results were replaced by the next sequential organic result from the same search to preserve the planned sampling frame. During the later audit, three TikTok records lacked verifiable raw-source support and were therefore removed without replacement.", False, False)],
+        first_line_indent=1.27
+    )
+
+    add_formatted_paragraph(
+        doc,
+        "Accordingly, Table 2.1 should be interpreted as the planned sampling matrix rather than the final audited analytical distribution. All inferential analyses reported in Chapters 3\u20135 and the appendices are based on the final audited dataset of 197 items.",
         first_line_indent=1.27
     )
 
@@ -398,7 +404,7 @@ def create_chapter2():
     )
 
     # TABLE 2.1 - Sampling Matrix
-    add_apa_table_title(doc, "2.1", "Sampling Matrix: Distribution of Content Items by Search Term and Platform")
+    add_apa_table_title(doc, "2.1", "Planned Sampling Matrix: Target Distribution of Content Items by Search Term and Platform")
 
     table1 = doc.add_table(rows=7, cols=6)
     table1.alignment = WD_TABLE_ALIGNMENT.CENTER
@@ -442,7 +448,7 @@ def create_chapter2():
     p_note = doc.add_paragraph()
     run_note = p_note.add_run("Note. ")
     format_run(run_note, bold=False, italic=True, size=10)
-    run_note2 = p_note.add_run("Each cell represents the number of content items collected per search term per platform. Total sample N = 200.")
+    run_note2 = p_note.add_run("Each cell represents the targeted number of content items per search term per platform. Planned collection frame N = 200; final audited analytical sample N = 197 after three TikTok exclusions.")
     format_run(run_note2, bold=False, italic=False, size=10)
     add_paragraph_spacing(p_note, before=3, after=12, line_spacing=1.0)
 
@@ -456,13 +462,13 @@ def create_chapter2():
 
     add_formatted_paragraph(
         doc,
-        "Data collection was conducted over a two-day window (1\u20132 March 2026) using a systematic protocol designed to minimise algorithmic bias and ensure reproducibility. All searches were performed in logged-out, incognito (private) browsing mode in Google Chrome to eliminate the influence of personalised search algorithms, browsing history, and account-based recommendations on result rankings (Tripodi, 2018). The browser\u2019s language was set to English (United States) and geolocation was configured to Kaunas, Lithuania, the researcher\u2019s institutional location, to standardise the search environment across all platforms. No VPN was used.",
+        "Data collection was conducted over a two-day window (1\u20132 March 2026) using a systematic protocol designed to reduce avoidable sources of algorithmic bias and improve reproducibility. All searches were performed in logged-out, incognito (private) browsing mode in Google Chrome to reduce the influence of browsing history, cookies, and account-based recommendations on result rankings (Tripodi, 2018). Nonetheless, search results may still vary because of location/IP-based and other forms of platform personalisation. The browser\u2019s language was set to English (United States) and geolocation was configured to Kaunas, Lithuania, the researcher\u2019s institutional location, to standardise the search environment across all platforms. No VPN was used.",
         first_line_indent=1.27
     )
 
     add_formatted_paragraph(
         doc,
-        "For traditional websites, searches were conducted on Google (google.com) using the default \u2018All\u2019 results tab; sponsored results and advertisements were excluded. For YouTube, searches were conducted on youtube.com using the default \u2018Relevance\u2019 sort. For both platforms, an automated data collection approach was employed using Playwright, an open-source browser automation framework. The automated scripts navigated to each platform, entered the standardised search terms, and systematically recorded the top 10 organic results for each query. This approach ensured consistency in result capture and eliminated human error in the recording of search rankings, URLs, and metadata. For TikTok and Instagram, manual data collection was conducted due to these platforms\u2019 implementation of anti-bot measures that prevent reliable browser automation. TikTok searches used the in-app \u2018Top\u2019 tab; Instagram searches used the \u2018Tags\u2019 and \u2018Top\u2019 tabs. The primary researcher manually searched each term within the platform\u2019s native search function, recording the first 10 relevant results in order of appearance. Reposts, advertisements, pinned/promoted content, and duplicate items from the same creator for the same search term were excluded and replaced by the next sequential organic result.",
+        "For traditional websites, searches were conducted on Google (google.com) using the default \u2018All\u2019 results tab; sponsored results and advertisements were excluded. For YouTube, searches were conducted on youtube.com using the default \u2018Relevance\u2019 sort. For both platforms, an automated data collection approach was employed using Playwright, an open-source browser automation framework. The automated scripts navigated to each platform, entered the standardised search terms, and systematically recorded the top 10 organic results for each query. This approach ensured consistency in result capture and reduced human error in the recording of search rankings, URLs, and metadata. For TikTok and Instagram, manual data collection was conducted due to these platforms\u2019 implementation of anti-bot measures that prevent reliable browser automation. TikTok searches used the in-app \u2018Top\u2019 tab; Instagram searches used the \u2018Tags\u2019 and \u2018Top\u2019 tabs. The primary researcher manually searched each term within the platform\u2019s native search function, recording the first 10 relevant results in order of appearance. For TikTok and Instagram, this order of appearance was treated as an operational proxy for ranking position rather than a guaranteed ordinal rank list. Reposts, advertisements, pinned/promoted content, and duplicate items from the same creator for the same search term were excluded and replaced by the next sequential organic result during the initial collection stage.",
         first_line_indent=1.27
     )
 
@@ -486,6 +492,12 @@ def create_chapter2():
     add_formatted_paragraph(
         doc,
         "For the purposes of the present study, DISCERN quality scores were categorised using the following established thresholds: Very Poor (16\u201326), Poor (27\u201338), Fair (39\u201350), Good (51\u201362), and Excellent (63\u201380). These categories facilitate meaningful interpretation and cross-study comparison of quality ratings. In adapting the instrument for social media content, questions pertaining to treatment information were interpreted in the context of exercise and physical activity recommendations, consistent with the approach adopted in prior studies examining fitness-related content (Kocyigit et al., 2019; Kong et al., 2021).",
+        first_line_indent=1.27
+    )
+
+    add_formatted_paragraph(
+        doc,
+        "Scoring was restricted to information visible to a typical user at the point of access. For websites, raters assessed the full article text and any immediately visible source, date, and authorship information. For YouTube and TikTok, raters were permitted to use the video content itself, spoken narration, on-screen text, title, caption/description, pinned comments where present, and creator profile bio. For Instagram, raters used all visible carousel text or image text, the caption, pinned comments where present, and profile bio. No score was awarded on the basis of inferred but unstated evidence or credentials; if a risk, source, or qualification was implied but not explicitly visible, the conservative lower score was retained.",
         first_line_indent=1.27
     )
 
@@ -660,14 +672,14 @@ def create_chapter2():
     add_mixed_paragraph(
         doc,
         [("Pilot scoring. ", True, False),
-         ("Prior to the full assessment, the primary researcher conducted a pilot scoring exercise on 10 content items (2\u20133 per platform, not included in the final sample) to test the operationalisation of the DISCERN and JAMA instruments for social media content. This pilot identified that DISCERN questions Q4 (sources of information) and Q11 (risks of treatment) were the most challenging to adapt to short-form video, as these items often required inference from visual and verbal cues rather than explicit textual statements. Scoring rules were refined accordingly: for Q4, on-screen citation of sources or verbal references to guidelines were accepted; for Q11, any mention of injury risk, contraindications, or the advice to consult a professional was scored positively. These pilot-derived rules were documented in the scoring guide and applied consistently across all 200 items.", False, False)],
+         ("Prior to the full assessment, the primary researcher conducted a pilot scoring exercise on 10 content items (2\u20133 per platform, not included in the final sample) to test the operationalisation of the DISCERN and JAMA instruments for social media content. This pilot identified that DISCERN questions Q4 (sources of information) and Q11 (risks of treatment) were the most challenging to adapt to short-form video, as these items often required careful distinction between explicitly visible evidence and implied claims. Scoring rules were refined accordingly: for Q4, on-screen citation of sources or verbal references to guidelines were accepted; for Q11, any explicit mention of injury risk, contraindications, or the advice to consult a professional was scored positively. These pilot-derived rules were documented in the scoring guide and applied consistently across the final audited dataset.", False, False)],
         first_line_indent=1.27
     )
 
     add_mixed_paragraph(
         doc,
         [("Phase 3: Primary quality assessment. ", True, False),
-         ("The primary researcher assessed all 200 content items using both the DISCERN instrument and the JAMA benchmarks. For text-based website content, each article was read in full. For video content (YouTube and TikTok), scoring was based on a combination of the video content itself, visible captions, descriptions, and on-screen text; full verbatim transcription was not performed. For Instagram carousels and image posts, scoring was based on all visible text, captions, and associated profile information. This approach reflects the information a typical user would encounter when engaging with each item. Scores were recorded in a structured data collection spreadsheet.", False, False)],
+         ("The primary researcher assessed all 197 audited content items using both the DISCERN instrument and the JAMA benchmarks. For text-based website content, each article was read in full. For video content (YouTube and TikTok), scoring was based on a combination of the audiovisual content, visible captions, descriptions, on-screen text, and profile information; full verbatim transcription was not performed. For Instagram carousels and image posts, scoring was based on all visible text, captions, and associated profile information. This approach reflects the information a typical user would encounter when engaging with each item. Scores were recorded in a structured data collection spreadsheet.", False, False)],
         first_line_indent=1.27
     )
 
@@ -716,10 +728,10 @@ def create_chapter2():
     phases = [
         "Phase 1: Automated Data Collection\n(Google & YouTube via Playwright \u2013 Day 1)",
         "Phase 2: Manual Data Collection\n(TikTok & Instagram \u2013 Days 1\u20132)",
-        "Phase 3: Primary DISCERN & JAMA Assessment\n(N = 200 content items)",
+        "Phase 3: Primary DISCERN & JAMA Assessment\n(Final audited N = 197 content items)",
         "Phase 4: Second Rater Assessment\n(20% subsample, n = 40)",
         "Phase 5: Inter-Rater Reliability\n(ICC for DISCERN; Cohen\u2019s \u03ba for JAMA)",
-        "Phase 6: Statistical Analysis\n(Python 3.13 with SciPy, pingouin, scikit-posthocs)"
+        "Phase 6: Statistical Analysis\n(Python 3.13 with SciPy, pingouin, matplotlib/seaborn)"
     ]
 
     flow_table = doc.add_table(rows=11, cols=1)
@@ -772,7 +784,7 @@ def create_chapter2():
 
     add_formatted_paragraph(
         doc,
-        "The present study does not involve human subjects, as all data were derived from publicly available online content. Consequently, formal ethics committee approval was not required, consistent with standard practice for content analyses of publicly accessible materials (Snelson, 2016). No personal data of content creators were collected beyond publicly displayed profile information relevant to the creator type classification. All content was accessed through standard public-facing interfaces, and no private or restricted materials were accessed at any point during the data collection process.",
+        "The present study did not involve direct interaction with human participants, as all data were derived from publicly available online content. Consequently, formal ethics committee approval was not required, consistent with standard practice for content analyses of publicly accessible materials (Snelson, 2016). Nonetheless, the study was designed in line with internet research ethics principles by limiting data collection to public-facing content, avoiding private groups or restricted materials, not bypassing access controls, and minimising unnecessary identification of individuals in the thesis text. No personal data were collected beyond publicly displayed profile information relevant to creator-type classification, and screenshots were retained solely as an audit trail for verification purposes.",
         first_line_indent=1.27
     )
 
@@ -783,7 +795,7 @@ def create_chapter2():
 
     add_formatted_paragraph(
         doc,
-        "All statistical analyses were conducted using Python 3.13 with the following scientific computing libraries: pandas (McKinney, 2010) for data manipulation, SciPy (Virtanen et al., 2020) for non-parametric inferential tests including Kruskal\u2013Wallis, Mann\u2013Whitney U, chi-square, and Spearman correlations, scikit-posthocs (Terpilowski, 2019) for Dunn\u2019s post-hoc comparisons with Bonferroni correction, pingouin (Vallat, 2018) for intraclass correlation coefficient computation, and matplotlib/seaborn for publication-quality graphical representations. The significance level was set at \u03b1 = 0.05 for all inferential tests. The complete analysis code is reproduced in Appendix D.",
+        "All statistical analyses were conducted using Python 3.13 with the following scientific computing libraries: pandas (McKinney, 2010) for data manipulation, SciPy (Virtanen et al., 2020) for non-parametric inferential tests including Kruskal\u2013Wallis, Mann\u2013Whitney U, chi-square, and Spearman correlations, pingouin (Vallat, 2018) for intraclass correlation coefficient computation, and matplotlib/seaborn for publication-quality graphical representations. The significance level was set at \u03b1 = 0.05 for all inferential tests. The complete analysis code is reproduced in Appendix D.",
         first_line_indent=1.27
     )
 
@@ -823,7 +835,7 @@ def create_chapter2():
     add_mixed_paragraph(
         doc,
         [("Platform comparisons of DISCERN scores. ", True, False),
-         ("The Kruskal-Wallis H test was employed to examine whether DISCERN total scores differed significantly across the four platforms (Google, YouTube, TikTok, and Instagram). When a statistically significant omnibus result was obtained, Dunn\u2019s post-hoc test with Bonferroni correction was applied to identify which specific platform pairs differed significantly. The effect size was quantified using eta-squared (\u03b7\u00b2), computed as \u03b7\u00b2 = (H \u2212 k + 1) / (N \u2212 k), where H is the Kruskal-Wallis statistic, k the number of groups, and N the total sample size. This is an approximation rather than a true proportion of variance explained and should be interpreted accordingly; values of approximately 0.01, 0.06, and 0.14 correspond to small, medium, and large effects, respectively (Cohen, 1988).", False, False)],
+         ("The Kruskal-Wallis H test was employed to examine whether DISCERN total scores differed significantly across the four platforms (websites, YouTube, TikTok, and Instagram). When a statistically significant omnibus result was obtained, pairwise Mann\u2013Whitney U tests with Bonferroni correction were applied to identify which specific platform pairs differed significantly. The omnibus effect size was computed using the formula (H \u2212 k + 1) / (N \u2212 k) and is reported as a rank-based effect-size estimate to avoid terminological ambiguity. This value should be interpreted cautiously as an index of distributional separation rather than a literal proportion of explained variance; values of approximately 0.01, 0.06, and 0.14 correspond to small, medium, and large effects, respectively (Cohen, 1988).", False, False)],
         first_line_indent=1.27
     )
 
@@ -872,7 +884,7 @@ def create_chapter2():
         (
             "RQ1: How does PA information quality differ between traditional websites and social media?",
             "IV: Platform (4 levels)\nDV: DISCERN total score; JAMA criteria compliance",
-            "Kruskal-Wallis H test (DISCERN)\nDunn\u2019s post-hoc with Bonferroni\n\u03c7\u00b2 / Fisher\u2019s exact test (JAMA)\nEffect sizes: \u03b7\u00b2, Cram\u00e9r\u2019s V",
+            "Kruskal-Wallis H test (DISCERN)\nPairwise Mann-Whitney U with Bonferroni\n\u03c7\u00b2 / Fisher\u2019s exact test (JAMA)\nEffect sizes: rank-based H effect, Cram\u00e9r\u2019s V",
             "Non-parametric; ordinal DISCERN data likely non-normally distributed. Chi-square appropriate for categorical JAMA data."
         ),
         (
@@ -911,7 +923,7 @@ def create_chapter2():
     p_note4 = doc.add_paragraph()
     run_n4a = p_note4.add_run("Note. ")
     format_run(run_n4a, italic=True, size=10)
-    run_n4b = p_note4.add_run("IV = independent variable; DV = dependent variable; PA = physical activity; ICC = Intraclass Correlation Coefficient; \u03b7\u00b2 = eta-squared (approximation); \u03c7\u00b2 = chi-square; \u03ba = kappa; \u03c1 = Spearman\u2019s rho. Significance level: \u03b1 = 0.05 for all tests.")
+    run_n4b = p_note4.add_run("IV = independent variable; DV = dependent variable; PA = physical activity; ICC = Intraclass Correlation Coefficient; \u03c7\u00b2 = chi-square; \u03ba = kappa; \u03c1 = Spearman\u2019s rho. The Kruskal-Wallis omnibus effect size was calculated as (H \u2212 k + 1) / (N \u2212 k). Significance level: \u03b1 = 0.05 for all tests.")
     format_run(run_n4b, size=10)
     add_paragraph_spacing(p_note4, before=3, after=12, line_spacing=1.0)
 

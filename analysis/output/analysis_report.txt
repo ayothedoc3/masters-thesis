@@ -92,14 +92,7 @@ SECTION 3: RQ1 — DISCERN SCORES ACROSS PLATFORMS
   Eta-squared = 0.4689
   Result: HIGHLY SIGNIFICANT (p < 0.001)
 
-3b. Dunn's Post-Hoc Tests (Bonferroni corrected):
-            Website   YouTube    TikTok  Instagram
-Website    1.000000  0.410201  0.000000   0.000000
-YouTube    0.410201  1.000000  0.001200   0.000000
-TikTok     0.000000  0.001200  1.000000   0.008041
-Instagram  0.000000  0.000000  0.008041   1.000000
-
-  Pairwise comparisons (Mann-Whitney U with effect size):
+3b. Pairwise Mann-Whitney U Tests (Bonferroni corrected):
   Website vs YouTube: U=1646, p_adj=0.0384 *, r=-0.316
   Website vs TikTok: U=1972, p_adj=0.0000 ***, r=-0.678
   Website vs Instagram: U=2364, p_adj=0.0000 ***, r=-0.891

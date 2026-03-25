@@ -254,32 +254,32 @@ def generate_appendix_c():
     add_para(doc, "Table C1. Creator Type Distribution by Platform", bold=True, align=WD_ALIGN_PARAGRAPH.LEFT)
     make_table(doc, [
         ["Platform", "Healthcare Prof.", "Certified Fitness Prof.", "Fitness Influencer", "General User", "Organisation"],
-        ["Website", "0", "7", "0", "4", "39"],
-        ["YouTube", "3", "12", "19", "4", "12"],
-        ["TikTok", "8", "7", "21", "9", "5"],
+        ["Website", "5", "5", "0", "4", "36"],
+        ["YouTube", "3", "13", "16", "4", "14"],
+        ["TikTok", "8", "6", "19", "9", "5"],
         ["Instagram", "3", "8", "3", "7", "29"],
-        ["Total", "14", "34", "43", "24", "85"],
+        ["Total", "19", "32", "38", "24", "84"],
     ])
     add_para(doc, "")
 
     add_para(doc, "Table C2. DISCERN Total Score Descriptive Statistics by Platform", bold=True, align=WD_ALIGN_PARAGRAPH.LEFT)
     make_table(doc, [
         ["Platform", "n", "Mean", "SD", "Median", "Q1", "Q3", "Min", "Max", "IQR"],
-        ["Website", "50", "48.70", "8.17", "48.0", "42.25", "55.00", "33", "65", "12.75"],
-        ["YouTube", "50", "40.36", "6.21", "39.0", "36.00", "42.75", "31", "57", "6.75"],
-        ["TikTok", "50", "32.38", "6.39", "31.0", "29.00", "37.00", "17", "45", "8.00"],
-        ["Instagram", "50", "23.78", "5.83", "21.0", "18.25", "29.75", "16", "36", "11.50"],
-        ["Overall", "200", "36.30", "11.42", "35.5", "\u2014", "\u2014", "16", "65", "\u2014"],
+        ["Website", "50", "47.02", "7.90", "48.5", "43.00", "52.75", "28", "64", "9.75"],
+        ["YouTube", "50", "42.88", "7.10", "42.0", "38.00", "47.00", "30", "57", "9.00"],
+        ["TikTok", "47", "35.64", "7.97", "35.0", "31.00", "39.00", "20", "57", "8.00"],
+        ["Instagram", "50", "28.98", "6.82", "27.5", "25.00", "34.00", "17", "52", "9.00"],
+        ["Overall", "197", "38.68", "10.16", "38.0", "\u2014", "\u2014", "17", "64", "\u2014"],
     ])
     add_para(doc, "")
 
     add_para(doc, "Table C3. DISCERN Quality Category Distribution by Platform (n and %)", bold=True, align=WD_ALIGN_PARAGRAPH.LEFT)
     make_table(doc, [
         ["Platform", "Very Poor n (%)", "Poor n (%)", "Fair n (%)", "Good n (%)", "Excellent n (%)"],
-        ["Website", "0 (0%)", "4 (8%)", "23 (46%)", "22 (44%)", "1 (2%)"],
-        ["YouTube", "0 (0%)", "23 (46%)", "24 (48%)", "3 (6%)", "0 (0%)"],
-        ["TikTok", "7 (14%)", "35 (70%)", "8 (16%)", "0 (0%)", "0 (0%)"],
-        ["Instagram", "30 (60%)", "20 (40%)", "0 (0%)", "0 (0%)", "0 (0%)"],
+        ["Website", "0 (0%)", "9 (18%)", "22 (44%)", "18 (36%)", "1 (2%)"],
+        ["YouTube", "0 (0%)", "16 (32%)", "24 (48%)", "10 (20%)", "0 (0%)"],
+        ["TikTok", "6 (12.8%)", "26 (55.3%)", "13 (27.7%)", "2 (4.3%)", "0 (0%)"],
+        ["Instagram", "21 (42%)", "25 (50%)", "3 (6%)", "1 (2%)", "0 (0%)"],
     ])
     add_para(doc, "")
 
@@ -288,7 +288,7 @@ def generate_appendix_c():
         ["Platform", "Authorship", "Attribution", "Disclosure", "Currency", "Mean Total"],
         ["Website", "30%", "30%", "16%", "68%", "1.44"],
         ["YouTube", "38%", "16%", "0%", "100%", "1.54"],
-        ["TikTok", "30%", "0%", "14%", "100%", "1.44"],
+        ["TikTok", "29.8%", "0%", "12.8%", "100%", "1.43"],
         ["Instagram", "16%", "4%", "0%", "100%", "1.20"],
     ])
     add_para(doc, "")
@@ -297,33 +297,33 @@ def generate_appendix_c():
     add_para(doc, "Table C5. Pairwise Platform Comparisons for DISCERN Total (Mann-Whitney U with Bonferroni Correction)", bold=True, align=WD_ALIGN_PARAGRAPH.LEFT)
     make_table(doc, [
         ["Comparison", "U", "p (adjusted)", "Effect size (r)", "Sig."],
-        ["Website vs YouTube", "1980", "<.0001", "\u22120.584", "***"],
-        ["Website vs TikTok", "2348", "<.0001", "\u22120.878", "***"],
-        ["Website vs Instagram", "2494", "<.0001", "\u22120.995", "***"],
-        ["YouTube vs TikTok", "2030", "<.0001", "\u22120.624", "***"],
-        ["YouTube vs Instagram", "2468", "<.0001", "\u22120.974", "***"],
-        ["TikTok vs Instagram", "2051", "<.0001", "\u22120.641", "***"],
+        ["Website vs YouTube", "1646", ".0384", "\u22120.316", "*"],
+        ["Website vs TikTok", "1972", "<.0001", "\u22120.678", "***"],
+        ["Website vs Instagram", "2364", "<.0001", "\u22120.891", "***"],
+        ["YouTube vs TikTok", "1775", ".0001", "\u22120.511", "***"],
+        ["YouTube vs Instagram", "2313", "<.0001", "\u22120.850", "***"],
+        ["TikTok vs Instagram", "1740", ".0003", "\u22120.480", "***"],
     ])
-    add_para(doc, "Note. *** p < .001. Effect size r computed as Z / sqrt(N).", italic=True)
+    add_para(doc, "Note. * p < .05, *** p < .001. Effect size r reported as rank-biserial correlation.", italic=True)
     add_para(doc, "")
 
     add_heading(doc, "C.3 Engagement\u2013Quality Correlations", level=2)
     add_para(doc, "Table C6. Spearman Correlations Between Engagement Metrics and DISCERN Total by Platform", bold=True, align=WD_ALIGN_PARAGRAPH.LEFT)
     make_table(doc, [
         ["Platform", "Metric", "n", "rho", "p", "Sig."],
-        ["Overall", "Views", "63", ".017", ".894", ""],
-        ["Overall", "Likes", "121", ".549", "<.001", "***"],
-        ["Overall", "Comments", "111", ".520", "<.001", "***"],
-        ["YouTube", "Views", "\u2014", "\u2212.352", ".018", "*"],
-        ["YouTube", "Likes", "\u2014", "\u2212.338", ".023", "*"],
-        ["YouTube", "Comments", "\u2014", "\u2212.239", ".127", ""],
-        ["TikTok", "Views", "\u2014", ".522", ".026", "*"],
-        ["TikTok", "Likes", "\u2014", ".475", ".003", "**"],
-        ["TikTok", "Comments", "\u2014", ".262", ".094", ""],
-        ["Instagram", "Likes", "\u2014", "\u2212.038", ".817", ""],
-        ["Instagram", "Comments", "\u2014", ".065", ".747", ""],
+        ["Overall", "Views", "97", "\u2212.044", ".669", ""],
+        ["Overall", "Likes", "147", ".284", "<.001", "***"],
+        ["Overall", "Comments", "147", ".371", "<.001", "***"],
+        ["YouTube", "Views", "50", "\u2212.340", ".016", "*"],
+        ["YouTube", "Likes", "50", "\u2212.286", ".044", "*"],
+        ["YouTube", "Comments", "50", "\u2212.178", ".216", ""],
+        ["TikTok", "Views", "47", "\u2212.057", ".702", ""],
+        ["TikTok", "Likes", "47", ".109", ".467", ""],
+        ["TikTok", "Comments", "47", ".124", ".408", ""],
+        ["Instagram", "Likes", "50", "\u2212.174", ".226", ""],
+        ["Instagram", "Comments", "50", "\u2212.045", ".758", ""],
     ])
-    add_para(doc, "Note. * p < .05, ** p < .01, *** p < .001.", italic=True)
+    add_para(doc, "Note. * p < .05, *** p < .001. Overall likes and comments correlations should be interpreted cautiously because they are confounded by between-platform differences.", italic=True)
 
     path = os.path.join(APPENDIX_DIR, "appendix_c_data_summary.docx")
     doc.save(path)
@@ -342,7 +342,7 @@ def generate_appendix_d():
     add_para(
         doc,
         "The complete statistical analysis was conducted using Python 3.13 with the following "
-        "packages: pandas, scipy, pingouin, scikit-posthocs, matplotlib, and seaborn. The full "
+        "packages: pandas, scipy, pingouin, matplotlib, and seaborn. The full "
         "analysis script (run_analysis.py) is available in the project repository. Key analysis "
         "functions are summarised below.",
     )
@@ -354,7 +354,6 @@ def generate_appendix_d():
         "pandas 2.2.x \u2014 data manipulation",
         "scipy 1.14.x \u2014 Kruskal-Wallis H, Mann-Whitney U, Chi-square, Spearman correlation",
         "pingouin 0.5.x \u2014 Intraclass Correlation Coefficient (ICC)",
-        "scikit-posthocs 0.9.x \u2014 Dunn\u2019s post-hoc test with Bonferroni correction",
         "matplotlib 3.9.x + seaborn 0.13.x \u2014 figure generation",
     ]
     for item in env_items:
@@ -372,10 +371,10 @@ def generate_appendix_d():
          "Cohen\u2019s kappa calculated manually for binary JAMA criteria using observed vs. expected agreement."),
         ("Platform comparisons (DISCERN)",
          "Kruskal-Wallis H test (scipy.stats.kruskal) followed by Mann\u2013Whitney U pairwise "
-         "comparisons with Bonferroni correction. Effect size: \u03b7\u00b2 = (H \u2212 k + 1) / (N \u2212 k), "
-         "where H is the Kruskal-Wallis statistic, k the number of groups, and N the total "
-         "sample size (Tomczak & Tomczak, 2014). Pairwise effect sizes reported as rank-biserial "
-         "correlation r."),
+         "comparisons with Bonferroni correction. The Kruskal-Wallis omnibus effect size was "
+         "computed as (H \u2212 k + 1) / (N \u2212 k), where H is the Kruskal-Wallis statistic, "
+         "k the number of groups, and N the total sample size (Tomczak & Tomczak, 2014). "
+         "Pairwise effect sizes were reported as rank-biserial correlation r."),
         ("Platform comparisons (JAMA)",
          "Chi-square test of independence (scipy.stats.chi2_contingency) for each JAMA criterion. "
          "Fisher\u2019s exact test used when expected cell counts < 5. Effect size reported as "
@@ -405,7 +404,7 @@ def generate_appendix_d():
         doc,
         "All data, scripts, and analysis outputs are maintained in a version-controlled Git "
         "repository available at https://github.com/ayothedoc3/masters-thesis "
-        "(accessed 23 March 2026). The repository snapshot current at the time of submission "
+        "(accessed 25 March 2026). The repository snapshot current at the time of submission "
         "contains the materials supporting the submitted thesis. The complete analysis can be reproduced by "
         "running: python analysis/run_analysis.py from the project root directory. The final audited "
         "input files are data/csv/master_dataset_corrected.csv and data/csv/second_rater_scores.csv. "

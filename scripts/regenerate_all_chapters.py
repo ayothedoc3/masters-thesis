@@ -77,7 +77,7 @@ def set_paragraph_spacing(paragraph, spacing=1.5, space_after=Pt(6)):
 
 
 def add_heading1(doc, text):
-    p = doc.add_paragraph()
+    p = doc.add_paragraph(style="Heading 1")
     p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
     set_paragraph_spacing(p, spacing=1.5, space_after=Pt(12))
     run = p.add_run(text)
@@ -86,7 +86,7 @@ def add_heading1(doc, text):
 
 
 def add_heading2(doc, text):
-    p = doc.add_paragraph()
+    p = doc.add_paragraph(style="Heading 2")
     p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
     set_paragraph_spacing(p, spacing=1.5, space_after=Pt(10))
     run = p.add_run(text)
@@ -346,7 +346,7 @@ def build_chapter3():
     )
 
     add_body(doc,
-        "Dunn's post-hoc pairwise comparisons with Bonferroni correction revealed "
+        "Pairwise Mann-Whitney U comparisons with Bonferroni correction revealed "
         "significant differences for all six platform pairs (Table 4). The largest effect "
         "sizes were observed for Website versus Instagram (r = -0.891, large) and YouTube "
         "versus Instagram (r = -0.850, large). The Website versus YouTube comparison, while "
@@ -627,7 +627,7 @@ def build_chapter4():
         "information quality is consistent with a substantial body of prior research. "
         "The 2025 JMIR meta-analysis reported a pooled DISCERN score of 43.58 out of 100 "
         "(95% CI [37.80, 49.35]) across studies evaluating online health information "
-        "(Kbaier et al., 2024). When rescaled to the 16\u201380 DISCERN range used in the "
+        "(Liu et al., 2025). When rescaled to the 16\u201380 DISCERN range used in the "
         "present study, this corresponds to approximately 44 points, closely aligning with "
         "the overall sample mean of 38.68 observed here. The slightly lower overall mean "
         "in the present study likely reflects the inclusion of TikTok and Instagram, "
@@ -639,8 +639,9 @@ def build_chapter4():
         "The Instagram findings are particularly noteworthy. With 42% of items falling in "
         "the 'very poor' category and a median DISCERN score of 27.5, Instagram emerged "
         "as the lowest-quality platform by a substantial margin. This aligns with "
-        "concerns raised by de Moel-Mandel et al. (2025), who found that only 10% of "
-        "TikTok physical activity content was produced by medical professionals, and with "
+        "the broader pattern described by Li et al. (2024), who found that most TikTok "
+        "health-related short videos were of moderate to low quality and that medically "
+        "credentialed creators typically represented only a minority of content producers, and with "
         "Haghighi and Farhadloo (2025), who reported that 81% of Twitter health information "
         "was of low quality, with 95% of items meeting two or fewer JAMA criteria. The "
         "present study extends these findings by demonstrating that Instagram may present "

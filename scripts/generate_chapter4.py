@@ -67,7 +67,7 @@ def add_formatted_paragraph(doc, text, bold=False, italic=False, size=12,
 
 def add_heading_custom(doc, text, level=1, size=14, space_before=12, space_after=6):
     """Add a custom heading with Times New Roman formatting."""
-    p = doc.add_paragraph()
+    p = doc.add_paragraph(style=f"Heading {1 if level == 1 else 2 if level == 2 else 3}")
     if level == 1:
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     else:
@@ -127,7 +127,7 @@ rPr.insert(0, rFonts)
 # CHAPTER 4: CONSIDERATIONS
 # ============================================================
 
-add_heading_custom(doc, "4. CONSIDERATIONS", level=1, size=14, space_before=0, space_after=12)
+add_heading_custom(doc, "CHAPTER 4. CONSIDERATIONS", level=1, size=14, space_before=0, space_after=12)
 
 # Introductory paragraph
 add_formatted_paragraph(
@@ -150,7 +150,7 @@ add_heading_custom(doc, "4.1 Summary of Key Findings", level=2, size=12, space_b
 
 add_formatted_paragraph(
     doc,
-    "Three principal findings emerged from the analysis of 200 items across four platforms. "
+    "Three principal findings emerged from the analysis of 197 audited items across four platforms. "
     "First, a clear and statistically significant quality gradient was observed: traditional "
     "websites produced the highest DISCERN scores (Mdn = 48, classified as fair-to-good), "
     "followed by YouTube (Mdn = 39, fair-to-poor), TikTok (Mdn = 31, poor), and Instagram "
@@ -212,10 +212,10 @@ add_heading_custom(doc, "4.2 Comparison with Existing Literature", level=2, size
 add_formatted_paragraph(
     doc,
     "The quality gradient observed in this study is broadly consistent with earlier work "
-    "on online health information. The overall mean DISCERN score of 36.3 out of 80 aligns "
+    "on online health information. The overall mean DISCERN score of 38.68 out of 80 aligns "
     "closely with the pooled estimate from the 2025 JMIR meta-analysis, which reported a "
     "DISCERN score of approximately 43.58 out of 100 (equivalent to roughly 34.9 on an "
-    "80-point scale) across diverse health topics (I\u00b2 = 93.22%). That our sample slightly "
+    "80-point scale) across diverse health topics (Liu et al., 2025). That our sample slightly "
     "exceeded this benchmark is encouraging, but it also underscores that even the best-"
     "performing platform\u2014traditional websites\u2014only reached the lower boundary of the "
     "\u201cgood\u201d category. This finding resonates with Eysenbach's (2002) foundational observation "
@@ -227,12 +227,12 @@ add_formatted_paragraph(
 add_formatted_paragraph(
     doc,
     "The particularly low scores for Instagram and TikTok mirror findings from recent "
-    "platform-specific studies. De Moel-Mandel et al. (2025) reported that only 10% of "
-    "TikTok health content was created by medical professionals; in the present study, 16% "
-    "of TikTok items were attributed to healthcare professionals, a marginally higher "
-    "proportion that may reflect the growing visibility of health professionals on short-"
-    "video platforms. Nevertheless, this modest professional presence was insufficient to "
-    "lift TikTok's overall quality above the \u201cpoor\u201d threshold. On JAMA compliance, Haghighi "
+    "platform-specific studies. Li et al. (2024) concluded that most health-related TikTok "
+    "videos assessed to date are of moderate-to-low quality and that medically credentialed "
+    "creators typically account for only a minority of content producers. In the present "
+    "study, healthcare professionals accounted for 16% of TikTok items, a proportion that "
+    "was still insufficient to lift TikTok's overall quality above the \u201cpoor\u201d threshold. "
+    "On JAMA compliance, Haghighi "
     "and Farhadloo (2025) found that 81% of health-related Twitter content was of low "
     "quality and 95% met two or fewer of the four JAMA criteria. Our social media data "
     "follow the same pattern, with the majority of TikTok and Instagram items failing to "
@@ -242,14 +242,17 @@ add_formatted_paragraph(
 
 add_formatted_paragraph(
     doc,
-    "The negligible correlation between engagement and quality extends findings by Kbaier "
-    "et al. (2024), who documented how social media algorithms can amplify health "
-    "misinformation. Our observation that YouTube exhibited a negative engagement-quality "
-    "relationship supports the hypothesis that algorithmically promoted content on video "
-    "platforms prioritises entertainment value and emotional appeal over informational "
-    "rigour (Moorhead et al., 2013). Conversely, the unexpected positive correlation on "
-    "TikTok may be an artefact of a small number of high-engagement professional accounts; "
-    "this result should be interpreted cautiously and warrants replication.",
+    "The negligible overall correlation between engagement and quality is consistent with "
+    "review-level evidence that surface popularity metrics are poor proxies for the quality "
+    "of health information on YouTube and other social platforms (Osman et al., 2022; "
+    "Mohamed & Shoufan, 2024). Our observation that YouTube exhibited significant negative "
+    "views-quality and likes-quality relationships supports the hypothesis that "
+    "algorithmically promoted content on video platforms may prioritise entertainment value "
+    "and emotional appeal over informational rigour (Moorhead et al., 2013). In contrast, "
+    "TikTok and Instagram showed no significant within-platform correlations, reinforcing "
+    "the interpretation that aggregate engagement-quality associations are largely a "
+    "between-platform artefact rather than evidence that highly engaged content is higher "
+    "quality.",
     first_line_indent=1.25
 )
 
@@ -293,9 +296,10 @@ add_formatted_paragraph(
     "high-quality health information does not organically reach large audiences on social "
     "media. Public health agencies may therefore need to invest in paid promotion or "
     "influencer partnerships to ensure that evidence-based PA information achieves "
-    "competitive visibility. The World Health Organization (2023) has already endorsed "
-    "strategic use of social media for health communication, and our data reinforce the "
-    "need for such strategies to be accompanied by quality assurance mechanisms.",
+    "competitive visibility. Broader public-health communication and infodemic-management "
+    "literature already supports strategic use of digital platforms alongside stronger "
+    "quality assurance mechanisms (Swire-Thompson & Lazer, 2020), and the present data "
+    "reinforce that need for physical activity information specifically.",
     first_line_indent=1.25
 )
 
@@ -332,10 +336,11 @@ add_formatted_paragraph(
 
 add_formatted_paragraph(
     doc,
-    "The sample of 200 items (50 per platform) is larger than many content analysis studies "
-    "in this domain and was drawn using a systematic protocol of five representative search "
-    "terms applied uniformly across all platforms. Inter-rater reliability was excellent, "
-    "with an intraclass correlation coefficient (ICC) of 0.994 for DISCERN scores, well "
+    "The final audited sample of 197 items (50 websites, 50 YouTube videos, 47 TikTok "
+    "videos, and 50 Instagram posts) is larger than many content analysis studies in this "
+    "domain and was drawn using a systematic protocol of five representative search terms "
+    "applied uniformly across all platforms. Inter-rater reliability was excellent, "
+    "with an intraclass correlation coefficient (ICC) of 0.932 for DISCERN scores, well "
     "above the commonly accepted threshold of 0.75 (Koo & Li, 2016). This level of "
     "agreement strengthens confidence that the observed quality differences reflect genuine "
     "content variation rather than rater inconsistency.",

@@ -1,9 +1,9 @@
 """
 Master's Thesis Statistical Analysis — Python Implementation
 =============================================================
-Replaces R script (R not installed). Produces identical statistical tests:
+Replaces R script (R not installed). Produces the thesis statistical tests:
   - Kruskal-Wallis H test (DISCERN across platforms)
-  - Dunn's post-hoc with Bonferroni correction
+  - Pairwise Mann-Whitney U tests with Bonferroni correction
   - Chi-square / Fisher's exact (JAMA by platform)
   - Mann-Whitney U (DISCERN by creator type)
   - Spearman's rho (engagement vs quality)
@@ -23,7 +23,6 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 from scipy.stats import kruskal, mannwhitneyu, spearmanr, chi2_contingency, fisher_exact
-import scikit_posthocs as sp
 import pingouin as pg
 import matplotlib
 matplotlib.use("Agg")
@@ -318,14 +317,8 @@ elif h_p < 0.05:
 else:
     report(f"  Result: NOT significant (p = {h_p:.4f})")
 
-# 3b. Dunn's post-hoc with Bonferroni
-report(f"\n3b. Dunn's Post-Hoc Tests (Bonferroni corrected):")
-dunn_result = sp.posthoc_dunn(df, val_col="DISCERN_Total", group_col="Platform", p_adjust="bonferroni")
-report(dunn_result.round(6).to_string())
-dunn_result.to_csv(os.path.join(TABLES_DIR, "dunn_posthoc_discern.csv"))
-
-# Pairwise effect sizes (rank-biserial r)
-report("\n  Pairwise comparisons (Mann-Whitney U with effect size):")
+# 3b. Pairwise Mann-Whitney U tests with Bonferroni correction
+report(f"\n3b. Pairwise Mann-Whitney U Tests (Bonferroni corrected):")
 pairs = []
 for i in range(len(platform_order)):
     for j in range(i + 1, len(platform_order)):
