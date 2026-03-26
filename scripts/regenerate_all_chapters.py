@@ -361,7 +361,7 @@ def build_chapter3():
     add_figure(doc, 2,
         "Figure 2. Distribution of DISCERN quality categories by platform. Categories "
         "are based on conventional thresholds: Very Poor (16\u201326), Poor (27\u201338), "
-        "Fair (39\u201350), Good (51\u201362), and Excellent (63\u201380)."
+        "Fair (39\u201350), Good (51\u201362), and Excellent (63\u201380) (Sun et al., 2023)."
     )
 
     add_body(doc,
@@ -492,10 +492,8 @@ def build_chapter3():
     add_body(doc,
         "These overall positive correlations for likes and comments must be interpreted "
         "with considerable caution, as they represent a largely confounded association "
-        "driven by between-platform differences: traditional websites, which scored highest "
-        "on DISCERN, also tend to accumulate higher absolute engagement counts (e.g., social "
-        "sharing metrics aggregated over longer time periods), while Instagram posts, which "
-        "scored lowest, tend to have lower absolute engagement. When examined within individual "
+        "driven by between-social-platform differences rather than by a consistent within-platform "
+        "relationship. When examined within individual "
         "platforms, TikTok (rho = 0.109, p = .467) and Instagram (rho = -0.174, p = .226) "
         "showed non-significant likes\u2013quality correlations. However, YouTube demonstrated "
         "a significant negative likes\u2013quality correlation (rho = -0.286, p = .044), indicating "
@@ -503,8 +501,7 @@ def build_chapter3():
         "specific finding is an exception to the broader Simpson's paradox pattern and suggests "
         "that the overall positive association between likes and quality is predominantly an "
         "ecological artefact rather than reflecting a genuine within-platform relationship. The "
-        "overall positive "
-        "correlation is an ecological artefact of platform-level differences rather than "
+        "overall positive correlation is an ecological artefact of social-platform differences rather than "
         "evidence that higher-quality content attracts more engagement within platforms."
     )
 
@@ -600,7 +597,7 @@ def build_chapter4():
         "gradient: traditional websites scored highest (Mdn = 48.5), followed by YouTube "
         "(Mdn = 42.0), TikTok (Mdn = 35.0), and Instagram (Mdn = 27.5). The Kruskal-Wallis "
         "test confirmed significant differences across platforms, H(3) = 93.489, p < .001, "
-        "with a large effect size (eta-squared = 0.469). All six pairwise comparisons were "
+        "with a large eta-squared approximation (0.469). All six pairwise comparisons were "
         "statistically significant, although the Website versus YouTube contrast yielded a "
         "notably smaller effect (p = .038, r = -0.316) compared with the other five pairs "
         "(all p < .001)."
@@ -615,8 +612,8 @@ def build_chapter4():
         "significant (p = .012). Engagement\u2013quality correlations were largely "
         "non-significant within platforms, except for YouTube, where both views and likes "
         "showed significant negative correlations with quality; the overall positive "
-        "correlation between likes and quality across the full sample was identified "
-        "as primarily a Simpson's paradox artefact of between-platform differences."
+        "correlation between likes and quality across social-media items was identified "
+        "as primarily a Simpson's paradox artefact of between-social-platform differences."
     )
 
     # ---- 4.2 Comparison with Literature ----
@@ -625,14 +622,13 @@ def build_chapter4():
     add_body(doc,
         "The finding that traditional websites outperform social media platforms in health "
         "information quality is consistent with a substantial body of prior research. "
-        "The 2025 JMIR meta-analysis reported a pooled DISCERN score of 43.58 out of 100 "
+        "The 2025 JMIR meta-analysis reported a pooled DISCERN percentage of 43.58% "
         "(95% CI [37.80, 49.35]) across studies evaluating online health information "
-        "(Liu et al., 2025). When rescaled to the 16\u201380 DISCERN range used in the "
-        "present study, this corresponds to approximately 44 points, closely aligning with "
-        "the overall sample mean of 38.68 observed here. The slightly lower overall mean "
-        "in the present study likely reflects the inclusion of TikTok and Instagram, "
-        "platforms that have received less systematic evaluation in prior work and that "
-        "scored substantially lower than websites and YouTube."
+        "(Liu et al., 2025). Direct numerical comparison should be interpreted cautiously "
+        "because that review synthesised percentage-standardised scores across heterogeneous "
+        "studies. Even so, the present findings are directionally consistent with that "
+        "literature, particularly in showing lower quality for highly visual or video-led "
+        "social media formats than for websites and longer-form content."
     )
 
     add_body(doc,
@@ -771,14 +767,14 @@ def build_chapter4():
     )
 
     add_body(doc,
-        "Third, and critically, the scoring of video and image-based content relied "
-        "primarily on visible metadata, captions, and descriptions rather than full "
-        "content transcription. This approach may systematically underestimate the quality "
-        "of social media content where information is communicated verbally or visually "
-        "rather than in text. However, it is equally important to acknowledge that this "
-        "limitation may bias results in favour of the study hypothesis, as the apparent "
-        "quality gradient could partially reflect methodological differences in how "
-        "text-based and video-based content were assessed rather than true differences "
+        "Third, and critically, scoring of video and image-based content was restricted "
+        "to information visible or audible to a typical user at the point of access, "
+        "including spoken narration, on-screen text, captions, and profile metadata, "
+        "rather than full transcription or frame-by-frame coding. This approach may still "
+        "miss subtle cues or evidence embedded in longer viewing sessions. It is therefore "
+        "important to acknowledge that the apparent quality gradient could partially reflect "
+        "methodological differences in how text-based and audiovisual content were assessed "
+        "rather than true differences "
         "in information quality."
     )
 
@@ -822,7 +818,8 @@ def build_chapter4():
         "Eighth, the DISCERN quality categories used in this study (Very Poor 16\u201326, "
         "Poor 27\u201338, Fair 39\u201350, Good 51\u201362, Excellent 63\u201380) are "
         "commonly adopted thresholds in the health information quality literature but "
-        "were not specified in the original DISCERN validation by Charnock et al. (1999). "
+        "were not specified in the original DISCERN validation by Charnock et al. (1999); "
+        "one recent example using the same cut-points is Sun et al. (2023). "
         "These cut-points have been adopted from subsequent studies and should be treated "
         "as conventional rather than formally validated boundaries."
     )
@@ -837,8 +834,9 @@ def build_chapter4():
         "Second, multilingual studies incorporating non-English content would address "
         "a significant gap, given that the majority of global internet users access "
         "health information in languages other than English. Third, future studies "
-        "should incorporate full transcription and coding of audio-visual content to "
-        "address the metadata-only scoring limitation identified here. Fourth, the "
+        "should incorporate full transcription and more fine-grained coding of audio-visual "
+        "content to extend the point-of-access scoring approach used here and determine "
+        "whether subtle spoken or visual cues alter quality ratings. Fourth, the "
         "role of platform algorithms in promoting or suppressing high-quality health "
         "content warrants dedicated investigation, particularly given the significant "
         "negative views\u2013quality and likes\u2013quality correlations observed on YouTube. Fifth, intervention studies "
@@ -906,7 +904,7 @@ def build_chapter5():
         "information quality? Overall correlations suggested weak-to-moderate positive "
         "associations between likes (rho = 0.284, p < .001), comments (rho = 0.371, "
         "p < .001), and DISCERN scores; however, these aggregate associations are primarily "
-        "an ecological artefact of between-platform differences (Simpson's paradox). "
+        "an ecological artefact of between-social-platform differences (Simpson's paradox). "
         "Within-platform analyses revealed that TikTok and Instagram showed no significant "
         "likes\u2013quality correlations. Critically, YouTube demonstrated significant negative "
         "correlations for both views (rho = -0.340, p = .016) and likes (rho = -0.286, "
@@ -997,8 +995,8 @@ def build_chapter5():
         "studies are needed to determine whether the quality gradient observed here is "
         "stable or evolving as platforms mature and implement health content policies. "
         "Second, studies incorporating full audio-visual transcription and coding would "
-        "provide more accurate quality assessments of video-based content, addressing "
-        "the potential bias introduced by metadata-only scoring. Third, cross-cultural "
+        "extend the point-of-access scoring approach used here and test whether subtler "
+        "spoken or visual cues materially alter quality assessments. Third, cross-cultural "
         "and multilingual replications would establish whether the observed patterns "
         "generalise beyond English-language content."
     )
@@ -1028,8 +1026,9 @@ def build_chapter5():
         "activity information varies substantially across digital platforms, with "
         "short-form social media presenting the greatest quality concerns. However, "
         "these conclusions should be tempered by the study\u2019s limitations, particularly "
-        "the reliance on metadata-based scoring for video and image content, which may "
-        "have systematically underestimated social media quality and thereby inflated "
+        "the use of point-of-access scoring for video and image content without full "
+        "transcription or frame-by-frame coding, which may still underestimate some "
+        "forms of audiovisual explanation and thereby influence "
         "the observed gradient. The mixed automated and manual collection approach and "
         "the classification of diverse organisations as non-professional further qualify "
         "the precision of these findings. Notwithstanding these caveats, the overall "
@@ -1093,7 +1092,7 @@ def build_appendix_c():
     format_table(t2)
     shade_header_row(t2)
 
-    add_body(doc, "Note. Categories: Very Poor (16\u201326), Poor (27\u201338), Fair (39\u201350), Good (51\u201362), Excellent (63\u201380).")
+    add_body(doc, "Note. Categories: Very Poor (16\u201326), Poor (27\u201338), Fair (39\u201350), Good (51\u201362), Excellent (63\u201380) (Sun et al., 2023).")
 
     add_body(doc, "")
 

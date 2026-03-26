@@ -287,7 +287,7 @@ def create_chapter2():
 
     add_formatted_paragraph(
         doc,
-        "The research follows a deductive approach, applying established quality assessment frameworks\u2014the DISCERN instrument and JAMA benchmarks\u2014to evaluate content across a novel four-platform comparison. While these instruments were originally developed for traditional health information materials, their application to social media content represents a theoretically grounded extension that has been validated in prior research examining YouTube (Azer, 2020), TikTok (Kong et al., 2021), and Instagram health content (Chea & Lim, 2023).",
+        "The research follows a deductive approach, applying established quality assessment frameworks\u2014the DISCERN instrument and JAMA benchmarks\u2014to evaluate content across a novel four-platform comparison. While these instruments were originally developed for traditional health information materials, they are widely used in studies of YouTube, TikTok, and Instagram health content despite recognised methodological concerns when applied to audiovisual and short-form media (Azer, 2020; Kong et al., 2021; Chea & Lim, 2023). The present study therefore treats their use as a transparent, controlled adaptation rather than as a platform-specific validation.",
         first_line_indent=1.27
     )
 
@@ -351,6 +351,12 @@ def create_chapter2():
 
     add_formatted_paragraph(
         doc,
+        "Verification required a raw screenshot or captured record showing the content identifier or URL together with the metadata fields used in analysis (for example, platform, creator, date, content format, or engagement counts). Records that could not be matched to this audit evidence were removed from the final audited dataset.",
+        first_line_indent=1.27
+    )
+
+    add_formatted_paragraph(
+        doc,
         "Content was retrieved using five standardised search terms designed to simulate typical user queries related to physical activity:",
         first_line_indent=1.27
     )
@@ -393,7 +399,7 @@ def create_chapter2():
 
     add_formatted_paragraph(
         doc,
-        "Accordingly, Table 2.1 should be interpreted as the planned sampling matrix rather than the final audited analytical distribution. All inferential analyses reported in Chapters 3\u20135 and the appendices are based on the final audited dataset of 197 items.",
+        "Accordingly, Table 2.1 should be interpreted as the planned sampling matrix rather than the final audited analytical distribution. All inferential analyses reported in Chapters 3\u20134, the concluding sections, and the appendices are based on the final audited dataset of 197 items.",
         first_line_indent=1.27
     )
 
@@ -491,7 +497,7 @@ def create_chapter2():
 
     add_formatted_paragraph(
         doc,
-        "For the purposes of the present study, DISCERN quality scores were categorised using the following established thresholds: Very Poor (16\u201326), Poor (27\u201338), Fair (39\u201350), Good (51\u201362), and Excellent (63\u201380). These categories facilitate meaningful interpretation and cross-study comparison of quality ratings. In adapting the instrument for social media content, questions pertaining to treatment information were interpreted in the context of exercise and physical activity recommendations, consistent with the approach adopted in prior studies examining fitness-related content (Kocyigit et al., 2019; Kong et al., 2021).",
+        "For the purposes of the present study, DISCERN quality scores were categorised using the following established thresholds: Very Poor (16\u201326), Poor (27\u201338), Fair (39\u201350), Good (51\u201362), and Excellent (63\u201380). These conventional categories facilitate meaningful interpretation and cross-study comparison of quality ratings (Sun et al., 2023). In adapting the instrument for social media content, questions pertaining to treatment information were interpreted in the context of exercise and physical activity recommendations, consistent with the approach adopted in prior studies examining fitness-related content (Kocyigit et al., 2019; Kong et al., 2021).",
         first_line_indent=1.27
     )
 
@@ -835,7 +841,7 @@ def create_chapter2():
     add_mixed_paragraph(
         doc,
         [("Platform comparisons of DISCERN scores. ", True, False),
-         ("The Kruskal-Wallis H test was employed to examine whether DISCERN total scores differed significantly across the four platforms (websites, YouTube, TikTok, and Instagram). When a statistically significant omnibus result was obtained, pairwise Mann\u2013Whitney U tests with Bonferroni correction were applied to identify which specific platform pairs differed significantly. The omnibus effect size was computed using the formula (H \u2212 k + 1) / (N \u2212 k) and is reported as a rank-based effect-size estimate to avoid terminological ambiguity. This value should be interpreted cautiously as an index of distributional separation rather than a literal proportion of explained variance; values of approximately 0.01, 0.06, and 0.14 correspond to small, medium, and large effects, respectively (Cohen, 1988).", False, False)],
+         ("The Kruskal-Wallis H test was employed to examine whether DISCERN total scores differed significantly across the four platforms (websites, YouTube, TikTok, and Instagram). When a statistically significant omnibus result was obtained, pairwise Mann\u2013Whitney U tests with Bonferroni correction were applied to identify which specific platform pairs differed significantly. The omnibus effect size was computed using the formula (H \u2212 k + 1) / (N \u2212 k) and is reported as an eta-squared approximation for Kruskal-Wallis comparisons. This value should be interpreted cautiously as an index of distributional separation rather than a literal proportion of explained variance; values of approximately 0.01, 0.06, and 0.14 correspond to small, medium, and large effects, respectively (Cohen, 1988).", False, False)],
         first_line_indent=1.27
     )
 
@@ -884,7 +890,7 @@ def create_chapter2():
         (
             "RQ1: How does PA information quality differ between traditional websites and social media?",
             "IV: Platform (4 levels)\nDV: DISCERN total score; JAMA criteria compliance",
-            "Kruskal-Wallis H test (DISCERN)\nPairwise Mann-Whitney U with Bonferroni\n\u03c7\u00b2 / Fisher\u2019s exact test (JAMA)\nEffect sizes: rank-based H effect, Cram\u00e9r\u2019s V",
+            "Kruskal-Wallis H test (DISCERN)\nPairwise Mann-Whitney U with Bonferroni\n\u03c7\u00b2 / Fisher\u2019s exact test (JAMA)\nEffect sizes: eta-squared approximation, Cram\u00e9r\u2019s V",
             "Non-parametric; ordinal DISCERN data likely non-normally distributed. Chi-square appropriate for categorical JAMA data."
         ),
         (

@@ -44,9 +44,13 @@ Norman, C. D., & Skinner, H. A. (2006). eHEALS: The eHealth Literacy Scale. *Jou
 
 Pan, B., Hembrooke, H., Joachims, T., Lorigo, L., Gay, G., & Granka, L. (2007). In Google we trust: Users' decisions on rank, position, and relevance. *Journal of Computer-Mediated Communication*, *12*(3), 801--823. https://doi.org/10.1111/j.1083-6101.2007.00351.x
 
+Pew Research Center. (2021). *Social media use in 2021*. https://www.pewresearch.org/internet/2021/04/07/social-media-use-in-2021/
+
 Silberg, W. M., Lundberg, G. D., & Musacchio, R. A. (1997). Assessing, controlling, and assuring the quality of medical information on the Internet: Caveant lector et viewor -- Let the reader and viewer beware. *JAMA*, *277*(15), 1244--1245. https://doi.org/10.1001/jama.1997.03540390074039
 
 Snelson, C. L. (2016). Qualitative and mixed methods social media research: A review of the literature. *International Journal of Qualitative Methods*, *15*(1), 1--15. https://doi.org/10.1177/1609406915624574
+
+Sun, F., Zheng, S., & Wu, J. (2023). Quality of information in gallstone disease videos on TikTok: Cross-sectional study. *Journal of Medical Internet Research*, *25*, e39162. https://doi.org/10.2196/39162
 
 Stellefson, M., Hanik, B., Chaney, B., Chaney, D., Tennant, B., & Chavarria, E. A. (2011). eHealth literacy among college students: A systematic review with implications for eHealth education. *Journal of Medical Internet Research*, *13*(4), Article e102. https://doi.org/10.2196/jmir.1703
 

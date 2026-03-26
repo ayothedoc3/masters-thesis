@@ -62,7 +62,7 @@ A significant methodological challenge in contemporary health information resear
 
 1.6 Evidence for the Quality Gap and Moderating Factors
 
-A growing body of evidence documents systematic quality differences between health information published on traditional websites and that disseminated through social media platforms. A 2025 meta-analysis published in the Journal of Medical Internet Research, analysing 75 studies encompassing 297,519 posts across 15 platforms, reported a pooled DISCERN score of 43.58 out of 100 (95% CI: 37.80-49.35) for cancer-related information on new media, with approximately 27% of posts containing misinformation (Liu et al., 2025). The analysis further found that studies focusing on video-based media were statistically less likely to yield higher quality conclusions compared with those on text-based media, suggesting a format-dependent quality gradient.
+A growing body of evidence documents systematic quality differences between health information published on traditional websites and that disseminated through social media platforms. A 2025 meta-analysis published in the Journal of Medical Internet Research, analysing 75 studies encompassing 297,519 posts across 15 platforms, reported a pooled DISCERN percentage of 43.58% (95% CI: 37.80-49.35) for cancer-related information on new media, with approximately 27% of posts containing misinformation (Liu et al., 2025). The analysis further found that studies focusing on video-based media were statistically less likely to yield higher quality conclusions compared with those on text-based media, suggesting a format-dependent quality gradient.
 
 Platform-specific studies reinforce this pattern. Haghighi and Farhadloo (2025), in a cross-sectional analysis of the top 100 health-related websites most frequently shared on Twitter during the early COVID-19 pandemic, found that 81% received low DISCERN scores and 95% met only two of the four JAMA benchmark criteria. No website met all four JAMA criteria, and only five met three. These findings highlight that even the curated content surfacing through social media sharing is of questionable quality. On TikTok, research has consistently demonstrated low overall quality of health content, with the platform's short-form format constraining the depth and nuance of health information that can be conveyed (Li et al., 2024).
 
@@ -121,7 +121,7 @@ Moorhead, S. A., Hazlett, D. E., Harrison, L., Carroll, J. K., Irwin, A., & Hovi
 
 Norman, C. D., & Skinner, H. A. (2006). eHEALS: The eHealth Literacy Scale. Journal of Medical Internet Research, 8(4), e27. https://doi.org/10.2196/jmir.8.4.e27
 
-Pew Research Center. (2021). Social media fact sheet. https://www.pewresearch.org/internet/fact-sheet/social-media/
+Pew Research Center. (2021). Social media use in 2021. https://www.pewresearch.org/internet/2021/04/07/social-media-use-in-2021/
 
 Pilgrim, K., & Bohnet-Joschko, S. (2019). Selling health and happiness how influencers communicate on Instagram about dieting and exercise: Mixed methods research. BMC Public Health, 19, 1054. https://doi.org/10.1186/s12889-019-7387-8
 

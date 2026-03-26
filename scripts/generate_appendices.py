@@ -323,7 +323,7 @@ def generate_appendix_c():
         ["Instagram", "Likes", "50", "\u2212.174", ".226", ""],
         ["Instagram", "Comments", "50", "\u2212.045", ".758", ""],
     ])
-    add_para(doc, "Note. * p < .05, *** p < .001. Overall likes and comments correlations should be interpreted cautiously because they are confounded by between-platform differences.", italic=True)
+    add_para(doc, "Note. * p < .05, *** p < .001. Overall likes and comments correlations are based on social-media items only and should be interpreted cautiously because they are confounded by between-social-platform differences.", italic=True)
 
     path = os.path.join(APPENDIX_DIR, "appendix_c_data_summary.docx")
     doc.save(path)
@@ -381,7 +381,7 @@ def generate_appendix_d():
          "Cram\u00e9r\u2019s V."),
         ("Creator type analysis",
          "Mann-Whitney U test (scipy.stats.mannwhitneyu) comparing professional vs. non-professional "
-         "creators. Effect size: r = Z / sqrt(N)."),
+         "creators. Effect size: rank-biserial correlation."),
         ("Engagement-quality correlations",
          "Spearman\u2019s rank correlation (scipy.stats.spearmanr) between engagement metrics and "
          "DISCERN total, both overall and stratified by platform."),
