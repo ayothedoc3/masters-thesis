@@ -347,7 +347,7 @@ def build_chapter3():
 
     add_body(doc,
         "Pairwise Mann-Whitney U comparisons with Bonferroni correction revealed "
-        "significant differences for all six platform pairs (Table 4). The largest effect "
+        "significant differences for all six platform pairs (Appendix Table C3). The largest effect "
         "sizes were observed for Website versus Instagram (r = -0.891, large) and YouTube "
         "versus Instagram (r = -0.850, large). The Website versus YouTube comparison, while "
         "statistically significant at the Bonferroni-adjusted threshold (U = 1646, p = .038, "
@@ -476,7 +476,7 @@ def build_chapter3():
 
     add_body(doc,
         "Research Question 3 examined whether engagement metrics were associated with "
-        "information quality. Table 6 summarises the Spearman rank-order correlations "
+        "information quality. Appendix Table C6 summarises the Spearman rank-order correlations "
         "between engagement indicators and DISCERN total scores."
     )
 
@@ -622,7 +622,7 @@ def build_chapter4():
     add_body(doc,
         "The finding that traditional websites outperform social media platforms in health "
         "information quality is consistent with a substantial body of prior research. "
-        "The 2025 JMIR meta-analysis reported a pooled DISCERN percentage of 43.58% "
+        "The 2025 JMIR meta-analysis reported a pooled DISCERN score of 43.58 "
         "(95% CI [37.80, 49.35]) across studies evaluating online health information "
         "(Liu et al., 2025). Direct numerical comparison should be interpreted cautiously "
         "because that review synthesised percentage-standardised scores across heterogeneous "
@@ -673,9 +673,9 @@ def build_chapter4():
 
     add_body(doc,
         "The significant variation in quality across search terms (H[4] = 27.255, "
-        "p < .001) is a secondary finding that merits attention. Items retrieved using "
-        "\u2018how to start exercising\u2019 scored highest (Mdn = 46.0), while \u2018home workout "
-        "routine\u2019 yielded the lowest scores (Mdn = 34.0). This likely reflects "
+        "p < .001) is a secondary finding that merits attention. The query "
+        "\u2018how to start exercising\u2019 retrieved the highest-quality content, while "
+        "\u2018home workout routine\u2019 retrieved the lowest-quality content. This likely reflects "
         "differences in the clinical relevance and specificity of queries: more general "
         "health-oriented terms may retrieve content from authoritative institutional "
         "sources, whereas commercially oriented terms such as \u2018home workout routine\u2019 "
@@ -858,10 +858,7 @@ def build_chapter4():
 def build_chapter5():
     doc = create_doc()
 
-    add_heading1(doc, "CHAPTER 5. CONCLUSIONS AND RECOMMENDATIONS")
-
-    # ---- 5.1 Summary of Conclusions ----
-    add_heading2(doc, "5.1 Summary of Conclusions")
+    add_heading1(doc, "CONCLUSIONS")
 
     add_body(doc,
         "This study set out to evaluate the quality of physical activity information "
@@ -924,8 +921,7 @@ def build_chapter5():
         "advise patients on information seeking."
     )
 
-    # ---- 5.2 Practical Recommendations ----
-    add_heading2(doc, "5.2 Practical Recommendations")
+    add_heading1(doc, "RECOMMENDATIONS")
 
     add_body(doc,
         "Based on the findings of this study, the following practical recommendations "
@@ -986,8 +982,7 @@ def build_chapter5():
         "2018)."
     )
 
-    # ---- 5.3 Recommendations for Future Research ----
-    add_heading2(doc, "5.3 Recommendations for Future Research")
+    add_heading2(doc, "Recommendations for Future Research")
 
     add_body(doc,
         "Future research should address the methodological limitations identified in "
