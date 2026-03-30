@@ -348,14 +348,14 @@ def build_chapter3():
     add_body(doc,
         "Pairwise Mann-Whitney U comparisons with Bonferroni correction revealed "
         "significant differences for all six platform pairs (Appendix Table C3). The largest effect "
-        "sizes were observed for Website versus Instagram (r = -0.891, large) and YouTube "
-        "versus Instagram (r = -0.850, large). The Website versus YouTube comparison, while "
+        "sizes were observed for Website versus Instagram (r_rb = \u22120.891, large) and YouTube "
+        "versus Instagram (r_rb = \u22120.850, large). The Website versus YouTube comparison, while "
         "statistically significant at the Bonferroni-adjusted threshold (U = 1646, p = .038, "
-        "r = -0.316), exhibited a small-to-medium effect size, suggesting that these two "
+        "r_rb = \u22120.316), exhibited a small-to-medium effect size, suggesting that these two "
         "platforms are relatively more similar in information quality than other pairings. "
-        "The remaining comparisons\u2014Website versus TikTok (U = 1972, p < .001, r = -0.678), "
-        "YouTube versus TikTok (U = 1775, p < .001, r = -0.511), and TikTok versus Instagram "
-        "(U = 1740, p < .001, r = -0.480)\u2014all yielded medium to large effects."
+        "The remaining comparisons\u2014Website versus TikTok (U = 1972, p < .001, r_rb = \u22120.678), "
+        "YouTube versus TikTok (U = 1775, p < .001, r_rb = \u22120.511), and TikTok versus Instagram "
+        "(U = 1740, p < .001, r_rb = \u22120.480)\u2014all yielded medium to large effects."
     )
 
     add_figure(doc, 2,
@@ -441,8 +441,8 @@ def build_chapter3():
         "professional (healthcare professionals and certified fitness professionals, n = 51) "
         "and non-professional (fitness influencers, general users, and organisations, n = 146) "
         "categories. A Mann-Whitney U test comparing DISCERN total scores between these two "
-        "groups yielded U = 4457, p = .036, r = -0.197, reaching statistical significance at "
-        "the alpha = .05 level with a small effect size. Professional creators achieved a "
+        "groups yielded U = 4457, p = .036, r_rb = \u22120.197, reaching statistical significance at "
+        "the \u03b1 = .05 level with a small effect size. Professional creators achieved a "
         "median DISCERN score of 41.0, compared with 37.0 for non-professional creators."
     )
 
@@ -604,7 +604,7 @@ def build_chapter4():
         "test confirmed significant differences across platforms, H(3) = 93.489, p < .001, "
         "with a large eta-squared approximation (0.469). All six pairwise comparisons were "
         "statistically significant, although the Website versus YouTube contrast yielded a "
-        "notably smaller effect (p = .038, r = -0.316) compared with the other five pairs "
+        "notably smaller effect (p = .038, r_rb = \u22120.316) compared with the other five pairs "
         "(all p < .001)."
     )
 
@@ -627,11 +627,11 @@ def build_chapter4():
     add_body(doc,
         "The finding that traditional websites outperform social media platforms in health "
         "information quality is consistent with a substantial body of prior research. "
-        "The 2025 JMIR meta-analysis reported a pooled DISCERN score of 43.58 "
-        "(95% CI [37.80, 49.35]) across studies evaluating online health information "
-        "(Liu et al., 2025). Direct numerical comparison should be interpreted cautiously "
-        "because that review synthesised percentage-standardised scores across heterogeneous "
-        "studies. Even so, the present findings are directionally consistent with that "
+        "The 2025 JMIR meta-analysis reported a pooled percentage-standardised DISCERN score of 43.58% "
+        "(95% CI [37.80%, 49.35%]) across studies evaluating cancer-related information on new media "
+        "(Liu et al., 2025). Direct numerical comparison with the present study's raw DISCERN totals "
+        "(scored out of 80) is not appropriate because the meta-analysis synthesised percentage-standardised "
+        "scores across heterogeneous studies. Even so, the present findings are directionally consistent with that "
         "literature, particularly in showing lower quality for highly visual or video-led "
         "social media formats than for websites and longer-form content."
     )
@@ -892,7 +892,7 @@ def build_chapter5():
     add_body(doc,
         "Research Question 2: Does creator type moderate quality scores? The binary "
         "professional versus non-professional comparison was statistically significant "
-        "(U = 4457, p = .036, r = -0.197), and the five-category creator type analysis "
+        "(U = 4457, p = .036, r_rb = \u22120.197), and the five-category creator type analysis "
         "confirmed this (H[4] = 12.764, p = .012). Healthcare professionals scored highest "
         "(Mdn = 45.0), followed by certified fitness professionals (Mdn = 39.5), "
         "organisations (Mdn = 39.0), fitness influencers (Mdn = 36.0), and general users "
@@ -1100,7 +1100,7 @@ def build_appendix_c():
     add_heading2(doc, "Table C3. Pairwise Platform Comparisons (Mann-Whitney U, Bonferroni-Adjusted)")
     t3 = doc.add_table(rows=7, cols=4)
     t3.style = "Table Grid"
-    h3 = ["Comparison", "U", "p (adjusted)", "r"]
+    h3 = ["Comparison", "U", "p (adjusted)", "r_rb"]
     for i, v in enumerate(h3):
         t3.rows[0].cells[i].text = v
     rows3 = [
