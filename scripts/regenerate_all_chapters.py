@@ -385,7 +385,11 @@ def build_chapter3():
         "social media platforms an automatic advantage: posting dates are inherently "
         "visible (100% compliance) on social media but must be explicitly stated on "
         "websites (68% compliance). Criterion-level comparisons are therefore more "
-        "informative than total JAMA scores in this study."
+        "informative than total JAMA scores in this study. As a sensitivity check, "
+        "JAMA scores were also computed on a 0\u20133 scale excluding Currency. Under "
+        "this recalculation, mean scores were: websites 0.76, YouTube 0.54, TikTok "
+        "0.43, and Instagram 0.20, reinforcing the transparency advantage of "
+        "traditional websites when the platform-inherent date display is set aside."
     )
 
     add_body(doc,
@@ -566,9 +570,10 @@ def build_chapter3():
 
     add_body(doc,
         "Search terms also influenced quality scores. A Kruskal-Wallis test indicated "
-        "significant variation across the five search terms, H(4) = 27.255, p < .001. "
-        "Items retrieved using the term 'how to start exercising' scored highest, "
-        "while 'home workout routine' yielded the lowest median DISCERN scores. This "
+        "significant variation across the five search terms, H(4) = 27.255, p < .001 "
+        "(see Appendix Table C10 for descriptive statistics by search term). Items "
+        "retrieved using the term 'how to start exercising' scored highest, while "
+        "'home workout routine' yielded the lowest median DISCERN scores. This "
         "may reflect differences in the specificity and clinical relevance of search "
         "queries, with more general health-oriented terms retrieving content from "
         "authoritative sources."
@@ -1244,6 +1249,30 @@ def build_appendix_c():
             t9.rows[ri+1].cells[ci].text = v
     format_table(t9)
     shade_header_row(t9)
+
+    add_body(doc, "")
+
+    # -- Table C10: Search term descriptives --
+    add_heading2(doc, "Table C10. DISCERN Total Scores by Search Term")
+    t10 = doc.add_table(rows=6, cols=7)
+    t10.style = "Table Grid"
+    h10 = ["Search Term", "n", "Mdn", "Q1", "Q3", "M", "SD"]
+    for i, v in enumerate(h10):
+        t10.rows[0].cells[i].text = v
+    rows10 = [
+        ["How to start exercising", "40", "46.0", "37.75", "51.25", "43.83", "9.15"],
+        ["Best exercises to lose weight", "40", "37.0", "28.75", "45.00", "36.70", "9.47"],
+        ["Strength training for beginners", "37", "39.0", "33.00", "43.00", "39.62", "8.86"],
+        ["Physical activity guidelines", "40", "39.5", "32.00", "51.00", "40.70", "11.23"],
+        ["Home workout routine", "40", "34.0", "25.00", "38.00", "32.60", "8.52"],
+    ]
+    for ri, rd in enumerate(rows10):
+        for ci, v in enumerate(rd):
+            t10.rows[ri+1].cells[ci].text = v
+    format_table(t10)
+    shade_header_row(t10)
+
+    add_body(doc, "Note. Kruskal-Wallis H(4) = 27.255, p < .001. n values reflect the final audited sample (N = 197); exact counts per search term vary slightly due to TikTok audit exclusions.")
 
     doc.save(os.path.join(APPENDICES, "appendix_c_data_summary.docx"))
     print("Appendix C saved.")

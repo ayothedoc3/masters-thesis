@@ -8,6 +8,7 @@ from docx import Document
 from docx.shared import Pt, Inches, Cm, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 import os
+from regenerate_all_chapters import build_appendix_c
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(BASE)
@@ -243,91 +244,7 @@ def generate_appendix_b():
 # APPENDIX C: DATA SUMMARY TABLES
 # ============================================================
 def generate_appendix_c():
-    doc = Document()
-    set_style(doc)
-
-    add_heading(doc, "APPENDIX C: COMPLETE DATA SUMMARY TABLES", level=1)
-    add_para(doc, "")
-
-    add_heading(doc, "C.1 Sample Characteristics", level=2)
-
-    add_para(doc, "Table C1. Creator Type Distribution by Platform", bold=True, align=WD_ALIGN_PARAGRAPH.LEFT)
-    make_table(doc, [
-        ["Platform", "Healthcare Prof.", "Certified Fitness Prof.", "Fitness Influencer", "General User", "Organisation"],
-        ["Website", "5", "5", "0", "4", "36"],
-        ["YouTube", "3", "13", "16", "4", "14"],
-        ["TikTok", "8", "6", "19", "9", "5"],
-        ["Instagram", "3", "8", "3", "7", "29"],
-        ["Total", "19", "32", "38", "24", "84"],
-    ])
-    add_para(doc, "")
-
-    add_para(doc, "Table C2. DISCERN Total Score Descriptive Statistics by Platform", bold=True, align=WD_ALIGN_PARAGRAPH.LEFT)
-    make_table(doc, [
-        ["Platform", "n", "Mean", "SD", "Median", "Q1", "Q3", "Min", "Max", "IQR"],
-        ["Website", "50", "47.02", "7.90", "48.5", "43.00", "52.75", "28", "64", "9.75"],
-        ["YouTube", "50", "42.88", "7.10", "42.0", "38.00", "47.00", "30", "57", "9.00"],
-        ["TikTok", "47", "35.64", "7.97", "35.0", "31.00", "39.00", "20", "57", "8.00"],
-        ["Instagram", "50", "28.98", "6.82", "27.5", "25.00", "34.00", "17", "52", "9.00"],
-        ["Overall", "197", "38.68", "10.16", "38.0", "\u2014", "\u2014", "17", "64", "\u2014"],
-    ])
-    add_para(doc, "")
-
-    add_para(doc, "Table C3. DISCERN Quality Category Distribution by Platform (n and %)", bold=True, align=WD_ALIGN_PARAGRAPH.LEFT)
-    make_table(doc, [
-        ["Platform", "Very Poor n (%)", "Poor n (%)", "Fair n (%)", "Good n (%)", "Excellent n (%)"],
-        ["Website", "0 (0%)", "9 (18%)", "22 (44%)", "18 (36%)", "1 (2%)"],
-        ["YouTube", "0 (0%)", "16 (32%)", "24 (48%)", "10 (20%)", "0 (0%)"],
-        ["TikTok", "6 (12.8%)", "26 (55.3%)", "13 (27.7%)", "2 (4.3%)", "0 (0%)"],
-        ["Instagram", "21 (42%)", "25 (50%)", "3 (6%)", "1 (2%)", "0 (0%)"],
-    ])
-    add_para(doc, "")
-
-    add_para(doc, "Table C4. JAMA Benchmark Compliance by Platform (% Yes)", bold=True, align=WD_ALIGN_PARAGRAPH.LEFT)
-    make_table(doc, [
-        ["Platform", "Authorship", "Attribution", "Disclosure", "Currency", "Mean Total"],
-        ["Website", "30%", "30%", "16%", "68%", "1.44"],
-        ["YouTube", "38%", "16%", "0%", "100%", "1.54"],
-        ["TikTok", "29.8%", "0%", "12.8%", "100%", "1.43"],
-        ["Instagram", "16%", "4%", "0%", "100%", "1.20"],
-    ])
-    add_para(doc, "")
-
-    add_heading(doc, "C.2 Pairwise Comparisons", level=2)
-    add_para(doc, "Table C5. Pairwise Platform Comparisons for DISCERN Total (Mann-Whitney U with Bonferroni Correction)", bold=True, align=WD_ALIGN_PARAGRAPH.LEFT)
-    make_table(doc, [
-        ["Comparison", "U", "p (adjusted)", "Effect size (r)", "Sig."],
-        ["Website vs YouTube", "1646", ".0384", "\u22120.316", "*"],
-        ["Website vs TikTok", "1972", "<.0001", "\u22120.678", "***"],
-        ["Website vs Instagram", "2364", "<.0001", "\u22120.891", "***"],
-        ["YouTube vs TikTok", "1775", ".0001", "\u22120.511", "***"],
-        ["YouTube vs Instagram", "2313", "<.0001", "\u22120.850", "***"],
-        ["TikTok vs Instagram", "1740", ".0003", "\u22120.480", "***"],
-    ])
-    add_para(doc, "Note. * p < .05, *** p < .001. Effect size r reported as rank-biserial correlation.", italic=True)
-    add_para(doc, "")
-
-    add_heading(doc, "C.3 Engagement\u2013Quality Correlations", level=2)
-    add_para(doc, "Table C6. Spearman Correlations Between Engagement Metrics and DISCERN Total by Platform", bold=True, align=WD_ALIGN_PARAGRAPH.LEFT)
-    make_table(doc, [
-        ["Platform", "Metric", "n", "rho", "p", "Sig."],
-        ["Overall", "Views", "97", "\u2212.044", ".669", ""],
-        ["Overall", "Likes", "147", ".284", "<.001", "***"],
-        ["Overall", "Comments", "147", ".371", "<.001", "***"],
-        ["YouTube", "Views", "50", "\u2212.340", ".016", "*"],
-        ["YouTube", "Likes", "50", "\u2212.286", ".044", "*"],
-        ["YouTube", "Comments", "50", "\u2212.178", ".216", ""],
-        ["TikTok", "Views", "47", "\u2212.057", ".702", ""],
-        ["TikTok", "Likes", "47", ".109", ".467", ""],
-        ["TikTok", "Comments", "47", ".124", ".408", ""],
-        ["Instagram", "Likes", "50", "\u2212.174", ".226", ""],
-        ["Instagram", "Comments", "50", "\u2212.045", ".758", ""],
-    ])
-    add_para(doc, "Note. * p < .05, *** p < .001. Overall likes and comments correlations are based on social-media items only and should be interpreted cautiously because they are confounded by between-social-platform differences.", italic=True)
-
-    path = os.path.join(APPENDIX_DIR, "appendix_c_data_summary.docx")
-    doc.save(path)
-    print(f"Appendix C saved to {path}")
+    build_appendix_c()
 
 
 # ============================================================
