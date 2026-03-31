@@ -929,113 +929,36 @@ def build_chapter5():
     add_heading1(doc, "RECOMMENDATIONS")
 
     add_body(doc,
-        "Based on the findings of this study, the following practical recommendations "
-        "are proposed for key stakeholder groups."
+        "1. Public health organisations should maintain high-quality traditional websites "
+        "as anchor resources for physical activity information and should also produce "
+        "platform-native short-form content that clearly states aims, cites sources, and "
+        "acknowledges uncertainty."
     )
 
     add_body(doc,
-        "For public health organisations: Maintain and promote high-quality traditional "
-        "websites as anchor resources for physical activity information. Simultaneously, "
-        "develop platform-native content for TikTok and Instagram that adheres to "
-        "evidence-based principles while respecting the format constraints of short-form "
-        "media. Content should be designed with DISCERN-aligned principles: clearly stated "
-        "aims, identified sources, balanced presentation of options, and explicit "
-        "acknowledgement of uncertainty."
+        "2. Healthcare professionals should engage more actively on social media, display "
+        "their credentials prominently, and include source citations wherever feasible to "
+        "counter the dominance of unqualified creators."
     )
 
     add_body(doc,
-        "For healthcare professionals: Engage actively on social media platforms to "
-        "counter the dominance of unqualified content creators. Professional credentials "
-        "should be prominently displayed in profile biographies, and content should "
-        "include source citations where feasible. Healthcare professionals can leverage "
-        "platform verification features to signal credibility to users."
+        "3. Platform developers and policy makers should strengthen transparency standards "
+        "for health-related content, including prompts for evidence citation, clearer "
+        "credential signalling, and greater scrutiny of recommendation systems that "
+        "amplify highly viewed but lower-quality content."
     )
 
     add_body(doc,
-        "For platform developers: Consider implementing evidence-based content labelling "
-        "systems that signal information quality to users. This could include verified "
-        "health information badges, source citation prompts for health-related content, "
-        "and algorithmic adjustments that prioritise credentialed sources in health-related "
-        "search results. The finding that higher-viewed and more-liked YouTube content "
-        "tended to score significantly lower on DISCERN (views rho = -0.340, p = .016; "
-        "likes rho = -0.286, p = .044) warrants urgent further investigation."
+        "4. Health literacy initiatives should explicitly teach that views, likes, and "
+        "shares are not reliable indicators of information quality and should train users "
+        "to check author credentials and cited sources."
     )
 
     add_body(doc,
-        "For health literacy educators: Teach critical appraisal skills that are "
-        "platform-specific. Users should understand that high engagement (likes, views, "
-        "shares) does not indicate information accuracy. Educational programmes should "
-        "include practical exercises in evaluating social media health content using "
-        "simplified versions of tools such as DISCERN and JAMA benchmarks."
-    )
-
-    add_body(doc,
-        "For policy makers: Consider regulatory frameworks that require minimum "
-        "transparency standards for health-related content on social media, analogous "
-        "to advertising disclosure requirements. The near-zero attribution rates on "
-        "TikTok (0%) and Instagram (4%) suggest that voluntary compliance with evidence "
-        "citation norms is insufficient."
-    )
-
-    add_body(doc,
-        "For consumers of physical activity information: Prefer traditional websites "
-        "from recognised health organisations (e.g., WHO, NHS, national public health "
-        "agencies) as primary information sources. When using social media for physical "
-        "activity guidance, verify creator credentials, check for cited sources, and "
-        "cross-reference recommendations with authoritative guidelines such as the WHO "
-        "Global Action Plan on Physical Activity 2018\u20132030 (World Health Organization, "
-        "2018)."
-    )
-
-    add_heading2(doc, "Recommendations for Future Research")
-
-    add_body(doc,
-        "Future research should address the methodological limitations identified in "
-        "this study through several priority directions. First, longitudinal tracking "
-        "studies are needed to determine whether the quality gradient observed here is "
-        "stable or evolving as platforms mature and implement health content policies. "
-        "Second, studies incorporating full audio-visual transcription and coding would "
-        "extend the point-of-access scoring approach used here and test whether subtler "
-        "spoken or visual cues materially alter quality assessments. Third, cross-cultural "
-        "and multilingual replications would establish whether the observed patterns "
-        "generalise beyond English-language content."
-    )
-
-    add_body(doc,
-        "Fourth, experimental studies could investigate the causal impact of information "
-        "quality on user behaviour\u2014specifically, whether exposure to higher-quality "
-        "physical activity information on social media leads to greater adoption of "
-        "evidence-based exercise practices. Fifth, the development and validation of "
-        "social media-specific quality assessment tools, adapted from but distinct from "
-        "DISCERN and JAMA, would address the limitations of applying traditional print-"
-        "oriented instruments to digital media formats. Sixth, algorithmic audit studies "
-        "could examine how platform recommendation systems interact with content quality, "
-        "building on the significant negative views\u2013quality and likes\u2013quality correlations "
-        "observed on YouTube in the present study."
-    )
-
-    add_body(doc,
-        "Finally, participatory research involving content creators, healthcare "
-        "professionals, and platform users could inform the design of practical "
-        "interventions to improve the quality of physical activity information "
-        "in the social media ecosystem."
-    )
-
-    add_body(doc,
-        "In closing, this study provides evidence that the quality of physical "
-        "activity information varies substantially across digital platforms, with "
-        "short-form social media presenting the greatest quality concerns. However, "
-        "these conclusions should be tempered by the study\u2019s limitations, particularly "
-        "the use of point-of-access scoring for video and image content without full "
-        "transcription or frame-by-frame coding, which may still underestimate some "
-        "forms of audiovisual explanation and thereby influence "
-        "the observed gradient. The mixed automated and manual collection approach and "
-        "the classification of diverse organisations as non-professional further qualify "
-        "the precision of these findings. Notwithstanding these caveats, the overall "
-        "pattern\u2014that platform architecture constrains information completeness and "
-        "that engagement does not reliably signal accuracy\u2014is consistent with the "
-        "broader literature and has clear implications for public health practice, "
-        "health literacy education, and platform governance."
+        "5. Consumers seeking physical activity guidance should use recognised health "
+        "organisation websites as their primary source and should verify creator "
+        "credentials and cross-check claims against authoritative guidelines when using "
+        "social media."
     )
 
     doc.save(os.path.join(CHAPTERS, "chapter5_conclusions.docx"))
