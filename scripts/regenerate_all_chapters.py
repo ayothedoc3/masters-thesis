@@ -655,9 +655,9 @@ def build_chapter4():
         "long-form video platform appears to permit more comprehensive information "
         "delivery than short-form social media, potentially because longer formats allow "
         "for more detailed explanations, source citations, and structured presentation "
-        "of evidence. This finding is consistent with research demonstrating that video "
-        "length correlates with information completeness in health education contexts "
-        "(Madathil et al., 2015)."
+        "of evidence. This finding is consistent with more recent review evidence showing "
+        "that longer-form health videos tend to permit greater informational completeness "
+        "than short-form social-media content (Osman et al., 2022; Rodriguez-Rodriguez et al., 2022)."
     )
 
     add_body(doc,

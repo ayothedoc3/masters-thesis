@@ -317,7 +317,7 @@ def create_chapter2():
 
     add_formatted_paragraph(
         doc,
-        "The rationale for employing a cross-sectional content analysis rather than a systematic review lies in the current state of the literature. Recent systematic reviews and meta-analyses have already synthesised major strands of evidence on health information quality across websites, social media, and short-form video content (Daraz et al., 2019; Li et al., 2024; Liu et al., 2025). However, no study to date has conducted a direct, head-to-head comparison of physical activity information quality across traditional websites, YouTube, TikTok, and Instagram using both the DISCERN and JAMA instruments simultaneously. The present study addresses this gap by providing a four-platform comparative analysis using dual quality assessment frameworks applied specifically to physical activity content.",
+        "The rationale for employing a cross-sectional content analysis rather than a systematic review lies in the current state of the literature. Recent systematic reviews and meta-analyses have already synthesised major strands of evidence on health information quality across websites, social media, and short-form video content (Denniss et al., 2023; Li et al., 2024; Liu et al., 2025). However, no study to date has conducted a direct, head-to-head comparison of physical activity information quality across traditional websites, YouTube, TikTok, and Instagram using both the DISCERN and JAMA instruments simultaneously. The present study addresses this gap by providing a four-platform comparative analysis using dual quality assessment frameworks applied specifically to physical activity content.",
         first_line_indent=1.27
     )
 
@@ -334,7 +334,7 @@ def create_chapter2():
 
     add_formatted_paragraph(
         doc,
-        "Furthermore, this study represents applied research with practical implications for multiple stakeholders. The findings are intended to inform health literacy initiatives, guide content regulation policies on social media platforms, assist healthcare professionals in directing patients toward reliable information sources, and contribute to the broader understanding of digital health information ecosystems. The applied orientation aligns with the growing recognition that the quality of online health information has direct consequences for public health behaviours and outcomes (Swire-Thompson & Lazer, 2020).",
+        "Furthermore, this study represents applied research with practical implications for multiple stakeholders. The findings are intended to inform health literacy initiatives, guide content regulation policies on social media platforms, assist healthcare professionals in directing patients toward reliable information sources, and contribute to the broader understanding of digital health information ecosystems. The applied orientation aligns with recent evidence showing that social-media-based health information can shape health behaviours while misinformation in these environments can undermine public trust and decision-making (Paul & Headley-Johnson, 2025; Stimpson et al., 2025).",
         first_line_indent=1.27
     )
 
@@ -345,7 +345,7 @@ def create_chapter2():
 
     add_formatted_paragraph(
         doc,
-        "The sampling design targeted 200 content items from four digital platforms: traditional websites accessed through Google search (target n = 50), YouTube (target n = 50), TikTok (target n = 50), and Instagram (target n = 50). This target sample size was designed to provide balanced cross-platform coverage and is comparable to sample sizes commonly used in online health-information quality studies summarised in prior reviews (Drozd et al., 2018; Osman et al., 2022). Following the post-collection audit, three TikTok records could not be verified against the raw captures and were excluded without replacement, yielding a final analytical sample of 197 items (50 websites, 50 YouTube videos, 47 TikTok videos, and 50 Instagram posts).",
+        "The sampling design targeted 200 content items from four digital platforms: traditional websites accessed through Google search (target n = 50), YouTube (target n = 50), TikTok (target n = 50), and Instagram (target n = 50). This target sample size was designed to provide balanced cross-platform coverage and is comparable to sample sizes commonly used in recent health-information quality studies and reviews of video-based and short-form social media content (Osman et al., 2022; Li et al., 2024). Following the post-collection audit, three TikTok records could not be verified against the raw captures and were excluded without replacement, yielding a final analytical sample of 197 items (50 websites, 50 YouTube videos, 47 TikTok videos, and 50 Instagram posts).",
         first_line_indent=1.27
     )
 
@@ -497,7 +497,7 @@ def create_chapter2():
 
     add_formatted_paragraph(
         doc,
-        "For the purposes of the present study, DISCERN quality scores were categorised using the following established thresholds: Very Poor (16\u201326), Poor (27\u201338), Fair (39\u201350), Good (51\u201362), and Excellent (63\u201380). These conventional categories facilitate meaningful interpretation and cross-study comparison of quality ratings (Sun et al., 2023). In adapting the instrument for social media content, questions pertaining to treatment information were interpreted in the context of exercise and physical activity recommendations, consistent with the approach adopted in prior studies examining fitness-related content (Kocyigit et al., 2019; Kong et al., 2021).",
+        "For the purposes of the present study, DISCERN quality scores were categorised using the following established thresholds: Very Poor (16\u201326), Poor (27\u201338), Fair (39\u201350), Good (51\u201362), and Excellent (63\u201380). These conventional categories facilitate meaningful interpretation and cross-study comparison of quality ratings (Sun et al., 2023). In adapting the instrument for social media content, questions pertaining to treatment information were interpreted in the context of exercise and physical activity recommendations, consistent with recent studies examining health-related video and short-form social-media content (Kong et al., 2021; Li et al., 2024).",
         first_line_indent=1.27
     )
 
@@ -576,7 +576,7 @@ def create_chapter2():
 
     add_formatted_paragraph(
         doc,
-        "To apply the JAMA benchmarks to social media content, which differs substantially in format from traditional web-based health information, the criteria were operationalised as described in Table 2.3. This operationalisation draws on adaptations employed in prior research assessing YouTube health content (Drozd et al., 2018; Kocyigit et al., 2019).",
+        "To apply the JAMA benchmarks to social media content, which differs substantially in format from traditional web-based health information, the criteria were operationalised as described in Table 2.3. This operationalisation draws on approaches reported in recent research and reviews assessing YouTube and TikTok health content (Osman et al., 2022; Li et al., 2024).",
         first_line_indent=1.27
     )
 
@@ -632,7 +632,7 @@ def create_chapter2():
     add_mixed_paragraph(
         doc,
         [("Creator type classification. ", True, False),
-         ("Each content creator was classified into one of five categories based on the information available in their profile, bio, and content: (a) Healthcare professional (e.g., physicians, physiotherapists, registered nurses), (b) Certified fitness professional (e.g., certified personal trainers, strength and conditioning specialists), (c) Fitness influencer (individuals with substantial followings who create fitness content without verified professional credentials), (d) General user (individuals without identifiable fitness or health credentials), and (e) Organisation (institutional accounts such as hospitals, health agencies, or fitness organisations). This classification scheme was developed based on typologies employed in prior research on health information creators (Kocyigit et al., 2019; Yurdaisik, 2022).", False, False)],
+         ("Each content creator was classified into one of five categories based on the information available in their profile, bio, and content: (a) Healthcare professional (e.g., physicians, physiotherapists, registered nurses), (b) Certified fitness professional (e.g., certified personal trainers, strength and conditioning specialists), (c) Fitness influencer (individuals with substantial followings who create fitness content without verified professional credentials), (d) General user (individuals without identifiable fitness or health credentials), and (e) Organisation (institutional accounts such as hospitals, health agencies, or fitness organisations). This classification scheme was informed by recent reviews of creator typologies in YouTube, TikTok, and broader social-media health content (Osman et al., 2022; Li et al., 2024; Thomas et al., 2025).", False, False)],
         first_line_indent=1.27
     )
 
