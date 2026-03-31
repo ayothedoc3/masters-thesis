@@ -68,20 +68,9 @@ Yurdaisik, I. (2020). Analysis of the most viewed first 50 videos on YouTube abo
 
 ---
 
-## Notes on Specific References
+## Notes
 
-**References that could not be fully verified:**
+This markdown file is a legacy working bibliography. The current reference-integrity audit is documented in:
 
-1. **Chea & Lim (2023)** -- Multiple searches did not return a publication matching this author combination and year in the context of social media health information quality. If this reference appears in your chapters, please verify the exact author names and publication venue. It may be a different author spelling or a working paper.
-
-2. **Kong et al. (2024)** -- No specific publication by "Kong et al." from 2024 on social media health information quality could be verified. If cited in your chapters, please double-check the source. A possible match might be a chapter or conference paper not indexed in major databases.
-
-**References where the year differs from what was requested:**
-
-3. **Yurdaisik** -- The verified publication is from 2020, not 2022. If your chapters cite "Yurdaisik (2022)," the in-text citation should be updated to "(2020)."
-
-**Additional highly relevant reference included:**
-
-4. **Thomas et al. (2025)** -- "Physical activity misinformation on social media: Systematic review" in JMIR Infodemiology is directly relevant to your thesis topic and should be cited.
-
-5. **Liu et al. (2025)** -- This is the JMIR 2025 meta-analysis referenced in your CLAUDE.md as the source of the pooled DISCERN benchmark (43.58/100). The study focuses on cancer-related information but provides the cross-platform quality benchmarks your thesis references.
+- `audit/reference_integrity_audit.csv`
+- `audit/reference_integrity_summary.md`

@@ -287,7 +287,7 @@ def create_chapter2():
 
     add_formatted_paragraph(
         doc,
-        "The research follows a deductive approach, applying established quality assessment frameworks\u2014the DISCERN instrument and JAMA benchmarks\u2014to evaluate content across a novel four-platform comparison. While these instruments were originally developed for traditional health information materials, they are widely used in studies of YouTube, TikTok, and Instagram health content despite recognised methodological concerns when applied to audiovisual and short-form media (Azer, 2020; Kong et al., 2021; Chea & Lim, 2023). The present study therefore treats their use as a transparent, controlled adaptation rather than as a platform-specific validation.",
+        "The research follows a deductive approach, applying established quality assessment frameworks\u2014the DISCERN instrument and JAMA benchmarks\u2014to evaluate content across a novel four-platform comparison. While these instruments were originally developed for traditional health information materials, they are widely used in studies of YouTube and TikTok health content despite recognised methodological concerns when applied to audiovisual and short-form media (Azer, 2020; Kong et al., 2021; Li et al., 2024). The present study therefore treats their use as a transparent, controlled adaptation rather than as a platform-specific validation.",
         first_line_indent=1.27
     )
 
@@ -345,7 +345,7 @@ def create_chapter2():
 
     add_formatted_paragraph(
         doc,
-        "The sampling design targeted 200 content items from four digital platforms: traditional websites accessed through Google search (target n = 50), YouTube (target n = 50), TikTok (target n = 50), and Instagram (target n = 50). This target sample size was determined based on precedent in health information quality research, where samples of 40\u201360 items per platform have been established as sufficient for detecting meaningful quality differences (Leong et al., 2021; Drozd et al., 2018). Following the post-collection audit, three TikTok records could not be verified against the raw captures and were excluded without replacement, yielding a final analytical sample of 197 items (50 websites, 50 YouTube videos, 47 TikTok videos, and 50 Instagram posts).",
+        "The sampling design targeted 200 content items from four digital platforms: traditional websites accessed through Google search (target n = 50), YouTube (target n = 50), TikTok (target n = 50), and Instagram (target n = 50). This target sample size was designed to provide balanced cross-platform coverage and is comparable to sample sizes commonly used in online health-information quality studies summarised in prior reviews (Drozd et al., 2018; Osman et al., 2022). Following the post-collection audit, three TikTok records could not be verified against the raw captures and were excluded without replacement, yielding a final analytical sample of 197 items (50 websites, 50 YouTube videos, 47 TikTok videos, and 50 Instagram posts).",
         first_line_indent=1.27
     )
 
@@ -576,7 +576,7 @@ def create_chapter2():
 
     add_formatted_paragraph(
         doc,
-        "To apply the JAMA benchmarks to social media content, which differs substantially in format from traditional web-based health information, the criteria were operationalised as described in Table 2.3. This operationalisation draws on adaptations employed in prior research assessing social media health content (Delli et al., 2016; Kocyigit et al., 2019).",
+        "To apply the JAMA benchmarks to social media content, which differs substantially in format from traditional web-based health information, the criteria were operationalised as described in Table 2.3. This operationalisation draws on adaptations employed in prior research assessing YouTube health content (Drozd et al., 2018; Kocyigit et al., 2019).",
         first_line_indent=1.27
     )
 
@@ -834,7 +834,7 @@ def create_chapter2():
 
     add_formatted_paragraph(
         doc,
-        "Non-parametric statistical tests were selected as the primary inferential methods due to the ordinal nature of DISCERN scores and the anticipated non-normal distribution of quality data, consistent with methodological recommendations for health information quality research (Naaman et al., 2022).",
+        "Non-parametric statistical tests were selected as the primary inferential methods due to the ordinal nature of DISCERN scores and the anticipated non-normal distribution of quality data, consistent with methodological recommendations for analysing Likert-type rating scales (Sullivan & Artino, 2013).",
         first_line_indent=1.27
     )
 
