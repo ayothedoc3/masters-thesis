@@ -95,14 +95,14 @@ def generate_flyleaf() -> None:
     add_front_heading(doc, "CONFIRMATION OF INDEPENDENT COMPOSITION OF THE THESIS")
     add_para(
         doc,
-        f"I hereby declare that the present final master's thesis titled "
+        f"I hereby declare, that the present final master's thesis titled "
         f"\"{TITLE_EN}\"",
         first_line_indent_cm=1.25,
     )
     for item in [
         "1. Has been carried out by myself;",
         "2. Has not been used in any other university in Lithuania or abroad;",
-        "3. Has not used any references not indicated in the paper and the list of references is complete.",
+        "3. Have not used any references not indicated in the paper and the list of references is complete.",
     ]:
         add_para(doc, item, align=WD_ALIGN_PARAGRAPH.LEFT)
 
@@ -126,19 +126,22 @@ def generate_flyleaf() -> None:
     add_para(doc, "")
     add_front_heading(doc, "FINAL MASTER'S THESIS SUPERVISOR'S ASSESSMENT")
     add_rule_line(doc, "Date:")
-    add_rule_line(doc, "Supervisor's name and surname:")
+    add_rule_line(doc, "Supervisor's name and surname: Dr. Antanas Usas")
     add_rule_line(doc, "Signature:")
     add_para(doc, "")
-    add_rule_line(doc, "Reviewer 1:")
-    add_rule_line(doc, "Study administrator:")
+    add_rule_line(doc, "Reviewer of the final thesis:")
+    add_rule_line(doc, "Study Administrator:")
     add_rule_line(doc, "Signature:")
     add_para(doc, "")
-    add_rule_line(doc, "Reviewer 2:")
-    add_rule_line(doc, "Study administrator:")
+    add_rule_line(doc, "Reviewer of the final thesis:")
+    add_rule_line(doc, "Study Administrator:")
     add_rule_line(doc, "Signature:")
     add_para(doc, "")
-    add_rule_line(doc, "Final thesis placed in ETD IS by:")
-    add_rule_line(doc, "Date / signature:")
+    add_rule_line(doc, "Final thesis supervisor:")
+    add_rule_line(doc, "Study Administrator:")
+    add_rule_line(doc, "Signature:")
+    add_para(doc, "")
+    add_rule_line(doc, "Final Master’s thesis has been placed in ETD IS")
 
     path = os.path.join(CHAPTERS, "flyleaf.docx")
     doc.save(path)
@@ -235,7 +238,7 @@ def generate_acknowledgments() -> None:
             "for his guidance, expertise, and constructive feedback throughout this research project."
         ),
         (
-            "I am grateful to the faculty and staff of the Master of Public Health programme at "
+            "I am grateful to the faculty and staff of the Physical Activity and Public Health study programme at "
             "Lithuanian Sports University for providing the academic environment and resources "
             "necessary to complete this thesis."
         ),

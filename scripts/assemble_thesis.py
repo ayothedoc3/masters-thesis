@@ -53,15 +53,46 @@ def setup_doc() -> Document:
     return doc
 
 
+def force_run_black(run) -> None:
+    run.font.name = "Times New Roman"
+    run.font.color.rgb = RGBColor(0, 0, 0)
+    rpr = run._element.get_or_add_rPr()
+    color = rpr.find(qn("w:color"))
+    if color is None:
+        color = OxmlElement("w:color")
+        rpr.append(color)
+    color.set(qn("w:val"), "000000")
+    for attr in ("w:themeColor", "w:themeTint", "w:themeShade"):
+        if qn(attr) in color.attrib:
+            del color.attrib[qn(attr)]
+
+
+def force_style_black(style, *, size: int | None = None, bold: bool | None = None) -> None:
+    style.font.name = "Times New Roman"
+    style.font.color.rgb = RGBColor(0, 0, 0)
+    if size is not None:
+        style.font.size = Pt(size)
+    if bold is not None:
+        style.font.bold = bold
+    rpr = style.element.get_or_add_rPr()
+    color = rpr.find(qn("w:color"))
+    if color is None:
+        color = OxmlElement("w:color")
+        rpr.append(color)
+    color.set(qn("w:val"), "000000")
+    for attr in ("w:themeColor", "w:themeTint", "w:themeShade"):
+        if qn(attr) in color.attrib:
+            del color.attrib[qn(attr)]
+
+
 def add_centered_line(doc: Document, text: str, *, bold: bool = False, size: int = 12) -> None:
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.line_spacing = 1.5
     run = p.add_run(text)
-    run.font.name = "Times New Roman"
     run.font.size = Pt(size)
-    run.font.color.rgb = RGBColor(0, 0, 0)
     run.bold = bold
+    force_run_black(run)
 
 
 def add_title_page(doc: Document) -> None:
@@ -69,10 +100,15 @@ def add_title_page(doc: Document) -> None:
         doc.add_paragraph("")
 
     add_centered_line(doc, "LITHUANIAN SPORTS UNIVERSITY", bold=True)
-    add_centered_line(doc, "MASTER OF PUBLIC HEALTH PROGRAMME", bold=True)
-    add_centered_line(doc, "FACULTY OF SPORT MEDICINE", bold=True)
+    add_centered_line(doc, "PHYSICAL ACTIVITY AND PUBLIC HEALTH STUDY PROGRAMME", bold=True)
 
-    for _ in range(5):
+    for _ in range(3):
+        doc.add_paragraph("")
+
+    add_centered_line(doc, "AYOKUNLE ADEMOLA-JOHN", bold=True)
+    add_centered_line(doc, "/signature/")
+
+    for _ in range(3):
         doc.add_paragraph("")
 
     add_centered_line(
@@ -89,17 +125,20 @@ def add_title_page(doc: Document) -> None:
         size=14,
     )
 
-    for _ in range(4):
+    for _ in range(3):
         doc.add_paragraph("")
 
     title_lines = [
-        "Final Master's Thesis",
+        "FINAL MASTER'S THESIS",
         "",
-        "Student: Ayokunle Ademola-John ____________________",
-        "Scientific supervisor: Dr. Antanas Usas ____________________",
-        "Scientific adviser: _________________________________________",
+        "Scientific Supervisor: Dr. Antanas Usas /signature/",
+        "Adviser: _________________________________________ /signature/",
         "",
-        "Kaunas, 2026",
+        "Final thesis Supervisor recommends / does not recommend the final thesis be assessed",
+        "Evaluation of the final thesis: in grade and words",
+        "Secretary of the Assessment Committee: __________________ /signature/",
+        "",
+        "KAUNAS 2026",
     ]
     for line in title_lines:
         add_centered_line(doc, line)
@@ -173,6 +212,14 @@ def add_annexes_heading(doc: Document) -> None:
 
 
 def normalize_structure(doc: Document) -> None:
+    force_style_black(doc.styles["Normal"], size=12, bold=False)
+    force_style_black(doc.styles["Heading 1"], size=14, bold=True)
+    force_style_black(doc.styles["Heading 2"], size=12, bold=True)
+    force_style_black(doc.styles["Heading 3"], size=12, bold=True)
+    for toc_style in ("TOC 1", "TOC 2", "TOC 3"):
+        if toc_style in [s.name for s in doc.styles]:
+            force_style_black(doc.styles[toc_style], size=12, bold=False)
+
     front_matter_titles = {
         "CONFIRMATION OF INDEPENDENT COMPOSITION OF THE THESIS",
         "CONFIRMATION OF LIABILITY FOR THE REGULARITY OF THE ENGLISH LANGUAGE",
@@ -199,7 +246,7 @@ def normalize_structure(doc: Document) -> None:
             continue
 
         if in_toc:
-            if text == "CONFIRMATION OF INDEPENDENT COMPOSITION OF THE THESIS":
+            if text == "ABSTRACT":
                 in_toc = False
             else:
                 continue
@@ -210,23 +257,33 @@ def normalize_structure(doc: Document) -> None:
 
         if text in front_matter_titles:
             paragraph.style = "Normal"
+            for run in paragraph.runs:
+                force_run_black(run)
             continue
 
         if text == "ANNEXES":
             in_annexes = True
             paragraph.style = "Heading 1"
+            for run in paragraph.runs:
+                force_run_black(run)
             continue
 
         if in_annexes:
             paragraph.style = "Normal"
+            for run in paragraph.runs:
+                force_run_black(run)
             continue
 
         if text in top_level_titles or re.match(r"^CHAPTER\s+\d+\.\s+", text):
             paragraph.style = "Heading 1"
+            for run in paragraph.runs:
+                force_run_black(run)
             continue
 
         if re.match(r"^\d+\.\d+\s+", text):
             paragraph.style = "Heading 2"
+            for run in paragraph.runs:
+                force_run_black(run)
             continue
 
 

@@ -171,6 +171,14 @@ def create_doc():
     pf = style.paragraph_format
     pf.line_spacing = 1.5
     pf.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+    for level in range(1, 4):
+        hs = doc.styles[f"Heading {level}"]
+        hs.font.name = "Times New Roman"
+        hs.font.size = Pt(14 if level == 1 else 12)
+        hs.font.bold = True
+        hs.font.color.rgb = RGBColor(0, 0, 0)
+        hpf = hs.paragraph_format
+        hpf.line_spacing = 1.5
     return doc
 
 

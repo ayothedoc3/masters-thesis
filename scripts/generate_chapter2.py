@@ -77,6 +77,8 @@ def format_run(run, bold=False, italic=False, size=12, font_name="Times New Roma
     rPr.insert(0, rFonts)
     if color:
         run.font.color.rgb = RGBColor(*color)
+    else:
+        run.font.color.rgb = RGBColor(0, 0, 0)
 
 
 def add_paragraph_spacing(paragraph, before=0, after=0, line_spacing=1.5):
@@ -238,12 +240,20 @@ def create_chapter2():
     font = style.font
     font.name = 'Times New Roman'
     font.size = Pt(12)
+    font.color.rgb = RGBColor(0, 0, 0)
     style.paragraph_format.line_spacing = 1.5
     style.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
     # Ensure Times New Roman for all character sets
     rPr = style.element.get_or_add_rPr()
     rFonts = parse_xml(f'<w:rFonts {nsdecls("w")} w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>')
     rPr.insert(0, rFonts)
+    for level in range(1, 4):
+        hs = doc.styles[f'Heading {level}']
+        hs.font.name = 'Times New Roman'
+        hs.font.size = Pt(14 if level == 1 else 12)
+        hs.font.bold = True
+        hs.font.color.rgb = RGBColor(0, 0, 0)
+        hs.paragraph_format.line_spacing = 1.5
 
     # ================================================================
     # CHAPTER 2 MAIN HEADING
